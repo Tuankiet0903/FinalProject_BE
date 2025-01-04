@@ -1,22 +1,46 @@
-import mongoose from 'mongoose';
-import dotenv from 'dotenv';
+import dotenv from "dotenv";
+import { Sequelize } from "sequelize";
 
 dotenv.config();
 
-const URL = process.env.MONGOOSE_URL;
+// Tạo kết nối tới cơ sở dữ liệu PostgreSQL
+const sequelize = new Sequelize(
+  process.env.DB_NAME,          // Tên cơ sở dữ liệu
+  process.env.DB_USERNAME,      // Tên đăng nhập
+  process.env.DB_PASSWORD,      // Mật khẩu
+  {
+    host: process.env.DB_HOST,  // Host của cơ sở dữ liệu
+    dialect: process.env.DB_DIALECT || "postgres", // Loại cơ sở dữ liệu (mặc định: PostgreSQL)
+    pool: {
+      max: 5,                   // Số kết nối tối đa trong pool
+      min: 0,                   // Số kết nối tối thiểu trong pool
+      idle: 10000,              // Thời gian tối đa một kết nối có thể nhàn rỗi (ms)
+    },
+    logging: false,             // Tắt log SQL trong môi trường sản xuất
+  }
+);
 
+// Kết nối tới cơ sở dữ liệu
 const connectDB = async () => {
-    try {
-        await mongoose.connect(URL, {
-            useNewUrlParser: true,
-            useUnifiedTopology: true,
-        });
-        console.log("Connected to MongoDB");
-    } catch (error) {
-        console.error("Error connecting to MongoDB:", error);
-        process.exit(1);
-    }
+  try {
+    await sequelize.authenticate();
+    console.log("Connected to the PostgreSQL database successfully.");
+  } catch (error) {
+    console.error("Error connecting to the database:", error.message);
+    process.exit(1); // Dừng ứng dụng nếu không thể kết nối
+  }
 };
-mongoose.set('strictQuery', true);
 
-export default connectDB;
+// Đồng bộ cơ sở dữ liệu (nếu cần)
+const syncDatabase = async () => {
+  try {
+    await sequelize.sync({ force: false }); // force: false để không xóa dữ liệu hiện tại
+    console.log("Database & tables synchronized successfully.");
+  } catch (error) {
+    console.error("Error syncing database:", error.message);
+    process.exit(1);
+  }
+};
+
+// Xuất `sequelize` để sử dụng trong model
+export { sequelize, connectDB, syncDatabase };
