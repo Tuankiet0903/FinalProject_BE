@@ -21,6 +21,9 @@ const Notifications = sequelize.define("Notifications", {
     allowNull: false,
     defaultValue: DataTypes.NOW
   }
+},{
+  freezeTableName: true,
+  timestamps: false
 });
 
 export default Notifications;

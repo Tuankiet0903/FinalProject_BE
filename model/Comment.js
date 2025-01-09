@@ -29,6 +29,9 @@ const Comment = sequelize.define("Comment", {
     type: DataTypes.TEXT,
     allowNull: true
   }
+},{
+  freezeTableName: true,
+  timestamps: false
 });
 
 export default Comment;

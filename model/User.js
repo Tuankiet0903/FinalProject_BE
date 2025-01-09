@@ -49,6 +49,9 @@ const User = sequelize.define("User", {
     type: DataTypes.BOOLEAN,
     defaultValue: true
   }
+},{
+  freezeTableName: true,
+  timestamps: false
 });
 
 export default User;

@@ -11,78 +11,96 @@ import Folder from "./Folder.js";
 import Space from "./Space.js";
 import ManageMemberWorkSpace from "./ManageMenberWorkSpace.js";
 
-User.hasMany(ManageMemberWorkSpace);
-ManageMemberWorkSpace.belongsTo(User);
 
-User.hasMany(ManageMemberSpace);
-ManageMemberSpace.belongsTo(User);
+try {
+  // Synchronize models
+  await Promise.all([
+    User.sync({ alter: true }),
+    Workspace.sync({ alter: true }),
+    Comment.sync({ alter: true }),
+    ManageMemberWorkSpace.sync({ alter: true }),
+    ManageMemberSpace.sync({ alter: true }),
+    Attachment.sync({ alter: true }),
+    Notifications.sync({ alter: true }),
+    TaskColumn.sync({ alter: true }),
+    List.sync({ alter: true }),
+    Folder.sync({ alter: true }),
+    Space.sync({ alter: true }),
+    Task.sync({ alter: true }),
+  ]);
+  console.log("Database & tables create successfully.");
+} catch (error) {
+  console.error("Error syncing database:", error.message);
+  process.exit(1);
+}
 
-User.hasMany(Comment);
-Comment.belongsTo(User);
+// User Associations
+User.hasMany(ManageMemberWorkSpace, { foreignKey: "userId" });
+ManageMemberWorkSpace.belongsTo(User, { foreignKey: "userId" });
 
-ManageMemberWorkSpace.belongsTo(Workspace);
-Workspace.hasMany(ManageMemberWorkSpace);
+User.hasMany(ManageMemberSpace, { foreignKey: "userId" });
+ManageMemberSpace.belongsTo(User, { foreignKey: "userId" });
 
-Workspace.hasMany(Space);
-Space.belongsTo(Workspace);
+User.hasMany(Comment, { foreignKey: "userId" });
+Comment.belongsTo(User, { foreignKey: "userId" });
 
-Space.hasMany(ManageMemberSpace);
-ManageMemberSpace.belongsTo(Space);
+// Workspace Associations
+ManageMemberWorkSpace.belongsTo(Workspace, { foreignKey: "workspaceId" });
+Workspace.hasMany(ManageMemberWorkSpace, { foreignKey: "workspaceId" });
 
-Space.hasMany(Folder);
-Folder.belongsTo(Space);
+Workspace.hasMany(Space, { foreignKey: "workspaceId" });
+Space.belongsTo(Workspace, { foreignKey: "workspaceId" });
 
-Folder.hasMany(List);
-List.belongsTo(Folder);
+// Space Associations
+Space.hasMany(ManageMemberSpace, { foreignKey: "spaceId" });
+ManageMemberSpace.belongsTo(Space, { foreignKey: "spaceId" });
 
-List.hasMany(TaskColumn);
-TaskColumn.belongsTo(List);
+Space.hasMany(Folder, { foreignKey: "spaceId" });
+Folder.belongsTo(Space, { foreignKey: "spaceId" });
 
-TaskColumn.hasMany(Task);
-Task.belongsTo(TaskColumn);
+// Folder Associations
+Folder.hasMany(List, { foreignKey: "folderId" });
+List.belongsTo(Folder, { foreignKey: "folderId" });
 
-Task.hasOne(Notifications);
-Notifications.belongsTo(Task);
+// List Associations
+List.hasMany(TaskColumn, { foreignKey: "listId" });
+TaskColumn.belongsTo(List, { foreignKey: "listId" });
 
-Task.hasMany(Comment);
-Comment.belongsTo(Task);
+// TaskColumn Associations
+TaskColumn.hasMany(Task, { foreignKey: "taskColumnId" });
+Task.belongsTo(TaskColumn, { foreignKey: "taskColumnId" });
 
-Task.hasOne(Attachment);
-Attachment.belongsTo(Task);
+// Task Associations
+Task.hasOne(Notifications, { foreignKey: "taskId" });
+Notifications.belongsTo(Task, { foreignKey: "taskId" });
 
-Comment.hasOne(Notifications);
-Notifications.belongsTo(Comment);
+Task.hasMany(Comment, { foreignKey: "taskId" });
+Comment.belongsTo(Task, { foreignKey: "taskId" });
 
-export {
-  User,
-  Workspace,
-  Task,
-  Comment,
-  ManageMemberWorkSpace,
-  ManageMemberSpace,
-  Attachment,
-  Notifications,
-  TaskColumn,
-  List,
-  Folder,
-  Space,
-};
+Task.hasOne(Attachment, { foreignKey: "taskId" });
+Attachment.belongsTo(Task, { foreignKey: "taskId" });
+
+// Comment Associations
+Comment.hasOne(Notifications, { foreignKey: "commentId" });
+Notifications.belongsTo(Comment, { foreignKey: "commentId" });
+
 
 const syncDatabase = async () => {
   try {
+    // Synchronize models
     await Promise.all([
-      User.sync(),
-      Workspace.sync(),
-      Task.sync(),
-      Comment.sync(),
-      ManageMemberWorkSpace.sync(),
-      ManageMemberSpace.sync(),
-      Attachment.sync(),
-      Notifications.sync(),
-      TaskColumn.sync(),
-      List.sync(),
-      Folder.sync(),
-      Space.sync(),
+      User.sync({ alter: true }),
+      Workspace.sync({ alter: true }),
+      Comment.sync({ alter: true }),
+      ManageMemberWorkSpace.sync({ alter: true }),
+      ManageMemberSpace.sync({ alter: true }),
+      Attachment.sync({ alter: true }),
+      Notifications.sync({ alter: true }),
+      TaskColumn.sync({ alter: true }),
+      List.sync({ alter: true }),
+      Folder.sync({ alter: true }),
+      Space.sync({ alter: true }),
+      Task.sync({ alter: true }),
     ]);
     console.log("Database & tables synchronized successfully.");
   } catch (error) {

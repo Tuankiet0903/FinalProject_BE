@@ -24,6 +24,9 @@ const TaskColumn = sequelize.define("TaskColumn", {
     type: DataTypes.INTEGER,
     allowNull: false
   }
+},{
+  freezeTableName: true,
+  timestamps: false
 });
 
 export default TaskColumn;

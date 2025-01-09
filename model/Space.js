@@ -33,6 +33,9 @@ const Space = sequelize.define("Space", {
     type: DataTypes.DATE,
     allowNull: true
   }
+},{
+  freezeTableName: true,
+  timestamps: false
 });
 
 export default Space;

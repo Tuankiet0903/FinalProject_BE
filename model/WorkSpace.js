@@ -41,6 +41,9 @@ const Workspace = sequelize.define("Workspace", {
     type: DataTypes.INTEGER,
     allowNull: true
   }
+},{
+  freezeTableName: true,
+  timestamps: false
 });
 
 export default Workspace;

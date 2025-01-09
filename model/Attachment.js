@@ -17,6 +17,9 @@ const Attachment = sequelize.define("Attachment", {
     allowNull: false,
     defaultValue: DataTypes.NOW
   }
+},{
+  freezeTableName: true,
+  timestamps: false
 });
 
 export default Attachment;

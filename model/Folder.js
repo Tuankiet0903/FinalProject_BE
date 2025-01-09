@@ -29,6 +29,9 @@ const Folder = sequelize.define("Folder", {
     type: DataTypes.INTEGER,
     allowNull: false
   }
+},{
+  freezeTableName: true,
+  timestamps: false
 });
 
 export default Folder;

@@ -42,15 +42,6 @@ const Task = sequelize.define("Task", {
     type: DataTypes.ENUM("bug", "feature", "task"),
     allowNull: true
   },
-  createdAt: {
-    type: DataTypes.DATE,
-    allowNull: false,
-    defaultValue: DataTypes.NOW
-  },
-  updatedAt: {
-    type: DataTypes.DATE,
-    allowNull: true
-  },
   assigneeId: {
     type: DataTypes.INTEGER,
     allowNull: true
@@ -67,6 +58,9 @@ const Task = sequelize.define("Task", {
     type: DataTypes.TIME,
     allowNull: true
   }
+}, {
+  freezeTableName: true,
+  timestamps: false
 });
 
 export default Task;

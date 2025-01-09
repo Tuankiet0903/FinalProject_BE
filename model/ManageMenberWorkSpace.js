@@ -16,6 +16,9 @@ const ManageMemberWorkSpace = sequelize.define("ManageMemberWorkSpace", {
     type: DataTypes.ENUM("owner", "admin", "member"),
     allowNull: false
   }
+},{
+  freezeTableName: true,
+  timestamps: false
 });
 
 export default ManageMemberWorkSpace;
