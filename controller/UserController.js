@@ -1,12 +1,12 @@
-import User from "../model/UserTest.js";
+import User from "../model/User.js";
 
 // Create: Tạo một bản ghi mới
 export const createUser = async (req, res) => {
   try {
-    const { username, password } = req.body;
-    console.log(username, password);
+    const { userId, fullName, password, email } = req.body;
+    console.log(fullName, password, email);
 
-    const user = await User.create({ username, password });
+    const user = await User.create({ userId, fullName, password, email });
     return res.status(201).json(user);
   } catch (error) {
     console.error("Error creating user:", error);

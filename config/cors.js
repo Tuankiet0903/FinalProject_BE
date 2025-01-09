@@ -9,7 +9,7 @@ export const corsOptions = {
       }
   
       // Kiểm tra xem origin có thuộc danh sách được phép hay không
-      if (WHITELIST_DOMAINS.includes(origin)) {
+      if (WHITELIST_DOMAINS.includes(origin) || origin.includes("Postman")) {
         return callback(null, true);
       }
   
