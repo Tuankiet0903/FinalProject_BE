@@ -1,0 +1,29 @@
+import { DataTypes } from "sequelize";
+import { sequelize } from "../database/connect.js";
+
+const TaskColumn = sequelize.define("TaskColumn", {
+  columnId: {
+    type: DataTypes.INTEGER,
+    primaryKey: true,
+    allowNull: false,
+    autoIncrement: true
+  },
+  name: {
+    type: DataTypes.STRING,
+    allowNull: false
+  },
+  color: {
+    type: DataTypes.ENUM("red", "blue", "green"),
+    allowNull: true
+  },
+  orderIndex: {
+    type: DataTypes.INTEGER,
+    allowNull: false
+  },
+  createBy: {
+    type: DataTypes.INTEGER,
+    allowNull: false
+  }
+});
+
+export default TaskColumn;
