@@ -45,8 +45,8 @@ export const getUserByPassword = async (req, res) => {
 export const updateUser = async (req, res) => {
   try {
     const { password } = req.params;
-    const { username } = req.body;
-    const [updated] = await User.update({ username }, { where: { password } });
+    const { fullName } = req.body;
+    const [updated] = await User.update({ fullName }, { where: { password } });
     if (updated) {
       return res.status(200).json({ message: "User updated successfully" });
     } else {

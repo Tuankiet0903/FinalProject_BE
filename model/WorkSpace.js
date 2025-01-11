@@ -36,11 +36,7 @@ const Workspace = sequelize.define("Workspace", {
   updatedAt: {
     type: DataTypes.DATE,
     allowNull: true
-  },
-  organizationId: {
-    type: DataTypes.INTEGER,
-    allowNull: true
-  }
+  } 
 },{
   freezeTableName: true,
   timestamps: false
