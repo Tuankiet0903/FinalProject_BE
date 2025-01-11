@@ -6,6 +6,7 @@ import { connectDB } from './database/connect.js';
 import { corsOptions } from './config/cors.js';
 import UserTestRouter from './router/user.route.js';
 import syncDatabase from './model/Association.js';
+import seedDatabase from './database/seeddataBase.js';
 
 dotenv.config();
 
@@ -19,6 +20,7 @@ app.use(morgan('combined')); // Hoặc 'dev' cho log đơn giản hơn
 // connect database & sync database
 connectDB()
 syncDatabase()
+seedDatabase()
 
 
 app.use('/api', UserTestRouter);
