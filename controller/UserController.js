@@ -1,75 +1,50 @@
-import User from "../model/User.js";
+import UserService from "../services/UserService.js";
 
-// Create: Tạo một bản ghi mới
 export const createUser = async (req, res) => {
   try {
-    const { userId, fullName, password, email } = req.body;
-    console.log(fullName, password, email);
-
-    const user = await User.create({ userId, fullName, password, email });
-    return res.status(201).json(user);
+    const user = await UserService.createUser(req.body);
+    return res.status(201).json({ message: "User created successfully", user });
   } catch (error) {
-    console.error("Error creating user:", error);
-    return res.status(500).json({ error: "Error creating user" });
+    const status = error.message === "Email is already registered" ? 409 : 500;
+    return res.status(status).json({ error: error.message });
   }
 };
 
-// Read: Lấy tất cả người dùng
 export const getAllUsers = async (req, res) => {
   try {
-    const users = await User.findAll();
+    const users = await UserService.getAllUsers();
     return res.status(200).json(users);
   } catch (error) {
-    console.error("Error fetching users:", error);
-    return res.status(500).json({ error: "Error fetching users" });
+    return res.status(500).json({ error: "Internal Server Error" });
   }
 };
 
-// Read: Lấy một người dùng theo password
-export const getUserByPassword = async (req, res) => {
+export const getUserById = async (req, res) => {
   try {
-    const { password } = req.params;
-    const user = await User.findOne({ where: { password } });
-    if (user) {
-      return res.status(200).json(user);
-    } else {
-      return res.status(404).json({ error: "User not found" });
-    }
+    const user = await UserService.getUserById(req.params.id);
+    return res.status(200).json(user);
   } catch (error) {
-    console.error("Error fetching user:", error);
-    return res.status(500).json({ error: "Error fetching user" });
+    const status = error.message === "User not found" ? 404 : 500;
+    return res.status(status).json({ error: error.message });
   }
 };
 
-// Update: Cập nhật thông tin người dùng
 export const updateUser = async (req, res) => {
   try {
-    const { password } = req.params;
-    const { fullName } = req.body;
-    const [updated] = await User.update({ fullName }, { where: { password } });
-    if (updated) {
-      return res.status(200).json({ message: "User updated successfully" });
-    } else {
-      return res.status(404).json({ error: "User not found" });
-    }
+    const user = await UserService.updateUser(req.params.id, req.body);
+    return res.status(200).json({ message: "User updated successfully", user });
   } catch (error) {
-    console.error("Error updating user:", error);
-    return res.status(500).json({ error: "Error updating user" });
+    const status = error.message === "User not found" ? 404 : 500;
+    return res.status(status).json({ error: error.message });
   }
 };
 
-// Delete: Xóa một người dùng
 export const deleteUser = async (req, res) => {
   try {
-    const { password } = req.params;
-    const deleted = await User.destroy({ where: { password } });
-    if (deleted) {
-      return res.status(200).json({ message: "User deleted successfully" });
-    } else {
-      return res.status(404).json({ error: "User not found" });
-    }
+    await UserService.deleteUser(req.params.id);
+    return res.status(200).json({ message: "User deleted successfully" });
   } catch (error) {
-    console.error("Error deleting user:", error);
-    return res.status(500).json({ error: "Error deleting user" });
+    const status = error.message === "User not found" ? 404 : 500;
+    return res.status(status).json({ error: error.message });
   }
 };
