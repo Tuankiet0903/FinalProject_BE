@@ -104,10 +104,8 @@ const seedDatabase = async () => {
   
       // Create Notifications
       await Notifications.bulkCreate([
-        { taskId: tasks[0].taskId, title: "Task Updated", content: "Task 1 updated successfully" },
-        { taskId: tasks[3].taskId, title: "Task Reviewed", content: "Task 4 moved to review" },
-        { commentId: 1, title: "Comment Added", content: "A new comment was added" },
-        { commentId: 2, title: "Comment Updated", content: "A comment was edited" },
+        { taskId: tasks[0].taskId, title: "Task Updated", content: "Task 1 updated successfully", commentId: 1 },
+        { taskId: tasks[3].taskId, title: "Task Reviewed", content: "Task 4 moved to review", commentId: 2 },
       ]);
   
       console.log("Sample data inserted successfully.");

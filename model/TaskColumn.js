@@ -8,6 +8,10 @@ const TaskColumn = sequelize.define("TaskColumn", {
     allowNull: false,
     autoIncrement: true
   },
+  listId: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
+  },
   name: {
     type: DataTypes.STRING,
     allowNull: false
