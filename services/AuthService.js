@@ -1,7 +1,8 @@
 import jwt from "jsonwebtoken";
 import bcrypt from "bcrypt";
 import User from "../model/User.js";
-import ENV from "../config/config.js";
+import { Op } from "sequelize";
+
 
 class AuthService {
    /**
@@ -20,8 +21,8 @@ class AuthService {
 
       const token = jwt.sign(
          { userId: user.userId, email: user.email },
-         ENV.JWT_SECRET,
-         { expiresIn: ENV.JWT_EXPIRES_IN }
+         process.env.JWT_SECRET,
+         { expiresIn: process.env.JWT_EXPIRES_IN }
       );
 
       return { token, user };
@@ -42,11 +43,42 @@ class AuthService {
 
       const token = jwt.sign(
          { userId: user.userId, email: user.email },
-         ENV.JWT_SECRET,
-         { expiresIn: ENV.JWT_EXPIRES_IN }
+         process.env.JWT_SECRET,
+         { expiresIn: process.env.JWT_EXPIRES_IN }
       );
 
       return { token, user };
+   }
+   
+   /**
+   * Đăng nhập bằng Google.
+   */
+   static async googleLogin(data) {
+      const { email, fullName, googleId, avatar } = data;
+
+      // Tìm người dùng theo email hoặc Google ID
+      let user = await User.findOne({
+         where: {
+            [Op.or]: [{ googleId }, { email }],
+         },
+      });
+
+      if (!user) {
+         user = await User.create({
+            fullName,
+            email,
+            googleId,
+            avatar,
+            password: "",
+            active: true,
+         });
+      }
+
+      if (user.isBlocked) {
+         throw new Error("Tài khoản của bạn đã bị khóa.");
+      }
+
+      return user;
    }
 }
 

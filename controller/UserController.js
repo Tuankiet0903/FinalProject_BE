@@ -1,4 +1,5 @@
 import UserService from "../services/UserService.js";
+import AuthService from "../services/AuthService.js";
 import logger from "../utils/logger.js";
 
 export const createUser = async (req, res) => {
@@ -56,3 +57,37 @@ export const deleteUser = async (req, res) => {
     return res.status(status).json({ error: error.message });
   }
 };
+
+export const ggLogin = async (req, res) => {
+  try {
+    const { email, fullName, googleId, avatar } = req.body;
+
+    // Gọi AuthService để xử lý logic
+    const user = await AuthService.googleLogin({ email, fullName, googleId, avatar });
+
+    // Tạo JWT token
+    const token = jwt.sign(
+      {
+        userId: user.userId,
+        email: user.email,
+        fullName: user.fullName,
+      },
+      process.env.JWT_SECRET,
+      { expiresIn: process.env.JWT_EXPIRES_IN || "24h" }
+    );
+
+    res.status(200).json({
+      msg: "Đăng nhập thành công!",
+      token,
+      user: {
+        userId: user.userId,
+        fullName: user.fullName,
+        email: user.email,
+        avatar: user.avatar,
+      },
+    });
+  } catch (error) {
+    res.status(500).json({ error: error.message || "Đăng nhập thất bại." });
+  }
+};
+

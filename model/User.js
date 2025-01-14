@@ -45,10 +45,14 @@ const User = sequelize.define(
       type: DataTypes.DATEONLY,
       allowNull: true,
     },
-    status: {
-      type: DataTypes.ENUM("active", "inactive", "blocked"),
-      defaultValue: "active",
+    isBlocked: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false
     },
+    active: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: true
+    }
   },
   {
     freezeTableName: true,
