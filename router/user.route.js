@@ -1,19 +1,19 @@
 import express from "express";
 import {
-  createUser,
-  deleteUser,
-  getAllUsers,
-  getUserByPassword,
-  updateUser,
+   createUser,
+   getAllUsers,
+   getUserById,
+   updateUser,
+   deleteUser,
 } from "../controller/UserController.js";
+import Auth from "../middleware/auth.js";
 
-const route = express.Router();
+const router = express.Router();
 
-// Routes
-route.post("/users", createUser); // Tạo người dùng
-route.get("/users", getAllUsers); // Lấy tất cả người dùng
-route.get("/users/:password", getUserByPassword); // Lấy người dùng theo password
-route.put("/users/:password", updateUser); // Cập nhật thông tin người dùng
-route.delete("/users/:password", deleteUser); // Xóa người dùng theo password
+router.post("/users", Auth, createUser); // Create user
+router.get("/users", Auth, getAllUsers); // Get all users
+router.get("/users/:id", Auth, getUserById); // Get user by ID
+router.put("/users/:id", Auth, updateUser); // Update user by ID
+router.delete("/users/:id", Auth, deleteUser); // Delete user by ID
 
-export default route;
+export default router;

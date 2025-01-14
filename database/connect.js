@@ -43,3 +43,4 @@ const connectDB = async () => {
 
 // Xuất `sequelize` để sử dụng trong model
 export { sequelize, connectDB };
+  
