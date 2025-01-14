@@ -4,7 +4,7 @@ import {
    getAllUsers,
    getUserById,
    updateUser,
-   deleteUser,
+   deleteUser
 } from "../controller/UserController.js";
 import Auth from "../middleware/auth.js";
 
