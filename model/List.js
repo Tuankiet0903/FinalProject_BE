@@ -1,6 +1,7 @@
 import { DataTypes } from "sequelize";
 import { sequelize } from "../database/connect.js";
 
+
 const List = sequelize.define("List", {
   listId: {
     type: DataTypes.INTEGER,

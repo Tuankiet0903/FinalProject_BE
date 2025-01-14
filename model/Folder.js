@@ -8,6 +8,10 @@ const Folder = sequelize.define("Folder", {
     allowNull: false,
     autoIncrement: true
   },
+    spaceId: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
   name: {
     type: DataTypes.STRING,
     allowNull: false
@@ -28,7 +32,7 @@ const Folder = sequelize.define("Folder", {
   createdBy: {
     type: DataTypes.INTEGER,
     allowNull: false
-  }
+  },
 },{
   freezeTableName: true,
   timestamps: false

@@ -8,6 +8,17 @@ const Notifications = sequelize.define("Notifications", {
     allowNull: false,
     autoIncrement: true
   },
+  taskId: {
+    type: DataTypes.INTEGER,
+    allowNull: false
+  },
+  commentId: {
+    type: DataTypes.INTEGER,
+    allowNull: false
+  },
+  userId: {
+    type: DataTypes.INTEGER,
+  },
   title: {
     type: DataTypes.STRING,
     allowNull: false
