@@ -4,7 +4,7 @@ import dotenv from 'dotenv';
 import morgan from 'morgan';
 import { connectDB } from './database/connect.js';
 import { corsOptions } from './config/cors.js';
-import UserTestRouter from './router/user.route.js';
+import UserTestRouter from './router/user.routes.js';
 import authRouter from './router/auth.routes.js';
 import syncDatabase from './model/Association.js';
 import seedDatabase from './database/seeddataBase.js';
@@ -35,8 +35,8 @@ app.use(passport.session());
 
 // connect database & sync database
 connectDB()
-syncDatabase()
-seedDatabase()
+// syncDatabase()
+// seedDatabase()
 
 
 app.use('/api/user', UserTestRouter);
