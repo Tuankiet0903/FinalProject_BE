@@ -46,7 +46,7 @@ const Task = sequelize.define("Task", {
     type: DataTypes.INTEGER,
     allowNull: true
   },
-  createBy: {
+  createdBy: {
     type: DataTypes.INTEGER,
     allowNull: true
   },

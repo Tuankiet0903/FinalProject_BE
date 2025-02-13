@@ -24,10 +24,6 @@ const Comment = sequelize.define("Comment", {
     type: DataTypes.DATE,
     allowNull: false,
     defaultValue: DataTypes.NOW
-  },
-  imageUrl: {
-    type: DataTypes.TEXT,
-    allowNull: true
   }
 },{
   freezeTableName: true,
