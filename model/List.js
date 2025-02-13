@@ -34,7 +34,7 @@ const List = sequelize.define("List", {
     type: DataTypes.DATE,
     allowNull: true
   },
-  createBy: {
+  createdBy: {
     type: DataTypes.INTEGER,
     allowNull: false
   }

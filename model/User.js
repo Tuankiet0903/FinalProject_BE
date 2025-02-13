@@ -7,7 +7,6 @@ const User = sequelize.define(
     userId: {
       type: DataTypes.INTEGER,
       primaryKey: true,
-      allowNull: false,
       autoIncrement: true,
     },
     fullName: {
@@ -29,10 +28,12 @@ const User = sequelize.define(
     githubId: {
       type: DataTypes.STRING,
       allowNull: true,
+      unique : true
     },
     googleId: {
       type: DataTypes.STRING,
       allowNull: true,
+      unique : true
     },
     avatar: {
       type: DataTypes.STRING,
@@ -43,7 +44,6 @@ const User = sequelize.define(
     },
     dateOfBirth: {
       type: DataTypes.DATEONLY,
-      allowNull: true,
     },
     isBlocked: {
       type: DataTypes.BOOLEAN,

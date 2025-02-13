@@ -12,10 +12,10 @@ import ListRouter from './router/list.routes.js';
 import TaskColumnRouter from './router/taskColumn.routes.js';
 import TaskRouter from './router/task.routes.js';
 import authRouter from './router/auth.routes.js';
-import syncDatabase from './model/Association.js';
-import seedDatabase from './database/seeddataBase.js';
 import session from "express-session";
 import passport from "./config/passport.js";
+import syncDatabase from './model/Association.js';
+import clearAndSeedDatabase from './database/seedDatabase.js'
 
 dotenv.config();
 
@@ -39,8 +39,11 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 connectDB().then(async () => {
+    //Chay syncDatabase khi co thay doi db
     // await syncDatabase();
-    // await seedDatabase();
+    
+    // chi chay lan dau khi khong co data
+    // await clearAndSeedDatabase();
     app.listen(PORT, () => {
         console.log(`Server is running on http://localhost:${PORT}`);
     });

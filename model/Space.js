@@ -20,7 +20,7 @@ const Space = sequelize.define("Space", {
     type: DataTypes.BOOLEAN,
     defaultValue: false
   },
-  createBy: {
+  createdBy: {
     type: DataTypes.INTEGER,
     allowNull: false
   },
