@@ -1,1 +1,102 @@
 {"level":"info","message":"Fetched all users successfully.","timestamp":"2025-01-12 17:00:13"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'userId')","timestamp":"2025-02-12 01:18:09"}
+{"level":"error","message":"Error creating space: column \"workspaceId\" does not exist","timestamp":"2025-02-12 01:19:09"}
+{"level":"error","message":"Failed to create space","timestamp":"2025-02-12 01:19:09"}
+{"level":"error","message":"Error creating space: column \"workspaceId\" does not exist","timestamp":"2025-02-12 01:19:51"}
+{"level":"error","message":"Failed to create space","timestamp":"2025-02-12 01:19:51"}
+{"level":"error","message":"Error creating space: Error\n    at Query.run (D:\\Web\\Final\\FinalProject_BE\\node_modules\\sequelize\\lib\\dialects\\postgres\\query.js:50:25)\n    at D:\\Web\\Final\\FinalProject_BE\\node_modules\\sequelize\\lib\\sequelize.js:315:28\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async PostgresQueryInterface.insert (D:\\Web\\Final\\FinalProject_BE\\node_modules\\sequelize\\lib\\dialects\\abstract\\query-interface.js:308:21)\n    at async model.save (D:\\Web\\Final\\FinalProject_BE\\node_modules\\sequelize\\lib\\model.js:2490:35)\n    at async Space.create (D:\\Web\\Final\\FinalProject_BE\\node_modules\\sequelize\\lib\\model.js:1362:12)\n    at async SpaceService.createSpace (file:///D:/Web/Final/FinalProject_BE/services/SpaceService.js:9:27)\n    at async createSpace (file:///D:/Web/Final/FinalProject_BE/controller/SpaceController.js:6:23)","timestamp":"2025-02-12 01:21:37"}
+{"level":"error","message":"column \"workspaceId\" does not exist","timestamp":"2025-02-12 01:21:37"}
+{"level":"error","message":"Error creating space: Error\n    at Query.run (D:\\Web\\Final\\FinalProject_BE\\node_modules\\sequelize\\lib\\dialects\\postgres\\query.js:50:25)\n    at D:\\Web\\Final\\FinalProject_BE\\node_modules\\sequelize\\lib\\sequelize.js:315:28\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async PostgresQueryInterface.insert (D:\\Web\\Final\\FinalProject_BE\\node_modules\\sequelize\\lib\\dialects\\abstract\\query-interface.js:308:21)\n    at async model.save (D:\\Web\\Final\\FinalProject_BE\\node_modules\\sequelize\\lib\\model.js:2490:35)\n    at async Space.create (D:\\Web\\Final\\FinalProject_BE\\node_modules\\sequelize\\lib\\model.js:1362:12)\n    at async SpaceService.createSpace (file:///D:/Web/Final/FinalProject_BE/services/SpaceService.js:9:27)\n    at async createSpace (file:///D:/Web/Final/FinalProject_BE/controller/SpaceController.js:6:23)","timestamp":"2025-02-12 01:38:47"}
+{"level":"error","message":"column \"workspaceId\" does not exist","timestamp":"2025-02-12 01:38:47"}
+{"level":"error","message":"Error creating space: Error\n    at Query.run (D:\\Web\\Final\\FinalProject_BE\\node_modules\\sequelize\\lib\\dialects\\postgres\\query.js:50:25)\n    at D:\\Web\\Final\\FinalProject_BE\\node_modules\\sequelize\\lib\\sequelize.js:315:28\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async PostgresQueryInterface.insert (D:\\Web\\Final\\FinalProject_BE\\node_modules\\sequelize\\lib\\dialects\\abstract\\query-interface.js:308:21)\n    at async model.save (D:\\Web\\Final\\FinalProject_BE\\node_modules\\sequelize\\lib\\model.js:2490:35)\n    at async Space.create (D:\\Web\\Final\\FinalProject_BE\\node_modules\\sequelize\\lib\\model.js:1362:12)\n    at async SpaceService.createSpace (file:///D:/Web/Final/FinalProject_BE/services/SpaceService.js:9:27)\n    at async createSpace (file:///D:/Web/Final/FinalProject_BE/controller/SpaceController.js:6:23)","timestamp":"2025-02-12 01:39:12"}
+{"level":"error","message":"column \"workspaceId\" does not exist","timestamp":"2025-02-12 01:39:12"}
+{"level":"error","message":"Error creating space: Error\n    at Query.run (D:\\Web\\Final\\FinalProject_BE\\node_modules\\sequelize\\lib\\dialects\\postgres\\query.js:50:25)\n    at D:\\Web\\Final\\FinalProject_BE\\node_modules\\sequelize\\lib\\sequelize.js:315:28\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async PostgresQueryInterface.insert (D:\\Web\\Final\\FinalProject_BE\\node_modules\\sequelize\\lib\\dialects\\abstract\\query-interface.js:308:21)\n    at async model.save (D:\\Web\\Final\\FinalProject_BE\\node_modules\\sequelize\\lib\\model.js:2490:35)\n    at async Space.create (D:\\Web\\Final\\FinalProject_BE\\node_modules\\sequelize\\lib\\model.js:1362:12)\n    at async SpaceService.createSpace (file:///D:/Web/Final/FinalProject_BE/services/SpaceService.js:9:27)\n    at async createSpace (file:///D:/Web/Final/FinalProject_BE/controller/SpaceController.js:6:23)","timestamp":"2025-02-12 01:50:42"}
+{"level":"error","message":"column \"workspaceId\" of relation \"Space\" does not exist","timestamp":"2025-02-12 01:50:42"}
+{"level":"error","message":"Error fetching spaces: column \"workspaceId\" does not exist","timestamp":"2025-02-12 02:00:43"}
+{"level":"error","message":"Failed to fetch spaces.","timestamp":"2025-02-12 02:00:43"}
+{"level":"info","message":"Fetched all spaces successfully","timestamp":"2025-02-12 10:37:24"}
+{"level":"error","message":"Error creating space: Error\n    at Query.run (D:\\Web\\Final\\FinalProject_BE\\node_modules\\sequelize\\lib\\dialects\\postgres\\query.js:50:25)\n    at D:\\Web\\Final\\FinalProject_BE\\node_modules\\sequelize\\lib\\sequelize.js:315:28\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async PostgresQueryInterface.insert (D:\\Web\\Final\\FinalProject_BE\\node_modules\\sequelize\\lib\\dialects\\abstract\\query-interface.js:308:21)\n    at async model.save (D:\\Web\\Final\\FinalProject_BE\\node_modules\\sequelize\\lib\\model.js:2490:35)\n    at async Space.create (D:\\Web\\Final\\FinalProject_BE\\node_modules\\sequelize\\lib\\model.js:1362:12)\n    at async SpaceService.createSpace (file:///D:/Web/Final/FinalProject_BE/services/SpaceService.js:9:27)\n    at async createSpace (file:///D:/Web/Final/FinalProject_BE/controller/SpaceController.js:6:23)","timestamp":"2025-02-12 11:07:26"}
+{"level":"error","message":"Validation error","timestamp":"2025-02-12 11:07:26"}
+{"level":"error","message":"Error creating space: Error\n    at Query.run (D:\\Web\\Final\\FinalProject_BE\\node_modules\\sequelize\\lib\\dialects\\postgres\\query.js:50:25)\n    at D:\\Web\\Final\\FinalProject_BE\\node_modules\\sequelize\\lib\\sequelize.js:315:28\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async PostgresQueryInterface.insert (D:\\Web\\Final\\FinalProject_BE\\node_modules\\sequelize\\lib\\dialects\\abstract\\query-interface.js:308:21)\n    at async model.save (D:\\Web\\Final\\FinalProject_BE\\node_modules\\sequelize\\lib\\model.js:2490:35)\n    at async Space.create (D:\\Web\\Final\\FinalProject_BE\\node_modules\\sequelize\\lib\\model.js:1362:12)\n    at async SpaceService.createSpace (file:///D:/Web/Final/FinalProject_BE/services/SpaceService.js:9:27)\n    at async createSpace (file:///D:/Web/Final/FinalProject_BE/controller/SpaceController.js:6:23)","timestamp":"2025-02-12 11:12:30"}
+{"level":"error","message":"Validation error","timestamp":"2025-02-12 11:12:30"}
+{"level":"error","message":"Validation error","timestamp":"2025-02-12 11:13:31"}
+{"level":"info","message":"Space created successfully with ID: 5","timestamp":"2025-02-12 11:31:36"}
+{"level":"info","message":"Fetched all spaces successfully","timestamp":"2025-02-12 11:32:20"}
+{"level":"info","message":"Fetched all workspaces successfully","timestamp":"2025-02-12 13:43:58"}
+{"level":"info","message":"Fetched all folders successfully","timestamp":"2025-02-12 17:07:28"}
+{"level":"error","message":"Error creating workspace: Validation error","timestamp":"2025-02-12 17:50:56"}
+{"level":"info","message":"Workspace created successfully with ID: 100","timestamp":"2025-02-12 17:58:50"}
+{"level":"info","message":"Space created successfully with ID: 6","timestamp":"2025-02-12 17:58:50"}
+{"level":"error","message":"Error creating folder: notNull Violation: Folder.createdBy cannot be null","timestamp":"2025-02-12 17:58:50"}
+{"level":"info","message":"Workspace created successfully with ID: 101","timestamp":"2025-02-12 18:04:46"}
+{"level":"info","message":"Space created successfully with ID: 7","timestamp":"2025-02-12 18:04:46"}
+{"level":"error","message":"Error creating folder: Validation error","timestamp":"2025-02-12 18:04:46"}
+{"level":"info","message":"Workspace created successfully with ID: 102","timestamp":"2025-02-12 18:21:27"}
+{"level":"info","message":"Space created successfully with ID: 8","timestamp":"2025-02-12 18:21:27"}
+{"level":"info","message":"Folder created successfully with ID: 10","timestamp":"2025-02-12 18:21:27"}
+{"level":"error","message":"Error creating list: column \"folderId\" does not exist","timestamp":"2025-02-12 18:21:27"}
+{"level":"error","message":"Error creating workspace: Validation error","timestamp":"2025-02-12 19:13:04"}
+{"level":"error","message":"Validation error","timestamp":"2025-02-12 19:13:04"}
+{"level":"error","message":"Error creating workspace: Validation error","timestamp":"2025-02-12 19:16:14"}
+{"level":"error","message":"Validation error","timestamp":"2025-02-12 19:16:14"}
+{"level":"error","message":"Validation error","timestamp":"2025-02-12 19:17:56"}
+{"level":"info","message":"Workspace created successfully with ID: 4","timestamp":"2025-02-12 19:20:08"}
+{"level":"info","message":"Workspace created successfully with ID: 5","timestamp":"2025-02-12 19:20:52"}
+{"level":"info","message":"Space created successfully with ID: 4","timestamp":"2025-02-12 19:20:52"}
+{"level":"info","message":"Folder created successfully with ID: 4","timestamp":"2025-02-12 19:20:52"}
+{"level":"error","message":"Error creating list: notNull Violation: List.folderId cannot be null","timestamp":"2025-02-12 19:20:52"}
+{"level":"info","message":"Workspace created successfully with ID: 6","timestamp":"2025-02-12 19:21:52"}
+{"level":"info","message":"Space created successfully with ID: 5","timestamp":"2025-02-12 19:21:52"}
+{"level":"info","message":"Folder created successfully with ID: 5","timestamp":"2025-02-12 19:21:52"}
+{"level":"info","message":"List created successfully with ID: 4","timestamp":"2025-02-12 19:21:52"}
+{"level":"error","message":"Error fetching workspace: Space is not defined","timestamp":"2025-02-12 20:22:30"}
+{"level":"error","message":"Failed to fetch workspace","timestamp":"2025-02-12 20:22:30"}
+{"level":"error","message":"Error fetching workspace: Space is not defined","timestamp":"2025-02-12 20:24:11"}
+{"level":"error","message":"Failed to fetch workspace","timestamp":"2025-02-12 20:24:11"}
+{"level":"error","message":"Error fetching workspace: Space is associated to Workspace using an alias. You've included an alias (spaces), but it does not match the alias(es) defined in your association (Spaces).","timestamp":"2025-02-12 20:25:11"}
+{"level":"error","message":"Failed to fetch workspace","timestamp":"2025-02-12 20:25:11"}
+{"level":"info","message":"Fetched workspace with ID: 6","timestamp":"2025-02-12 20:28:01"}
+{"level":"info","message":"Fetched workspace with ID: 6","timestamp":"2025-02-12 20:43:40"}
+{"level":"info","message":"Fetched workspace with ID: 6","timestamp":"2025-02-12 21:16:40"}
+{"level":"info","message":"Fetched workspace with ID: 6","timestamp":"2025-02-12 21:16:40"}
+{"level":"info","message":"Fetched workspace with ID: 2","timestamp":"2025-02-12 21:17:18"}
+{"level":"info","message":"Fetched workspace with ID: 2","timestamp":"2025-02-13 07:39:14"}
+{"level":"info","message":"Fetched workspace with ID: 2","timestamp":"2025-02-13 07:39:14"}
+{"level":"info","message":"Fetched workspace with ID: 2","timestamp":"2025-02-13 08:26:45"}
+{"level":"info","message":"Space created successfully with ID: 6","timestamp":"2025-02-13 08:39:14"}
+{"level":"info","message":"Folder created successfully with ID: 6","timestamp":"2025-02-13 08:39:14"}
+{"level":"info","message":"List created successfully with ID: 5","timestamp":"2025-02-13 08:39:14"}
+{"level":"info","message":"Fetched workspace with ID: 2","timestamp":"2025-02-13 08:40:14"}
+{"level":"info","message":"Fetched workspace with ID: 2","timestamp":"2025-02-13 08:40:14"}
+{"level":"info","message":"Fetched workspace with ID: 2","timestamp":"2025-02-13 08:40:59"}
+{"level":"info","message":"Fetched workspace with ID: 2","timestamp":"2025-02-13 08:47:08"}
+{"level":"info","message":"Fetched workspace with ID: 2","timestamp":"2025-02-13 08:48:41"}
+{"level":"info","message":"Fetched workspace with ID: 2","timestamp":"2025-02-13 09:28:05"}
+{"level":"info","message":"Fetched workspace with ID: 2","timestamp":"2025-02-13 09:28:05"}
+{"level":"info","message":"Fetched workspace with ID: 2","timestamp":"2025-02-13 09:29:09"}
+{"level":"info","message":"Fetched workspace with ID: 2","timestamp":"2025-02-13 09:29:09"}
+{"level":"error","message":"notNull Violation: Space.workspaceId cannot be null","timestamp":"2025-02-13 09:29:27"}
+{"level":"error","message":"notNull Violation: Space.workspaceId cannot be null","timestamp":"2025-02-13 09:31:58"}
+{"level":"info","message":"Fetched workspace with ID: 2","timestamp":"2025-02-13 09:35:20"}
+{"level":"info","message":"Fetched workspace with ID: 2","timestamp":"2025-02-13 09:35:20"}
+{"level":"info","message":"Space created successfully with ID: 7","timestamp":"2025-02-13 09:35:37"}
+{"level":"info","message":"Folder created successfully with ID: 7","timestamp":"2025-02-13 09:35:37"}
+{"level":"info","message":"List created successfully with ID: 6","timestamp":"2025-02-13 09:35:37"}
+{"level":"info","message":"Fetched workspace with ID: 2","timestamp":"2025-02-13 09:35:42"}
+{"level":"info","message":"Fetched workspace with ID: 2","timestamp":"2025-02-13 09:35:42"}
+{"level":"info","message":"Fetched workspace with ID: 2","timestamp":"2025-02-13 09:38:48"}
+{"level":"info","message":"Fetched workspace with ID: 2","timestamp":"2025-02-13 09:38:48"}
+{"level":"info","message":"Space created successfully with ID: 8","timestamp":"2025-02-13 09:39:51"}
+{"level":"info","message":"Folder created successfully with ID: 8","timestamp":"2025-02-13 09:39:51"}
+{"level":"info","message":"List created successfully with ID: 7","timestamp":"2025-02-13 09:39:51"}
+{"level":"info","message":"Fetched workspace with ID: 2","timestamp":"2025-02-13 09:39:51"}
+{"level":"info","message":"Fetched workspace with ID: 2","timestamp":"2025-02-13 09:41:03"}
+{"level":"info","message":"Fetched workspace with ID: 2","timestamp":"2025-02-13 09:46:57"}
+{"level":"info","message":"Fetched workspace with ID: 2","timestamp":"2025-02-13 09:47:24"}
+{"level":"info","message":"Fetched workspace with ID: 2","timestamp":"2025-02-13 09:47:24"}
+{"level":"info","message":"Space created successfully with ID: 9","timestamp":"2025-02-13 09:47:41"}
+{"level":"info","message":"Folder created successfully with ID: 9","timestamp":"2025-02-13 09:47:41"}
+{"level":"info","message":"List created successfully with ID: 8","timestamp":"2025-02-13 09:47:41"}
+{"level":"info","message":"Fetched workspace with ID: 2","timestamp":"2025-02-13 09:47:41"}
+{"level":"info","message":"Fetched workspace with ID: 2","timestamp":"2025-02-13 09:47:44"}
+{"level":"info","message":"Fetched workspace with ID: 2","timestamp":"2025-02-13 09:47:44"}
