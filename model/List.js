@@ -9,6 +9,10 @@ const List = sequelize.define("List", {
     allowNull: false,
     autoIncrement: true
   },
+  folderId:{
+    type: DataTypes.INTEGER,
+    allowNull: false
+  },
   name: {
     type: DataTypes.STRING,
     allowNull: false

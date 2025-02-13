@@ -5,6 +5,12 @@ import morgan from 'morgan';
 import { connectDB } from './database/connect.js';
 import { corsOptions } from './config/cors.js';
 import UserTestRouter from './router/user.routes.js';
+import SpaceRouter from './router/space.routes.js';
+import WorkspaceRouter from './router/workspace.routes.js';
+import FolderRouter from './router/folder.routes.js';
+import ListRouter from './router/list.routes.js';
+import TaskColumnRouter from './router/taskColumn.routes.js';
+import TaskRouter from './router/task.routes.js';
 import authRouter from './router/auth.routes.js';
 import syncDatabase from './model/Association.js';
 import seedDatabase from './database/seeddataBase.js';
@@ -32,15 +38,25 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
-
-// connect database & sync database
-connectDB()
-// syncDatabase()
-// seedDatabase()
-
+connectDB().then(async () => {
+    // await syncDatabase();
+    // await seedDatabase();
+    app.listen(PORT, () => {
+        console.log(`Server is running on http://localhost:${PORT}`);
+    });
+}).catch((error) => {
+    console.error("Error starting server:", error.message);
+});
 
 app.use('/api/user', UserTestRouter);
 app.use('/auth', authRouter);
-app.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
-});
+app.use('/space', SpaceRouter);
+app.use('/workspace', WorkspaceRouter);
+app.use('/folder', FolderRouter);
+app.use('/list', ListRouter);
+app.use('/task-column', TaskColumnRouter);
+app.use('/task', TaskRouter);
+
+// app.listen(PORT, () => {
+//     console.log(`Server is running on http://localhost:${PORT}`);
+// });
