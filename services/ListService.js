@@ -3,7 +3,7 @@ import logger from "../utils/logger.js";
 
 class ListService {
     static async createList(data) {
-        const { name, description, colorTag, folderId, createBy } = data;
+        const { name, description, colorTag, folderId, createdBy } = data;
         
         try {
             // Validate color tag if provided
@@ -16,7 +16,7 @@ class ListService {
                 description,
                 colorTag,
                 folderId,
-                createBy,
+                createdBy,
                 createdAt: new Date()
             });
             
@@ -107,7 +107,7 @@ class ListService {
     static async getListsByUser(userId) {
         try {
             const lists = await List.findAll({
-                where: { createBy: userId },
+                where: { createdBy: userId },
                 order: [['createdAt', 'DESC']]
             });
             

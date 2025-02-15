@@ -1,5 +1,5 @@
 // services/WorkspaceService.js
-import Workspace from "../model/Workspace.js";
+import Workspace from "../model/WorkSpace.js";
 import Space from "../model/Space.js";
 import Folder from "../model/Folder.js";
 import List from "../model/List.js";
@@ -7,7 +7,7 @@ import logger from "../utils/logger.js";
 
 class WorkspaceService {
     static async createWorkspace(data) {
-        const { name, description, type, createBy, favorite = false } = data;
+        const { name, description, type, createdBy, favorite = false } = data;
         
         try {
             // Validate workspace type
@@ -19,7 +19,7 @@ class WorkspaceService {
                 name,
                 description,
                 type,
-                createBy,
+                createdBy,
                 favorite,
                 createdAt: new Date()
             });
@@ -132,7 +132,7 @@ class WorkspaceService {
     static async getWorkspacesByUser(userId) {
         try {
             const workspaces = await Workspace.findAll({
-                where: { createBy: userId },
+                where: { createdBy: userId },
                 order: [['createdAt', 'DESC']]
             });
             

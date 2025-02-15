@@ -5,7 +5,7 @@ export const createList = async (req, res) => {
     try {
         const list = await ListService.createList({
             ...req.body,
-            createBy: req.user?.userId || req.body.createBy // Fallback for now
+            createdBy: req.user?.userId || req.body.createdBy // Fallback for now
         });
         return res.status(201).json({ 
             message: "List created successfully", 

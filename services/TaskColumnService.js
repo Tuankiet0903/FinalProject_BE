@@ -4,7 +4,7 @@ import logger from "../utils/logger.js";
 
 class TaskColumnService {
     static async createTaskColumn(data) {
-        const { name, color, listId, createBy } = data;
+        const { name, color, listId, createdBy } = data;
         
         try {
             // Verify list exists
@@ -29,7 +29,7 @@ class TaskColumnService {
                 name,
                 color,
                 listId,
-                createBy,
+                createdBy,
                 orderIndex
             });
             

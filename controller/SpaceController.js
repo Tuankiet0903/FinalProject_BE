@@ -5,19 +5,19 @@ import logger from "../utils/logger.js";
 
 export const createSpace = async (req, res) => {
 
-    const { createBy } = req.body;
+    const { createdBy } = req.body;
 
     try {
         const space = await SpaceService.createSpace({
             ...req.body,
-            // createBy: req.user.userId 
+            // createdBy: req.user.userId 
         });
 
         const folder = await FolderService.createFolder({
             name: 'Folder',
             description: 'This is a default folder',
             spaceId: space.spaceId,
-            createdBy: createBy
+            createdBy: createdBy
         });
 
         const list = await ListService.createList({
@@ -25,7 +25,7 @@ export const createSpace = async (req, res) => {
             description: 'This is a default list',
             tag: 'blue',
             folderId: folder.folderId,
-            createBy
+            createdBy
         });
 
         return res.status(201).json({ 
