@@ -15,7 +15,7 @@ const User = sequelize.define(
     },
     password: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
     },
     email: {
       type: DataTypes.STRING,
@@ -28,12 +28,12 @@ const User = sequelize.define(
     githubId: {
       type: DataTypes.STRING,
       allowNull: true,
-      unique : true
+      unique: true
     },
     googleId: {
       type: DataTypes.STRING,
       allowNull: true,
-      unique : true
+      unique: true
     },
     avatar: {
       type: DataTypes.STRING,
