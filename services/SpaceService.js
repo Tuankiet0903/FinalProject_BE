@@ -3,13 +3,13 @@ import logger from "../utils/logger.js";
 
 class SpaceService {
     static async createSpace(data) {
-        const { name, description, workspaceId, createBy, favorite = false } = data;
+        const { name, description, workspaceId, createdBy, favorite = false } = data;
         
         try {
             const space = await Space.create({
                 name,
                 description,
-                createBy,
+                createdBy,
                 workspaceId,
                 favorite,
                 createdAt: new Date()
@@ -97,7 +97,7 @@ class SpaceService {
     static async getSpacesByUser(userId) {
         try {
             const spaces = await Space.findAll({
-                where: { createBy: userId },
+                where: { createdBy: userId },
                 order: [['createdAt', 'DESC']]
             });
             
