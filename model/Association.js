@@ -1,5 +1,5 @@
 import User from "./User.js";
-import Workspace from "./Workspace.js";
+import Workspace from "./WorkSpace.js";
 import Task from "./Task.js";
 import Comment from "./Comment.js";
 import ManageMemberSpace from "./ManageMemberSpace.js";
@@ -25,16 +25,16 @@ User.hasMany(ManageMemberWorkSpace, { foreignKey: "userId", onDelete: "CASCADE" 
 ManageMemberWorkSpace.belongsTo(User, { foreignKey: "userId", onDelete: "CASCADE" });
 
 // Workspace ↔ Space
-Workspace.hasMany(Space, { foreignKey: "workspaceId", onDelete: "CASCADE" });
-Space.belongsTo(Workspace, { foreignKey: "workspaceId", onDelete: "CASCADE" });
+Workspace.hasMany(Space, { foreignKey: "workspaceId", onDelete: "CASCADE", as: "spaces" });
+Space.belongsTo(Workspace, { foreignKey: "workspaceId", onDelete: "CASCADE", as: "workspace" });
 
 // Space ↔ Folder
-Space.hasMany(Folder, { foreignKey: "spaceId", onDelete: "CASCADE" });
-Folder.belongsTo(Space, { foreignKey: "spaceId", onDelete: "CASCADE" });
+Space.hasMany(Folder, { foreignKey: "spaceId", onDelete: "CASCADE", as: "folders" });
+Folder.belongsTo(Space, { foreignKey: "spaceId", onDelete: "CASCADE", as: "space" });
 
 // Folder ↔ List
-Folder.hasMany(List, { foreignKey: "folderId", onDelete: "CASCADE" });
-List.belongsTo(Folder, { foreignKey: "folderId", onDelete: "CASCADE" });
+Folder.hasMany(List, { foreignKey: "folderId", onDelete: "CASCADE", as: "lists" });
+List.belongsTo(Folder, { foreignKey: "folderId", onDelete: "CASCADE", as: "folder" });
 
 // User ↔ Folder
 User.hasMany(Folder, { foreignKey: "createdBy", onDelete: "SET NULL" });

@@ -5,7 +5,7 @@ export const createTaskColumn = async (req, res) => {
     try {
         const taskColumn = await TaskColumnService.createTaskColumn({
             ...req.body,
-            createBy: req.user?.userId || req.body.createBy // Fallback for now
+            createdBy: req.user?.userId || req.body.createdBy // Fallback for now
         });
         return res.status(201).json({ 
             message: "Task column created successfully", 

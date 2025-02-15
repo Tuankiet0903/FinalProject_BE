@@ -41,8 +41,6 @@ app.use(passport.session());
 connectDB().then(async () => {
     //Chay syncDatabase khi co thay doi db
     // await syncDatabase();
-    
-    // chi chay lan dau khi khong co data
     // await clearAndSeedDatabase();
     app.listen(PORT, () => {
         console.log(`Server is running on http://localhost:${PORT}`);

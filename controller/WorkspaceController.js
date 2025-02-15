@@ -109,7 +109,7 @@ export const getWorkspacesByType = async (req, res) => {
 };
 
 export const createWorkspaceWithDefaults = async (req, res) => {
-    const { createBy } = req.body;
+    const { createdBy } = req.body;
 
     try {
         // Tạo Workspace mới
@@ -119,7 +119,7 @@ export const createWorkspaceWithDefaults = async (req, res) => {
         const space = await SpaceService.createSpace({
             name: 'Default Space',
             description: 'This is a default space',
-            createBy,
+            createdBy,
             workspaceId: workspace.workspaceId
         });
 
@@ -128,7 +128,7 @@ export const createWorkspaceWithDefaults = async (req, res) => {
             name: 'Default Folder',
             description: 'This is a default folder',
             spaceId: space.spaceId,
-            createdBy: createBy,
+            createdBy: createdBy,
         });
 
         // Tạo List mới liên quan đến Folder
@@ -137,7 +137,7 @@ export const createWorkspaceWithDefaults = async (req, res) => {
             description: 'This is a default list',
             tag: 'blue',
             folderId: folder.folderId,
-            createBy
+            createdBy
         });
 
         res.status(201).json({
