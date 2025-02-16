@@ -24,7 +24,7 @@ const TaskColumn = sequelize.define("TaskColumn", {
     type: DataTypes.INTEGER,
     allowNull: false
   },
-  createBy: {
+  createdBy: {
     type: DataTypes.INTEGER,
     allowNull: false
   }

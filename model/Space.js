@@ -20,7 +20,11 @@ const Space = sequelize.define("Space", {
     type: DataTypes.BOOLEAN,
     defaultValue: false
   },
-  createBy: {
+  createdBy: {
+    type: DataTypes.INTEGER,
+    allowNull: false
+  },
+  workspaceId: {  // 🔹 Thêm trường này vào
     type: DataTypes.INTEGER,
     allowNull: false
   },

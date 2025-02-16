@@ -24,7 +24,7 @@ const Workspace = sequelize.define("Workspace", {
     type: DataTypes.BOOLEAN,
     defaultValue: false
   },
-  createBy: {
+  createdBy: {
     type: DataTypes.INTEGER,
     allowNull: false
   },

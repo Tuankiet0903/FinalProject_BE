@@ -33,14 +33,18 @@ const sequelize = new Sequelize(
 // Kết nối tới cơ sở dữ liệu
 const connectDB = async () => {
   try {
+    // Authenticate the connection to the database
     await sequelize.authenticate();
     console.log("Connected to the PostgreSQL database successfully.");
+
+    // Sync the database schema
+    await sequelize.sync({ alter: true }); // Use `alter: true` to update schema without dropping tables
+    console.log('Database synced successfully.');
   } catch (error) {
-    console.error("Error connecting to the database:", error.message);
-    process.exit(1); // Dừng ứng dụng nếu không thể kết nối
+    console.error("Error connecting to or syncing the database:", error.message);
+    process.exit(1); // Stop the application if there's an error
   }
 };
-
 // Xuất `sequelize` để sử dụng trong model
 export { sequelize, connectDB };
   
