@@ -12,15 +12,6 @@ import {
 
 const router = express.Router();
 
-// Commented out authenticated routes for future use
-// router.post("/folders", Auth, createFolder);
-// router.get("/folders", Auth, getAllFolders);
-// router.get("/folders/:id", Auth, getFolderById);
-// router.put("/folders/:id", Auth, updateFolder);
-// router.delete("/folders/:id", Auth, deleteFolder);
-// router.get("/folders/space/:spaceId", Auth, getFoldersBySpace);
-// router.get("/folders/user/:userId", Auth, getFoldersByUser);
-
 // Current routes without authentication
 router.post("/folders", createFolder); // Create a new folder
 router.get("/folders", getAllFolders); // Get all folders
