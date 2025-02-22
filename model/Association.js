@@ -11,6 +11,8 @@ import Folder from "./Folder.js";
 import Space from "./Space.js";
 import ManageMemberWorkSpace from "./ManageMenberWorkSpace.js";
 import Subscription from "./Subcriptions.js";
+import PremiumPlans from "./PremiunPlans.js";
+import Otp from "./OTP.js";
 
 // User ↔ Workspace
 User.hasMany(Workspace, { foreignKey: "createdBy", onDelete: "CASCADE" });
@@ -95,6 +97,12 @@ ManageMemberSpace.belongsTo(Space, { foreignKey: "spaceId", onDelete: "CASCADE" 
 User.hasMany(ManageMemberSpace, { foreignKey: "userId", onDelete: "CASCADE" });
 ManageMemberSpace.belongsTo(User, { foreignKey: "userId", onDelete: "CASCADE" });
 
+PremiumPlans.hasOne(Subscription, { foreignKey: "planId", onDelete: "CASCADE" });
+Subscription.belongsTo(PremiumPlans, { foreignKey: "planId", onDelete: "CASCADE" });
+
+User.hasOne(Otp, { foreignKey: "userId", onDelete: "CASCADE" });
+Otp.belongsTo(User, { foreignKey: "userId", onDelete: "CASCADE" });
+
 // Synchronize Database
 const syncDatabase = async () => {
   try {
@@ -112,6 +120,7 @@ const syncDatabase = async () => {
       Notifications.sync(),
       Attachment.sync(),
       Subscription.sync(),
+      Otp.sync(),
     ]);
     console.log("Database synchronized successfully.");
   } catch (error) {
