@@ -1,15 +1,29 @@
 import FolderService from "../services/FolderService.js";
+import ListService from "../services/ListService.js";
 import logger from "../utils/logger.js";
 
 export const createFolder = async (req, res) => {
+
+    const { createdBy } = req.body;
+
     try {
         const folder = await FolderService.createFolder({
             ...req.body,
-            createdBy: req.user?.userId || req.body.createdBy // Fallback for now
+            createdBy
         });
+
+        const list = await ListService.createList({
+            name: 'List',
+            description: 'This is a default list',
+            tag: 'blue',
+            folderId: folder.folderId,
+            createdBy
+        });
+
         return res.status(201).json({ 
             message: "Folder created successfully", 
-            folder 
+            folder,
+            list
         });
     } catch (error) {
         logger.error(error.message);
