@@ -18,10 +18,11 @@ export const getAllUsers = async (req, res) => {
     const users = await UserService.getAllUsers();
     return res.status(200).json(users);
   } catch (error) {
-    logger.error("Failed to fetch users.");
+    console.error("Failed to fetch users:", error);
     return res.status(500).json({ error: "Internal Server Error" });
   }
 };
+
 
 export const getUserById = async (req, res) => {
   try {
@@ -75,4 +76,49 @@ export const ggLogin = async (req, res) => {
     res.status(500).json({ error: error.message || "Đăng nhập thất bại." });
   }
 };
+
+export const getProfile = async (req, res) => {
+  try {
+    const userId = req.user.userId; // 🔥 Lấy userId từ token
+
+    if (!userId) {
+      console.error("❌ [getProfile] userId không hợp lệ:", userId);
+      return res.status(400).json({ error: "userId không hợp lệ!" });
+    }
+
+    console.log(`🔍 [getProfile] Đang tìm user với userId: ${userId}`);
+
+    const user = await UserService.getUserById(userId);
+
+    if (!user) {
+      console.error(`❌ [getProfile] Không tìm thấy user với ID: ${userId}`);
+      return res.status(404).json({ error: "User không tồn tại!" });
+    }
+
+    console.log("✅ [getProfile] Trả về thông tin user:", user);
+
+    return res.status(200).json({
+      userId: user.userId,
+      fullName: user.fullName,
+      email: user.email,
+      avatar: user.avatar || "/placeholder.svg",
+      githubId: user.githubId,
+      googleId: user.googleId,
+      dateOfBirth: user.dateOfBirth,
+      isBlocked: user.isBlocked,
+      active: user.active,
+      createdAt: user.createdAt,
+      updatedAt: user.updatedAt
+    });
+  } catch (error) {
+    console.error("🔥 [getProfile] Lỗi khi lấy thông tin user:", error);
+    return res.status(500).json({ error: "Lỗi máy chủ, vui lòng thử lại!" });
+  }
+};
+
+
+
+
+
+
 

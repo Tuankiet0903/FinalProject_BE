@@ -22,20 +22,64 @@ class UserService {
    }
 
    static async getAllUsers() {
-      const users = await User.findAll({ attributes: ["userId", "fullName", "email", "status"] });
-      logger.info("Fetched all users successfully.");
+      const users = await User.findAll({
+         attributes: [
+            "userId",
+            "fullName",
+            "email",
+            "avatar",
+            "googleId",
+            "githubId",
+            "dateOfBirth",
+            "isBlocked",
+            "active",
+            "createdAt",
+         ],
+         order: [["createdAt", "DESC"]] // Sắp xếp theo ngày tạo mới nhất
+      });
+
       return users;
    }
 
    static async getUserById(id) {
-      const user = await User.findByPk(id, { attributes: ["userId", "fullName", "email", "status"] });
-      if (!user) {
-         logger.warn(`User not found with ID: ${id}`);
-         return null;
+      try {
+         console.log(`🔍 [Truy vấn] Tìm User với ID: ${id}`);
+
+         if (!id || isNaN(id)) {
+            console.error("❌ [LỖI] userId không hợp lệ:", id);
+            return null;
+         }
+
+         const user = await User.findByPk(id, {
+            attributes: [
+               "userId",
+               "fullName",
+               "email",
+               "avatar",
+               "githubId",
+               "googleId",
+               "dateOfBirth",
+               "isBlocked",
+               "active",
+               "createdAt",
+               "updatedAt"
+            ],
+         });
+
+         if (!user) {
+            console.error("❌ [LỖI] Không tìm thấy user với ID:", id);
+            return null;
+         }
+
+         console.log("✅ [THÀNH CÔNG] User tìm thấy:", user);
+         return user;
+      } catch (error) {
+         console.error("🔥 [LỖI] Lỗi truy vấn DB:", error);
+         throw new Error("Lỗi truy vấn database");
       }
-      logger.info(`Fetched user with ID: ${id}`);
-      return user;
    }
+
+
 
    static async updateUser(id, data) {
       const user = await User.findByPk(id);

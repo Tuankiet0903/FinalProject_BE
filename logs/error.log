@@ -36,3 +36,17 @@
 {"level":"error","message":"Failed to fetch workspace","timestamp":"2025-02-12 20:25:11"}
 {"level":"error","message":"notNull Violation: Space.workspaceId cannot be null","timestamp":"2025-02-13 09:29:27"}
 {"level":"error","message":"notNull Violation: Space.workspaceId cannot be null","timestamp":"2025-02-13 09:31:58"}
+{"level":"error","message":"Error creating folder: insert or update on table \"Folder\" violates foreign key constraint \"Folder_createdBy_fkey\"","timestamp":"2025-02-24 19:54:30"}
+{"level":"error","message":"invalid input syntax for type integer: \"profile\"","timestamp":"2025-02-24 21:42:35"}
+{"level":"error","message":"invalid input syntax for type integer: \"profile\"","timestamp":"2025-02-24 21:42:51"}
+{"level":"error","message":"invalid input syntax for type integer: \"profile\"","timestamp":"2025-02-24 21:43:20"}
+{"level":"error","message":"invalid input syntax for type integer: \"profile\"","timestamp":"2025-02-24 21:43:58"}
+{"level":"error","message":"Database error","timestamp":"2025-02-24 21:45:05"}
+{"level":"error","message":"Database error","timestamp":"2025-02-24 21:47:33"}
+{"level":"error","message":"Database error","timestamp":"2025-02-24 21:47:35"}
+{"level":"error","message":"Database error","timestamp":"2025-02-24 21:48:01"}
+{"level":"error","message":"Error creating folder: insert or update on table \"Folder\" violates foreign key constraint \"Folder_createdBy_fkey\"","timestamp":"2025-02-25 02:30:50"}
+{"level":"error","message":"insert or update on table \"Folder\" violates foreign key constraint \"Folder_createdBy_fkey\"","timestamp":"2025-02-25 02:30:50"}
+{"level":"error","message":"Error creating folder: insert or update on table \"Folder\" violates foreign key constraint \"Folder_createdBy_fkey\"","timestamp":"2025-02-25 02:30:52"}
+{"level":"error","message":"insert or update on table \"Folder\" violates foreign key constraint \"Folder_createdBy_fkey\"","timestamp":"2025-02-25 02:30:52"}
+{"level":"error","message":"Error creating folder: insert or update on table \"Folder\" violates foreign key constraint \"Folder_createdBy_fkey\"","timestamp":"2025-02-25 02:31:05"}

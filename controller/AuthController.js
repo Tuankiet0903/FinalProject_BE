@@ -1,4 +1,5 @@
-import AuthService from '../services/AuthService.js';
+import AuthService from "../services/AuthService.js";
+import jwt from "jsonwebtoken";
 
 const AuthController = {
    async register(req, res) {
@@ -22,19 +23,36 @@ const AuthController = {
 
    async googleCallback(req, res) {
       try {
-         const user = await AuthService.googleLogin(req.user);
-         res.status(200).json(user);
+         console.log("🔍 Google User từ Passport:", req.user);
+         if (!req.user) {
+            return res.status(401).json({ error: "Xác thực Google thất bại!" });
+         }
+
+         const token = jwt.sign(
+            {
+               userId: req.user.userId,
+               email: req.user.email,
+               fullName: req.user.fullName,
+               avatar: req.user.avatar,
+            },
+            process.env.JWT_SECRET,
+            { expiresIn: process.env.JWT_EXPIRES_IN || "24h" }
+         );
+
+         res.cookie("token", token, { httpOnly: true });
+         res.redirect(`http://localhost:5173/user?token=${token}&avatar=${req.user.avatar}&fullName=${req.user.fullName}`);
       } catch (error) {
-         res.status(500).json({ error: error.message });
+         console.error("❌ Lỗi Google Callback:", error);
+         res.status(500).json({ error: "Lỗi khi đăng nhập bằng Google!" });
       }
    },
 
-   async githubCallback(req, res) {
+   async logout(req, res) {
       try {
-         const user = await AuthService.googleLogin(req.user);
-         res.status(200).json(user);
+         res.clearCookie("token"); // Xóa token từ cookie
+         return res.status(200).json({ message: "Đăng xuất thành công!" });
       } catch (error) {
-         res.status(500).json({ error: error.message });
+         return res.status(500).json({ error: "Lỗi khi đăng xuất!" });
       }
    }
 };
