@@ -13,7 +13,7 @@ const ManageMemberSpace = sequelize.define("ManageMemberSpace", {
     allowNull: false,
   },
   roleSpace: {
-    type: DataTypes.ENUM("owner", "admin", "member"),
+    type: DataTypes.STRING,
     allowNull: false
   },
   spaceId: {

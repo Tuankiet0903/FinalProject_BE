@@ -11,6 +11,7 @@ import FolderRouter from './router/folder.routes.js';
 import ListRouter from './router/list.routes.js';
 import TaskColumnRouter from './router/taskColumn.routes.js';
 import TaskRouter from './router/task.routes.js';
+import OTPRouter from './router/OTP.routes.js';
 import authRouter from './router/auth.routes.js';
 import session from "express-session";
 import passport from "./config/passport.js";
@@ -40,10 +41,10 @@ app.use(passport.session());
 
 connectDB().then(async () => {
     //Chay syncDatabase khi co thay doi db
-    //await syncDatabase();
+    // await syncDatabase();
     
     // chi chay lan dau khi khong co data
-    //await clearAndSeedDatabase();
+    // await clearAndSeedDatabase();
 
     app.listen(PORT, () => {
         console.log(`Server is running on http://localhost:${PORT}`);
@@ -60,6 +61,7 @@ app.use('/folder', FolderRouter);
 app.use('/list', ListRouter);
 app.use('/task-column', TaskColumnRouter);
 app.use('/task', TaskRouter);
+app.use('/api/otp', OTPRouter);
 
 // app.listen(PORT, () => {
 //     console.log(`Server is running on http://localhost:${PORT}`);
