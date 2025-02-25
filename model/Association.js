@@ -13,6 +13,7 @@ import ManageMemberWorkSpace from "./ManageMenberWorkSpace.js";
 import Subscription from "./Subcriptions.js";
 import PremiumPlans from "./PremiunPlans.js";
 import Otp from "./OTP.js";
+import TaskHistory from "./TaskHistory.js";
 
 // User ↔ Workspace
 User.hasMany(Workspace, { foreignKey: "createdBy", onDelete: "CASCADE" });
@@ -81,6 +82,14 @@ Task.belongsTo(User, { foreignKey: "createdBy", onDelete: "SET NULL" });
 User.hasMany(Notifications, { foreignKey: "userId", onDelete: "CASCADE" });
 Notifications.belongsTo(User, { foreignKey: "userId", onDelete: "CASCADE" });
 
+// Workspace ↔ Notifications
+Workspace.hasMany(Notifications, { foreignKey: "workspaceId", onDelete: "CASCADE" });
+Notifications.belongsTo(Workspace, { foreignKey: "workspaceId", onDelete: "CASCADE" });
+
+// Task ↔ Notifications
+Task.hasMany(Notifications, { foreignKey: "taskId", onDelete: "CASCADE" });
+Notifications.belongsTo(Task, { foreignKey: "taskId", onDelete: "CASCADE" });
+
 // Workspace ↔ Subscription
 Workspace.hasMany(Subscription, { foreignKey: "workspaceId", onDelete: "CASCADE" });
 Subscription.belongsTo(Workspace, { foreignKey: "workspaceId", onDelete: "CASCADE" });
@@ -97,11 +106,22 @@ ManageMemberSpace.belongsTo(Space, { foreignKey: "spaceId", onDelete: "CASCADE" 
 User.hasMany(ManageMemberSpace, { foreignKey: "userId", onDelete: "CASCADE" });
 ManageMemberSpace.belongsTo(User, { foreignKey: "userId", onDelete: "CASCADE" });
 
+// PremiumPlans ↔ Subscription
 PremiumPlans.hasOne(Subscription, { foreignKey: "planId", onDelete: "CASCADE" });
 Subscription.belongsTo(PremiumPlans, { foreignKey: "planId", onDelete: "CASCADE" });
 
+// User ↔ Otp
 User.hasOne(Otp, { foreignKey: "userId", onDelete: "CASCADE" });
 Otp.belongsTo(User, { foreignKey: "userId", onDelete: "CASCADE" });
+
+// Task ↔ TaskHistory
+Task.hasMany(TaskHistory, { foreignKey: "taskId", onDelete: "CASCADE" });
+TaskHistory.belongsTo(Task, { foreignKey: "taskId", onDelete: "CASCADE" });
+
+// User ↔ TaskHistory
+User.hasMany(TaskHistory, { foreignKey: "updatedBy", onDelete: "CASCADE" });
+TaskHistory.belongsTo(User, { foreignKey: "updatedBy", onDelete: "CASCADE" });
+
 
 // Synchronize Database
 const syncDatabase = async () => {
@@ -121,6 +141,8 @@ const syncDatabase = async () => {
       Attachment.sync(),
       Subscription.sync(),
       Otp.sync(),
+      PremiumPlans.sync(),
+      TaskHistory.sync()
     ]);
     console.log("Database synchronized successfully.");
   } catch (error) {

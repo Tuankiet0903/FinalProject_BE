@@ -235,16 +235,10 @@ const seedDatabase = async () => {
     // Create Notifications
     await Notifications.bulkCreate([
       {
-        taskId: 1,
-        title: "Task Updated",
         content: "Task 1 updated successfully",
-        commentId: 1,
       },
       {
-        taskId: 4,
-        title: "Task Reviewed",
         content: "Task 4 moved to review",
-        commentId: 2,
       },
     ]);
 
