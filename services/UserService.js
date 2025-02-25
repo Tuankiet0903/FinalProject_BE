@@ -28,7 +28,7 @@ class UserService {
    }
 
    static async getUserById(id) {
-      const user = await User.findByPk(id, { attributes: ["userId", "fullName", "email", "status"] });
+      const user = await User.findByPk(id, { attributes: ["userId", "fullName", "email", "active", "avatar"] });
       if (!user) {
          logger.warn(`User not found with ID: ${id}`);
          return null;
@@ -49,6 +49,7 @@ class UserService {
       if (data.email) updatedData.email = data.email;
       if (data.password) updatedData.password = await hashPassword(data.password);
       if (data.status) updatedData.status = data.status;
+      if (data.avatar) updatedData.avatar = data.avatar
 
       await user.update(updatedData);
       logger.info(`User updated successfully with ID: ${id}`);

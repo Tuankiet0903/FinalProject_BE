@@ -36,3 +36,9 @@
 {"level":"error","message":"Failed to fetch workspace","timestamp":"2025-02-12 20:25:11"}
 {"level":"error","message":"notNull Violation: Space.workspaceId cannot be null","timestamp":"2025-02-13 09:29:27"}
 {"level":"error","message":"notNull Violation: Space.workspaceId cannot be null","timestamp":"2025-02-13 09:31:58"}
+{"level":"error","message":"insert or update on table \"Space\" violates foreign key constraint \"Space_workspaceId_fkey\"","timestamp":"2025-02-25 04:19:30"}
+{"level":"error","message":"Workspace is not defined","timestamp":"2025-02-25 04:24:02"}
+{"level":"error","message":"Error creating folder: insert or update on table \"Folder\" violates foreign key constraint \"Folder_createdBy_fkey\"","timestamp":"2025-02-25 04:34:58"}
+{"level":"error","message":"Error creating folder: insert or update on table \"Folder\" violates foreign key constraint \"Folder_createdBy_fkey\"","timestamp":"2025-02-25 04:35:18"}
+{"level":"error","message":"Error creating folder: insert or update on table \"Folder\" violates foreign key constraint \"Folder_createdBy_fkey\"","timestamp":"2025-02-25 04:38:17"}
+{"level":"error","message":"insert or update on table \"Folder\" violates foreign key constraint \"Folder_createdBy_fkey\"","timestamp":"2025-02-25 04:38:17"}

@@ -13,6 +13,7 @@ import TaskColumnRouter from './router/taskColumn.routes.js';
 import TaskRouter from './router/task.routes.js';
 import authRouter from './router/auth.routes.js';
 import session from "express-session";
+import cookieParser from "cookie-parser";
 import passport from "./config/passport.js";
 import syncDatabase from './model/Association.js';
 import clearAndSeedDatabase from './database/seedDatabase.js'
@@ -37,11 +38,12 @@ app.use(
 // Middleware Passport
 app.use(passport.initialize());
 app.use(passport.session());
+app.use(cookieParser());
 
 connectDB().then(async () => {
     //Chay syncDatabase khi co thay doi db
     //await syncDatabase();
-    
+
     // chi chay lan dau khi khong co data
     //await clearAndSeedDatabase();
 

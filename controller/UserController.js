@@ -76,3 +76,20 @@ export const ggLogin = async (req, res) => {
   }
 };
 
+export const getUserProfile = async (req, res) => {
+  try {
+    console.log("📌 Đang lấy thông tin user với ID:", req.user.userId); // Kiểm tra ID
+
+    const user = await UserService.getUserById(req.user.userId);
+    console.log("✅ Kết quả truy vấn user:", user);
+
+    if (!user) {
+      return res.status(404).json({ message: "User not found" });
+    }
+
+    res.json(user);
+  } catch (error) {
+    console.error("❌ Lỗi trong getUserProfile:", error);
+    res.status(500).json({ message: "Internal Server Error", error: error.message });
+  }
+};
