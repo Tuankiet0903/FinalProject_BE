@@ -36,3 +36,4 @@
 {"level":"error","message":"Failed to fetch workspace","timestamp":"2025-02-12 20:25:11"}
 {"level":"error","message":"notNull Violation: Space.workspaceId cannot be null","timestamp":"2025-02-13 09:29:27"}
 {"level":"error","message":"notNull Violation: Space.workspaceId cannot be null","timestamp":"2025-02-13 09:31:58"}
+{"level":"error","message":"createdBy is not defined","timestamp":"2025-02-23 18:50:32"}
