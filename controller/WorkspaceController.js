@@ -8,7 +8,7 @@ export const createWorkspace = async (req, res) => {
     try {
         const workspace = await WorkspaceService.createWorkspace({
             ...req.body,
-            // createBy: req.user.userId
+            createBy: req.createdBy
         });
         return res.status(201).json({
             message: "Workspace created successfully",
@@ -75,7 +75,7 @@ export const deleteWorkspace = async (req, res) => {
 
 export const getUserWorkspaces = async (req, res) => {
     try {
-        const workspaces = await WorkspaceService.getWorkspacesByUser(req.user.userId);
+        const workspaces = await WorkspaceService.getWorkspacesByUser(req.params.userId);
         return res.status(200).json(workspaces);
     } catch (error) {
         logger.error(error.message);
