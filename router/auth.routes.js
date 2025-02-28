@@ -22,6 +22,15 @@ router.post("/login", async (req, res) => {
    try {
       const { email, password } = req.body;
       const { token, user } = await AuthService.login(email, password);
+
+      // Lưu token vào cookie
+      res.cookie("token", token, {
+         httpOnly: true,
+         secure: false,  // Phải là `false` khi test trên localhost
+         sameSite: "lax",
+         maxAge: 24 * 60 * 60 * 1000 // 24h
+      });
+
       res.status(200).json({ message: "Đăng nhập thành công!", token, user });
    } catch (error) {
       res.status(401).json({ error: error.message });
@@ -57,9 +66,28 @@ router.get(
    }
 );
 
+router.get("/google/success", (req, res) => {
+   if (!req.user) {
+      return res.status(401).json({ error: "Not authenticated" });
+   }
+
+   // ✅ Trả token về frontend từ cookies
+   res.json({
+      message: "Google login successful",
+      token: req.cookies.token,  // 🔥 Lấy token từ cookies
+      user: {
+         userId: req.user.userId,
+         fullName: req.user.fullName,
+         email: req.user.email,
+         avatar: req.user.avatar,
+      },
+   });
+});
+
 // Đăng xuất
 router.get("/logout", (req, res) => {
-   res.clearCookie("token");
+   res.clearCookie("token", { httpOnly: true, secure: false, sameSite: "Lax" }); // Xóa token trong cookies
+   res.json({ message: "Đã đăng xuất thành công!" }); // Gửi response về FE để xử lý tiếp
    res.redirect("http://localhost:5173/login");
 });
 

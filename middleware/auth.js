@@ -1,50 +1,42 @@
 import jwt from "jsonwebtoken";
 import ENV from "../config/config.js";
 
-/**
- * Middleware xác thực người dùng bằng JWT.
- * Kiểm tra token hợp lệ và gán thông tin người dùng vào req.user.
- */
 export default function Auth(req, res, next) {
    try {
       let token;
 
-      // Ưu tiên lấy token từ Cookie trước
+      // Lấy token từ cookie nếu có
       if (req.cookies?.token) {
          token = req.cookies.token;
-         // console.log("🔹 Token lấy từ Cookies:", token);
+         console.log("Token from cookies:", token); // Log token từ cookies
       }
-      // Nếu không có trong Cookies, thử lấy từ Header Authorization
+      // Nếu không có trong cookie, lấy token từ header Authorization
       else if (req.headers.authorization?.startsWith("Bearer ")) {
          token = req.headers.authorization.split(" ")[1];
-         // console.log("🔹 Token lấy từ Authorization Header:", token);
+         console.log("Token from header:", token); // Log token từ header
       }
 
       if (!token) {
-         console.error("❌ Không tìm thấy token trong Cookie hoặc Authorization Header.");
          return res.status(403).json({ error: "Vui lòng cung cấp token!" });
       }
 
       // Giải mã token và gán thông tin người dùng vào req.user
       const decodedToken = jwt.verify(token, ENV.JWT_SECRET);
-      console.log("✅ Token decoded:", decodedToken);
       req.user = decodedToken;
+      console.log("Decoded user:", req.user); // Log thông tin user
 
       if (!req.user.userId) {
          console.error("❌ Token không chứa userId hợp lệ:", req.user);
          return res.status(401).json({ error: "Người dùng không hợp lệ!" });
       }
 
-      // Nếu tất cả đều hợp lệ, tiếp tục đến route tiếp theo
+      // Tiếp tục đến route tiếp theo nếu không có lỗi
       next();
    } catch (error) {
       handleTokenError(error, res);
    }
 }
 
-/**
- * Hàm xử lý lỗi token một cách chi tiết.
- */
 function handleTokenError(error, res) {
    if (error instanceof jwt.JsonWebTokenError) {
       console.error("❌ Lỗi xác thực: Token không hợp lệ.", error.message);

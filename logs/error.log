@@ -42,3 +42,33 @@
 {"level":"error","message":"Error creating folder: insert or update on table \"Folder\" violates foreign key constraint \"Folder_createdBy_fkey\"","timestamp":"2025-02-25 04:35:18"}
 {"level":"error","message":"Error creating folder: insert or update on table \"Folder\" violates foreign key constraint \"Folder_createdBy_fkey\"","timestamp":"2025-02-25 04:38:17"}
 {"level":"error","message":"insert or update on table \"Folder\" violates foreign key constraint \"Folder_createdBy_fkey\"","timestamp":"2025-02-25 04:38:17"}
+{"level":"error","message":"invalid input syntax for type integer: \"undefined\"","timestamp":"2025-02-26 23:53:36"}
+{"level":"error","message":"invalid input syntax for type integer: \"undefined\"","timestamp":"2025-02-26 23:54:13"}
+{"level":"error","message":"invalid input syntax for type integer: \"undefined\"","timestamp":"2025-02-26 23:56:33"}
+{"level":"error","message":"hashPassword is not defined","timestamp":"2025-02-27 00:16:50"}
+{"level":"error","message":"hashPassword is not defined","timestamp":"2025-02-27 00:20:06"}
+{"level":"error","message":"hashPassword is not defined","timestamp":"2025-02-27 00:22:39"}
+{"http_code":401,"level":"error","message":"Invalid cloud_name 8WpKYw1vox4_PhVtOzrWjPo4hDo","name":"Error","timestamp":"2025-02-27 02:42:43"}
+{"http_code":401,"level":"error","message":"Error uploading to Cloudinary: Invalid cloud_name 8WpKYw1vox4_PhVtOzrWjPo4hDo","name":"Error","timestamp":"2025-02-27 02:44:50"}
+{"level":"error","message":"Error updating avatar: Cannot read properties of undefined (reading 'userId')","stack":"TypeError: Cannot read properties of undefined (reading 'userId')\n    at file:///D:/newcode/FinalPJ/FinalProject_BE/controller/UploadFileController.js:32:37\n    at D:\\newcode\\FinalPJ\\FinalProject_BE\\node_modules\\cloudinary\\lib\\utils\\index.js:1396:12\n    at IncomingMessage.<anonymous> (D:\\newcode\\FinalPJ\\FinalProject_BE\\node_modules\\cloudinary\\lib\\uploader.js:514:9)\n    at IncomingMessage.emit (node:events:531:35)\n    at endReadableNT (node:internal/streams/readable:1696:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)","timestamp":"2025-02-27 02:52:12"}
+{"level":"error","message":"Error updating avatar: Cannot read properties of undefined (reading 'userId')","stack":"TypeError: Cannot read properties of undefined (reading 'userId')\n    at file:///D:/newcode/FinalPJ/FinalProject_BE/controller/UploadFileController.js:33:37\n    at D:\\newcode\\FinalPJ\\FinalProject_BE\\node_modules\\cloudinary\\lib\\utils\\index.js:1396:12\n    at IncomingMessage.<anonymous> (D:\\newcode\\FinalPJ\\FinalProject_BE\\node_modules\\cloudinary\\lib\\uploader.js:514:9)\n    at IncomingMessage.emit (node:events:531:35)\n    at endReadableNT (node:internal/streams/readable:1696:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)","timestamp":"2025-02-27 02:53:17"}
+{"level":"error","message":"Error updating avatar: Cannot read properties of undefined (reading 'userId')","stack":"TypeError: Cannot read properties of undefined (reading 'userId')\n    at file:///D:/newcode/FinalPJ/FinalProject_BE/controller/UploadFileController.js:33:37\n    at D:\\newcode\\FinalPJ\\FinalProject_BE\\node_modules\\cloudinary\\lib\\utils\\index.js:1396:12\n    at IncomingMessage.<anonymous> (D:\\newcode\\FinalPJ\\FinalProject_BE\\node_modules\\cloudinary\\lib\\uploader.js:514:9)\n    at IncomingMessage.emit (node:events:531:35)\n    at endReadableNT (node:internal/streams/readable:1696:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)","timestamp":"2025-02-27 18:50:56"}
+{"level":"error","message":"User information is missing","timestamp":"2025-02-27 18:53:38"}
+{"level":"error","message":"User information is missing","timestamp":"2025-02-27 18:54:09"}
+{"level":"error","message":"User information is missing","timestamp":"2025-02-27 19:02:15"}
+{"level":"error","message":"User information is missing","timestamp":"2025-02-27 19:04:21"}
+{"level":"error","message":"User information is missing","timestamp":"2025-02-27 21:07:26"}
+{"level":"error","message":"User information is missing","timestamp":"2025-02-27 21:08:41"}
+{"level":"error","message":"User information is missing","timestamp":"2025-02-27 21:09:01"}
+{"level":"error","message":"User information is missing","timestamp":"2025-02-27 21:10:46"}
+{"level":"error","message":"User information is missing","timestamp":"2025-02-27 21:11:58"}
+{"level":"error","message":"User information is missing","timestamp":"2025-02-27 21:12:44"}
+{"level":"error","message":"User information is missing","timestamp":"2025-02-27 21:13:39"}
+{"level":"error","message":"User information is missing","timestamp":"2025-02-27 21:15:58"}
+{"level":"error","message":"User information is missing","timestamp":"2025-02-27 21:16:06"}
+{"level":"error","message":"User information is missing","timestamp":"2025-02-27 21:16:27"}
+{"level":"error","message":"User information is missing","timestamp":"2025-02-27 21:26:38"}
+{"level":"error","message":"User information is missing","timestamp":"2025-02-27 21:29:42"}
+{"level":"error","message":"User information is missing","timestamp":"2025-02-27 23:06:26"}
+{"level":"error","message":"User information is missing","timestamp":"2025-02-27 23:21:05"}
+{"level":"error","message":"User information is missing","timestamp":"2025-02-27 23:35:14"}
