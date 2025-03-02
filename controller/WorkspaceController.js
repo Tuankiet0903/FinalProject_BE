@@ -4,21 +4,35 @@ import FolderService from '../services/FolderService.js';
 import ListService from '../services/ListService.js';
 import logger from "../utils/logger.js";
 
-export const createWorkspace = async (req, res) => {
+export const createWorkspace = async ({ name, description, type = 'personal' }) => {
     try {
-        const workspace = await WorkspaceService.createWorkspace({
-            ...req.body,
-            createBy: req.createdBy
+        const response = await axios.post(`${API_ROOT}/workspace/create-with-defaults`, {
+            name,
+            description,
+            type: type || 'personal', // Đảm bảo luôn có giá trị mặc định
+            createdBy: getUserId(),
+        }, {
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${localStorage.getItem('token')}`
+            }
         });
-        console.log("✅ [SUCCESS] Workspace Created:", workspace);
-        return res.status(201).json({
-            message: "Workspace created successfully",
-            workspace
+
+        console.log('Workspace creation request:', {
+            name,
+            description,
+            type,
+            createdBy: getUserId()
         });
+
+        return response.data;
     } catch (error) {
-        logger.error(error.message);
-        const status = error.message === "Invalid workspace type" ? 400 : 500;
-        return res.status(status).json({ error: error.message });
+        console.error("Error creating workspace:", {
+            message: error.message,
+            data: error.response?.data,
+            status: error.response?.status
+        });
+        throw error;
     }
 };
 
