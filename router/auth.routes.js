@@ -1,6 +1,6 @@
 import express from "express";
-import AuthController from "../controller/AuthController.js";
 import passport from "../config/passport.js";
+
 import jwt from "jsonwebtoken";
 import AuthService from "../services/AuthService.js";
 

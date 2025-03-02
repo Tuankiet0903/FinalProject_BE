@@ -1,36 +1,31 @@
 import { DataTypes } from "sequelize";
 import { sequelize } from "../database/connect.js";
 
-const Folder = sequelize.define(
-  "Folder",
+const Otp = sequelize.define(
+  "Otp",
   {
-    folderId: {
+    id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
-      allowNull: false,
       autoIncrement: true,
     },
-    spaceId: {
+    userId: {
       type: DataTypes.INTEGER,
       allowNull: false,
     },
-    name: {
+    otpCode: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    description: {
-      type: DataTypes.TEXT,
-      allowNull: true,
-    },
-    createdBy: {
-      type: DataTypes.INTEGER,
+    expiresAt: {
+      type: DataTypes.DATE,
       allowNull: false,
     },
   },
   {
     freezeTableName: true,
-    timestamps: true,
+    timestamps: false,
   }
 );
 
-export default Folder;
+export default Otp;

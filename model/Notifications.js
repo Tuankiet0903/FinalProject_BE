@@ -2,7 +2,7 @@ import { DataTypes } from "sequelize";
 import { sequelize } from "../database/connect.js";
 
 const Notifications = sequelize.define("Notifications", {
-  id: {
+  notificationId: {
     type: DataTypes.INTEGER,
     primaryKey: true,
     allowNull: false,
@@ -10,31 +10,20 @@ const Notifications = sequelize.define("Notifications", {
   },
   taskId: {
     type: DataTypes.INTEGER,
-    allowNull: false
   },
-  commentId: {
+  workspaceId: {
     type: DataTypes.INTEGER,
-    allowNull: false
   },
   userId: {
     type: DataTypes.INTEGER,
-  },
-  title: {
-    type: DataTypes.STRING,
-    allowNull: false
   },
   content: {
     type: DataTypes.TEXT,
     allowNull: false
   },
-  createdAt: {
-    type: DataTypes.DATE,
-    allowNull: false,
-    defaultValue: DataTypes.NOW
-  }
 }, {
   freezeTableName: true,
-  timestamps: false
+  timestamps: true
 });
 
 export default Notifications;

@@ -1,5 +1,4 @@
 import User from "../model/User.js";
-import Workspace from "../model/Workspace.js";
 import Task from "../model/Task.js";
 import Comment from "../model/Comment.js";
 import ManageMemberSpace from "../model/ManageMemberSpace.js";
@@ -10,6 +9,9 @@ import List from "../model/List.js";
 import Folder from "../model/Folder.js";
 import Space from "../model/Space.js";
 import ManageMemberWorkSpace from "../model/ManageMenberWorkSpace.js";
+import Workspace from "../model/WorkSpace.js";
+import Subscription from "../model/Subcriptions.js";
+import PremiumPlans from "../model/PremiunPlans.js";
 
 const seedDatabase = async () => {
   try {
@@ -167,16 +169,16 @@ const seedDatabase = async () => {
 
     // Create TaskColumns
     const columns = await TaskColumn.bulkCreate([
-      { columnId: 1, name: "To Do", listId: 1, orderIndex: 1, createdBy: 1 },
+      { columnId: 1, name: "ToDo", listId: 1, color: '#FFFFFF', createdBy: 1, status: 1 },
       {
         columnId: 2,
         name: "In Progress",
         listId: 1,
-        orderIndex: 2,
-        createdBy: 1,
+        color: '#FFFFFF',
+        createdBy: 1, status: 1,
       },
-      { columnId: 3, name: "Done", listId: 2, orderIndex: 1, createdBy: 2 },
-      { columnId: 4, name: "Review", listId: 3, orderIndex: 2, createdBy: 3 },
+      { columnId: 3, name: "Done", listId: 2, color: '#FFFFFF', createdBy: 2, status: 1 },
+      { columnId: 4, name: "Review", listId: 3, color: '#FFFFFF', createdBy: 3, status: 1 },
     ]);
 
     // Create Tasks
@@ -186,32 +188,32 @@ const seedDatabase = async () => {
         title: "Task 1",
         description: "First task",
         taskColumnId: 1,
-        status: "todo",
-        priority: "low",
+        status: 1,
+        priority: "Easy",
       },
       {
         taskId: 2,
         title: "Task 2",
         description: "Second task",
         taskColumnId: 2,
-        status: "inProgress",
-        priority: "medium",
+        status: 2,
+        priority: "Medium",
       },
       {
         taskId: 3,
         title: "Task 3",
         description: "Third task",
         taskColumnId: 3,
-        status: "done",
-        priority: "high",
+        status: 2,
+        priority: "Medium",
       },
       {
         taskId: 4,
         title: "Task 4",
         description: "Fourth task",
         taskColumnId: 4,
-        status: "todo",
-        priority: "low",
+        status: 3,
+        priority: "High",
       },
     ]);
 
@@ -225,24 +227,50 @@ const seedDatabase = async () => {
 
     // Create Attachments
     await Attachment.bulkCreate([
-      { taskId: 1, uploadedBy: 1, fileURL: "http://example.com/file1" },
-      { taskId: 2, uploadedBy: 2, fileURL: "http://example.com/file2" },
-      { taskId: 3, uploadedBy: 3, fileURL: "http://example.com/file3" },
+      { taskId: 1, uploadedBy: 1, fileURL: "http://example.com/file1", taskId : 1 },
+      { taskId: 2, uploadedBy: 2, fileURL: "http://example.com/file2", taskId : 2 },
+      { taskId: 3, uploadedBy: 3, fileURL: "http://example.com/file3", taskId : 3 },
     ]);
 
     // Create Notifications
     await Notifications.bulkCreate([
       {
-        taskId: 1,
-        title: "Task Updated",
         content: "Task 1 updated successfully",
-        commentId: 1,
       },
       {
-        taskId: 4,
-        title: "Task Reviewed",
         content: "Task 4 moved to review",
-        commentId: 2,
+      },
+    ]);
+
+    await PremiumPlans.bulkCreate([
+      {
+        planId: 1,
+        planName: "Plan 1",
+        price: 100,
+        description: "upgrade to plan 1",
+        duration: 30,
+      },
+      {
+        planId: 2,
+        planName: "Plan 2",
+        price: 100,
+        description: "upgrade to plan 2",
+        duration: 90,
+      },
+    ]);
+
+    await Subscription.bulkCreate([
+      {
+        subscriptionId: 1,
+        userId: 1,
+        workspaceId: 1,
+        planId: 1,
+      },
+      {
+        subscriptionId: 2,
+        userId: 2,
+        workspaceId: 2,
+        planId: 2,
       },
     ]);
 
@@ -272,6 +300,9 @@ const clearAndSeedDatabase = async () => {
     });
     await Workspace.destroy({ where: {}, truncate: { cascade: true } });
     await User.destroy({ where: {}, truncate: { cascade: true } });
+    await Subscription.destroy({ where: {}, truncate: { cascade: true } });
+    await PremiumPlans.destroy({ where: {}, truncate: { cascade: true } });
+
 
     console.log("All data cleared. Re-seeding the database...");
 

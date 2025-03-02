@@ -17,14 +17,14 @@ const TaskColumn = sequelize.define("TaskColumn", {
     allowNull: false
   },
   color: {
-    type: DataTypes.ENUM("red", "blue", "green"),
+    type: DataTypes.STRING,
     allowNull: true
   },
-  orderIndex: {
+  createdBy: {
     type: DataTypes.INTEGER,
     allowNull: false
   },
-  createdBy: {
+  status: {
     type: DataTypes.INTEGER,
     allowNull: false
   }

@@ -27,19 +27,10 @@ const Space = sequelize.define("Space", {
   workspaceId: {  // 🔹 Thêm trường này vào
     type: DataTypes.INTEGER,
     allowNull: false
-  },
-  createdAt: {
-    type: DataTypes.DATE,
-    allowNull: false,
-    defaultValue: DataTypes.NOW
-  },
-  updatedAt: {
-    type: DataTypes.DATE,
-    allowNull: true
   }
 },{
   freezeTableName: true,
-  timestamps: false
+  timestamps: true
 });
 
 export default Space;

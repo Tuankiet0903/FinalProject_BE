@@ -2,6 +2,7 @@ import jwt from "jsonwebtoken";
 import bcrypt from "bcrypt";
 import User from "../model/User.js";
 import { Op } from "sequelize";
+import { sendOtpService } from "./OTPService.js";
 
 class AuthService {
    static async login(email, password) {
@@ -18,9 +19,10 @@ class AuthService {
       const existingUser = await User.findOne({ where: { email } });
       if (existingUser) throw new Error("Email đã được sử dụng!");
       const hashedPassword = await bcrypt.hash(password, 10);
-      const user = await User.create({ email, password: hashedPassword, fullName });
-      const token = jwt.sign({ userId: user.userId, email: user.email }, process.env.JWT_SECRET, { expiresIn: process.env.JWT_EXPIRES_IN });
-      return { token, user };
+      const user = await User.create({ email, password: hashedPassword, fullName, active: false });
+      await sendOtpService(email)
+      // const token = jwt.sign({ userId: user.userId, email: user.email }, process.env.JWT_SECRET, { expiresIn: process.env.JWT_EXPIRES_IN });
+      return { user };
    }
 
    static async googleLogin(data) {
