@@ -29,14 +29,6 @@ const AuthController = {
       }
    },
 
-   async githubCallback(req, res) {
-      try {
-         const user = await AuthService.googleLogin(req.user);
-         res.status(200).json(user);
-      } catch (error) {
-         res.status(500).json({ error: error.message });
-      }
-   }
 };
 
 export default AuthController;

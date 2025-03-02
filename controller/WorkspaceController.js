@@ -10,6 +10,7 @@ export const createWorkspace = async (req, res) => {
             ...req.body,
             createBy: req.createdBy
         });
+        console.log("✅ [SUCCESS] Workspace Created:", workspace);
         return res.status(201).json({
             message: "Workspace created successfully",
             workspace
