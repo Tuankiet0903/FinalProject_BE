@@ -16,9 +16,7 @@ import authRouter from './router/auth.routes.js';
 import session from "express-session";
 import cookieParser from "cookie-parser";
 import passport from "./config/passport.js";
-import syncDatabase from './model/Association.js';
-import clearAndSeedDatabase from './database/seedDatabase.js'
-
+import './cron/notificationCron.js';
 dotenv.config();
 
 const app = express();
