@@ -22,3 +22,15 @@
 {"level":"error","message":"Task creation error: NotificationService.createTaskAssignmentNotification is not a function","timestamp":"2025-03-03 18:49:07"}
 {"level":"error","message":"Error creating task assignment notification: invalid input value for enum \"enum_Notifications_type\": \"TASK_ASSIGNED\"","timestamp":"2025-03-03 18:49:49"}
 {"level":"error","message":"Task creation error: invalid input value for enum \"enum_Notifications_type\": \"TASK_ASSIGNED\"","timestamp":"2025-03-03 18:49:49"}
+{"level":"error","message":"Error fetching user workspaces: invalid input syntax for type integer: \"null\"","timestamp":"2025-03-03 23:36:42"}
+{"level":"error","message":"Failed to fetch user workspaces","timestamp":"2025-03-03 23:36:42"}
+{"level":"error","message":"Error fetching user workspaces: invalid input syntax for type integer: \"null\"","timestamp":"2025-03-03 23:36:42"}
+{"level":"error","message":"Failed to fetch user workspaces","timestamp":"2025-03-03 23:36:42"}
+{"level":"error","message":"Error fetching workspace: Space is not associated to Workspace!","timestamp":"2025-03-04 00:35:59"}
+{"level":"error","message":"Failed to fetch workspace","timestamp":"2025-03-04 00:35:59"}
+{"level":"error","message":"Error fetching workspace: Space is not associated to Workspace!","timestamp":"2025-03-04 00:36:05"}
+{"level":"error","message":"Failed to fetch workspace","timestamp":"2025-03-04 00:36:05"}
+{"level":"error","message":"Error fetching workspace: Space is not associated to Workspace!","timestamp":"2025-03-04 00:36:11"}
+{"level":"error","message":"Failed to fetch workspace","timestamp":"2025-03-04 00:36:11"}
+{"level":"error","message":"Error fetching workspace: Space is not associated to Workspace!","timestamp":"2025-03-04 00:36:36"}
+{"level":"error","message":"Failed to fetch workspace","timestamp":"2025-03-04 00:36:36"}

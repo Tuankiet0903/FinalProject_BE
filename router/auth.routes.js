@@ -2,7 +2,7 @@ import express from "express";
 import passport from "../config/passport.js";
 import jwt from "jsonwebtoken";
 import AuthService from "../services/AuthService.js";
-import NotificationController from "../controller/NotificationController.js";
+import { createWelcomeNotification } from "../controller/NotificationController.js";
 
 const router = express.Router();
 
@@ -32,7 +32,7 @@ router.post("/login", async (req, res) => {
       });
 
       // Tạo thông báo chào mừng
-      const notification = await NotificationController.createWelcomeNotification(user.userId);
+      const notification = await createWelcomeNotification(user.userId);
       console.log('Welcome notification created:', notification);
 
       res.status(200).json({
@@ -78,7 +78,7 @@ router.get(
          });
 
          // Tạo thông báo chào mừng
-         const notification = await NotificationController.createWelcomeNotification(user.userId);
+         const notification = await createWelcomeNotification(user.userId);
          console.log('Welcome notification created for Google login:', notification);
 
          // Chuyển hướng về FE

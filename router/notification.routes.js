@@ -1,11 +1,16 @@
 import express from 'express';
-import NotificationController from '../controller/NotificationController.js';
+import {
+   createNotification,
+   getUserNotifications,
+   markAsRead,
+   getUnreadNotifications
+} from '../controller/NotificationController.js';
 
 const router = express.Router();
 
-router.post('/create', NotificationController.createNotification);
-router.get('/user/:userId', NotificationController.getUserNotifications);
-router.put('/:notificationId/read', NotificationController.markAsRead);
-router.get('/unread/:userId', NotificationController.getUnreadNotifications);
+router.post('/create', createNotification);
+router.get('/user/:userId', getUserNotifications); // Endpoint để lấy thông báo của người dùng
+router.put('/:notificationId/read', markAsRead);
+router.get('/unread/:userId', getUnreadNotifications);
 
 export default router;
