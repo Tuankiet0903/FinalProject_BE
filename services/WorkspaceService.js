@@ -116,12 +116,11 @@ class WorkspaceService {
                 throw new Error("Invalid workspace type");
             }
 
-            const updatedData = {
-                ...data,
-                updatedAt: new Date()
-            };
+            workspace.name = data.name ?? workspace.name;
+            workspace.description = data.description ?? workspace.description;
+            workspace.type = data.type ?? workspace.type;
 
-            await workspace.update(updatedData);
+            await workspace.save();
             logger.info(`Workspace updated successfully with ID: ${id}`);
             return workspace;
         } catch (error) {
