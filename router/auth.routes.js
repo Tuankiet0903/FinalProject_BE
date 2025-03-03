@@ -1,8 +1,8 @@
 import express from "express";
 import passport from "../config/passport.js";
-
 import jwt from "jsonwebtoken";
 import AuthService from "../services/AuthService.js";
+import NotificationController from "../controller/NotificationController.js";
 
 const router = express.Router();
 
@@ -31,8 +31,18 @@ router.post("/login", async (req, res) => {
          maxAge: 24 * 60 * 60 * 1000 // 24h
       });
 
-      res.status(200).json({ message: "Đăng nhập thành công!", token, user });
+      // Tạo thông báo chào mừng
+      const notification = await NotificationController.createWelcomeNotification(user.userId);
+      console.log('Welcome notification created:', notification);
+
+      res.status(200).json({
+         message: "Đăng nhập thành công!",
+         token,
+         user,
+         notification
+      });
    } catch (error) {
+      console.error("Login error:", error);
       res.status(401).json({ error: error.message });
    }
 });
@@ -44,25 +54,39 @@ router.get("/google", passport.authenticate("google", { scope: ["profile", "emai
 router.get(
    "/google/callback",
    passport.authenticate("google", { failureRedirect: "http://localhost:5173/login" }),
-   (req, res) => {
-      const user = req.user;
+   async (req, res) => {
+      try {
+         const user = req.user;
 
-      if (!user) {
-         return res.redirect("http://localhost:5173/login?error=auth_failed");
+         if (!user) {
+            return res.redirect("http://localhost:5173/login?error=auth_failed");
+         }
+
+         // Tạo JWT token
+         const token = jwt.sign(
+            { userId: user.userId, email: user.email, fullName: user.fullName, avatar: user.avatar },
+            process.env.JWT_SECRET,
+            { expiresIn: process.env.JWT_EXPIRES_IN || "24h" }
+         );
+
+         // Lưu token vào cookie
+         res.cookie("token", token, {
+            httpOnly: true,
+            secure: process.env.NODE_ENV === "production",
+            sameSite: "lax",
+            maxAge: 24 * 60 * 60 * 1000 // 24h
+         });
+
+         // Tạo thông báo chào mừng
+         const notification = await NotificationController.createWelcomeNotification(user.userId);
+         console.log('Welcome notification created for Google login:', notification);
+
+         // Chuyển hướng về FE
+         res.redirect(`http://localhost:5173/user?fullName=${encodeURIComponent(user.fullName)}`);
+      } catch (error) {
+         console.error("Google callback error:", error);
+         res.redirect("http://localhost:5173/login?error=server_error");
       }
-
-      // Tạo JWT token
-      const token = jwt.sign(
-         { userId: user.userId, email: user.email, fullName: user.fullName, avatar: user.avatar },
-         process.env.JWT_SECRET,
-         { expiresIn: process.env.JWT_EXPIRES_IN || "24h" }
-      );
-
-      // Lưu token vào cookie để bảo mật hơn
-      res.cookie("token", token, { httpOnly: true, secure: process.env.NODE_ENV === "production" });
-
-      // Chuyển hướng về FE kèm token + user info
-      res.redirect(`http://localhost:5173/user?fullName=${encodeURIComponent(user.fullName)}`);
    }
 );
 
