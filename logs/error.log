@@ -1,0 +1,57 @@
+{"level":"error","message":"Error fetching list task columns: column TaskColumn.orderIndex does not exist","timestamp":"2025-03-03 16:36:58"}
+{"level":"error","message":"Failed to fetch list task columns","timestamp":"2025-03-03 16:36:58"}
+{"level":"error","message":"Error fetching list task columns: column TaskColumn.orderIndex does not exist","timestamp":"2025-03-03 16:36:58"}
+{"level":"error","message":"Failed to fetch list task columns","timestamp":"2025-03-03 16:36:58"}
+{"level":"error","message":"Error fetching list task columns: column TaskColumn.orderIndex does not exist","timestamp":"2025-03-03 16:37:26"}
+{"level":"error","message":"Failed to fetch list task columns","timestamp":"2025-03-03 16:37:26"}
+{"level":"error","message":"Error fetching list task columns: column TaskColumn.orderIndex does not exist","timestamp":"2025-03-03 16:37:26"}
+{"level":"error","message":"Failed to fetch list task columns","timestamp":"2025-03-03 16:37:26"}
+{"level":"error","message":"Error fetching list task columns: column TaskColumn.orderIndex does not exist","timestamp":"2025-03-03 16:37:28"}
+{"level":"error","message":"Failed to fetch list task columns","timestamp":"2025-03-03 16:37:28"}
+{"level":"error","message":"Error fetching list task columns: column TaskColumn.orderIndex does not exist","timestamp":"2025-03-03 16:37:28"}
+{"level":"error","message":"Failed to fetch list task columns","timestamp":"2025-03-03 16:37:28"}
+{"level":"error","message":"Error creating task column: column TaskColumn.orderIndex does not exist","timestamp":"2025-03-03 16:46:47"}
+{"level":"error","message":"Error creating task column: column TaskColumn.orderIndex does not exist","timestamp":"2025-03-03 16:51:24"}
+{"level":"error","message":"Error creating task column: column TaskColumn.orderIndex does not exist","timestamp":"2025-03-03 16:53:56"}
+{"level":"error","message":"Error creating task column: notNull Violation: TaskColumn.status cannot be null","timestamp":"2025-03-03 16:56:37"}
+{"level":"error","message":"Error creating task column: invalid input syntax for type integer: \"todo\"","timestamp":"2025-03-03 16:58:44"}
+{"level":"error","message":"Error creating task column: invalid input syntax for type integer: \"your_list_id_here\"","timestamp":"2025-03-03 18:48:09"}
+{"level":"error","message":"invalid input syntax for type integer: \"your_list_id_here\"","timestamp":"2025-03-03 18:48:09"}
+{"level":"error","message":"Error creating task column: Invalid color. Must be red, blue, or green","timestamp":"2025-03-03 19:33:31"}
+{"level":"error","message":"Invalid color. Must be red, blue, or green","timestamp":"2025-03-03 19:33:31"}
+{"level":"error","message":"Error creating task column: Invalid color. Must be red, blue, or green","timestamp":"2025-03-03 19:33:47"}
+{"level":"error","message":"Invalid color. Must be red, blue, or green","timestamp":"2025-03-03 19:33:47"}
+{"level":"error","message":"Error creating task column: Invalid color. Must be red, blue, or green","timestamp":"2025-03-03 21:11:11"}
+{"level":"error","message":"Invalid color. Must be red, blue, or green","timestamp":"2025-03-03 21:11:11"}
+{"level":"error","message":"Error creating task column: Invalid color. Must be red, blue, or green","timestamp":"2025-03-03 21:11:20"}
+{"level":"error","message":"Invalid color. Must be red, blue, or green","timestamp":"2025-03-03 21:11:20"}
+{"level":"error","message":"Error creating task column: Invalid color. Must be red, blue, or green","timestamp":"2025-03-03 21:11:35"}
+{"level":"error","message":"Invalid color. Must be red, blue, or green","timestamp":"2025-03-03 21:11:35"}
+{"level":"error","message":"Error creating task column: Invalid color. Must be red, blue, or green","timestamp":"2025-03-03 21:11:47"}
+{"level":"error","message":"Invalid color. Must be red, blue, or green","timestamp":"2025-03-03 21:11:47"}
+{"level":"error","message":"Error fetching column tasks: invalid input syntax for type integer: \"undefined\"","timestamp":"2025-03-03 22:56:13"}
+{"level":"error","message":"Failed to fetch column tasks","timestamp":"2025-03-03 22:56:13"}
+{"level":"error","message":"Error fetching column tasks: invalid input syntax for type integer: \"undefined\"","timestamp":"2025-03-03 22:56:26"}
+{"level":"error","message":"Failed to fetch column tasks","timestamp":"2025-03-03 22:56:26"}
+{"level":"error","message":"Error fetching column tasks: invalid input syntax for type integer: \"undefined\"","timestamp":"2025-03-03 22:56:32"}
+{"level":"error","message":"Failed to fetch column tasks","timestamp":"2025-03-03 22:56:32"}
+{"level":"error","message":"Error fetching column tasks: invalid input syntax for type integer: \"undefined\"","timestamp":"2025-03-03 23:00:54"}
+{"level":"error","message":"Failed to fetch column tasks","timestamp":"2025-03-03 23:00:54"}
+{"level":"error","message":"Error fetching column tasks: invalid input syntax for type integer: \"undefined\"","timestamp":"2025-03-04 00:38:25"}
+{"level":"error","message":"Failed to fetch column tasks","timestamp":"2025-03-04 00:38:25"}
+{"level":"error","message":"Error fetching column tasks: invalid input syntax for type integer: \"undefined\"","timestamp":"2025-03-04 00:59:09"}
+{"level":"error","message":"Failed to fetch column tasks","timestamp":"2025-03-04 00:59:09"}
+{"level":"error","message":"Error fetching column tasks: invalid input syntax for type integer: \"undefined\"","timestamp":"2025-03-04 00:59:16"}
+{"level":"error","message":"Failed to fetch column tasks","timestamp":"2025-03-04 00:59:16"}
+{"level":"error","message":"Error fetching column tasks: invalid input syntax for type integer: \"undefined\"","timestamp":"2025-03-04 00:59:19"}
+{"level":"error","message":"Failed to fetch column tasks","timestamp":"2025-03-04 00:59:19"}
+{"level":"error","message":"Error fetching column tasks: invalid input syntax for type integer: \"undefined\"","timestamp":"2025-03-04 13:09:54"}
+{"level":"error","message":"Failed to fetch column tasks","timestamp":"2025-03-04 13:09:54"}
+{"level":"error","message":"Error creating task column: notNull Violation: TaskColumn.createdBy cannot be null","timestamp":"2025-03-04 13:12:42"}
+{"level":"error","message":"notNull Violation: TaskColumn.createdBy cannot be null","timestamp":"2025-03-04 13:12:42"}
+{"level":"error","message":"Error creating task column: notNull Violation: TaskColumn.createdBy cannot be null","timestamp":"2025-03-04 13:14:06"}
+{"level":"error","message":"notNull Violation: TaskColumn.createdBy cannot be null","timestamp":"2025-03-04 13:14:06"}
+{"level":"error","message":"Error creating task column: notNull Violation: TaskColumn.createdBy cannot be null","timestamp":"2025-03-04 13:17:25"}
+{"level":"error","message":"notNull Violation: TaskColumn.createdBy cannot be null","timestamp":"2025-03-04 13:17:25"}
+{"level":"error","message":"Error creating task column: notNull Violation: TaskColumn.createdBy cannot be null","timestamp":"2025-03-04 13:18:12"}
+{"level":"error","message":"notNull Violation: TaskColumn.createdBy cannot be null","timestamp":"2025-03-04 13:18:12"}
