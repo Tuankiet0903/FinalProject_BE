@@ -10,11 +10,12 @@ import {
 
 const router = express.Router();
 
-router.post("/tasks", createTask);
-router.get("/tasks", getAllTasks);
-router.get("/tasks/:id", getTaskById);
-router.put("/tasks/:id", updateTask);
-router.delete("/tasks/:id", deleteTask);
-router.get("/tasks/column/:taskColumnId", getTasksByColumn);
+// Sửa các routes để khớp với prefix trong server.js
+router.post("/", createTask);           // Thay vì /tasks
+router.get("/", getAllTasks);           // Thay vì /tasks
+router.get("/:id", getTaskById);        // Thay vì /tasks/:id
+router.put("/:id", updateTask);         // Thay vì /tasks/:id
+router.delete("/:id", deleteTask);      // Thay vì /tasks/:id
+router.get("/column/:taskColumnId", getTasksByColumn);
 
 export default router;

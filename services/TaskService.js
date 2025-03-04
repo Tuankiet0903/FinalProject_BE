@@ -1,10 +1,36 @@
 import Task from "../model/Task.js";
+import User from "../model/User.js";
+import NotificationService from "./NotificationService.js";
 import logger from "../utils/logger.js";
 
 class TaskService {
-    static async createTask(data) {
+    // static async createTask(data) {
+    //     try {
+    //         const task = await Task.create(data);
+    //         logger.info(`Task created successfully with ID: ${task.taskId}`);
+    //         return task;
+    //     } catch (error) {
+    //         logger.error(`Error creating task: ${error.message}`);
+    //         throw error;
+    //     }
+    // }
+    static async createTask(taskData) {
         try {
-            const task = await Task.create(data);
+            // Validate required fields
+            if (!taskData.title) {
+                throw new Error('Title is required');
+            }
+
+            // Set default values if not provided
+            const task = await Task.create({
+                ...taskData,
+                status: taskData.status || 1,
+                priority: taskData.priority || "Easy",
+                createAt: new Date(),
+                startDate: taskData.startDate ? new Date(taskData.startDate) : null,
+                endDate: taskData.endDate ? new Date(taskData.endDate) : null
+            });
+
             logger.info(`Task created successfully with ID: ${task.taskId}`);
             return task;
         } catch (error) {
