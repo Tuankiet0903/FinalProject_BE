@@ -7,8 +7,8 @@ class ListService {
         
         try {
             // Validate color tag if provided
-            if (colorTag && !["red", "blue", "green"].includes(colorTag)) {
-                throw new Error("Invalid color tag. Must be red, blue, or green");
+            if (colorTag && !["gray", "blue", "green"].includes(colorTag)) {
+                throw new Error("Invalid color tag. Must be gray, blue, or green");
             }
 
             const list = await List.create({
@@ -69,8 +69,8 @@ class ListService {
             }
 
             // Validate color tag if being updated
-            if (data.colorTag && !["red", "blue", "green"].includes(data.colorTag)) {
-                throw new Error("Invalid color tag. Must be red, blue, or green");
+            if (data.colorTag && !["gray", "blue", "green"].includes(data.colorTag)) {
+                throw new Error("Invalid color tag. Must be gray, blue, or green");
             }
 
             const updatedData = {
