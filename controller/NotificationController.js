@@ -38,11 +38,26 @@ export const markAsRead = async (req, res) => {
       const { notificationId } = req.params;
       await Notifications.update(
          { isRead: true },
-         { where: { id: notificationId } } // Sửa lại điều kiện where
+         { where: { id: notificationId } }
       );
       res.status(200).json({ message: "Notification marked as read" });
    } catch (error) {
       console.error(`Error marking notification as read: ${error.message}`);
+      res.status(500).json({ error: error.message });
+   }
+};
+
+// Đánh dấu chưa đọc
+export const markAsUnread = async (req, res) => {
+   try {
+      const { notificationId } = req.params;
+      await Notifications.update(
+         { isRead: false },
+         { where: { id: notificationId } }
+      );
+      res.status(200).json({ message: "Notification marked as unread" });
+   } catch (error) {
+      console.error(`Error marking notification as unread: ${error.message}`);
       res.status(500).json({ error: error.message });
    }
 };
@@ -89,5 +104,19 @@ export const createWelcomeNotification = async (userId) => {
    } catch (error) {
       console.error('Error creating welcome notification:', error);
       throw error;
+   }
+};
+
+// Xóa thông báo
+export const deleteNotification = async (req, res) => {
+   try {
+      const { notificationId } = req.params;
+      await Notifications.destroy({
+         where: { id: notificationId }
+      });
+      res.status(200).json({ message: "Notification deleted successfully" });
+   } catch (error) {
+      console.error(`Error deleting notification: ${error.message}`);
+      res.status(500).json({ error: error.message });
    }
 };
