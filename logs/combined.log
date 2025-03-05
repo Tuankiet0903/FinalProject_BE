@@ -96,3 +96,260 @@
 {"level":"error","message":"Task creation error: invalid input value for enum \"enum_Notifications_type\": \"TASK_ASSIGNED\"","timestamp":"2025-03-03 18:49:49"}
 {"level":"info","message":"Task created successfully with ID: 12","timestamp":"2025-03-03 18:52:21"}
 {"level":"info","message":"Created task assignment notification for user 1","timestamp":"2025-03-03 18:52:21"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-04 03:41:52"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-04 03:41:52"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-04 03:41:57"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-04 03:41:57"}
+{"level":"error","message":"Workspace with ID null does not exist.","timestamp":"2025-03-04 03:42:13"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-04 03:42:18"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-04 03:42:20"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-04 03:42:22"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-04 03:42:26"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-04 03:42:26"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-04 03:42:30"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-04 03:42:37"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-04 03:51:41"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-04 03:51:48"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-04 04:54:35"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-04 04:54:35"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-04 04:54:35"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-04 04:54:35"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-04 04:55:08"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-04 04:55:08"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-04 04:55:08"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-04 04:55:08"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-04 04:56:48"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-04 04:56:53"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-04 04:56:53"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-04 04:56:53"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-04 04:56:53"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-04 04:57:05"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-04 04:57:05"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-04 04:57:11"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-04 04:57:11"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-04 04:57:11"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-04 04:57:11"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-04 04:57:11"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-04 04:57:11"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-04 05:00:41"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-04 05:00:42"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-04 05:01:26"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-04 05:01:26"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-04 05:01:38"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-04 05:01:38"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-04 05:06:44"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-04 05:06:48"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-04 05:06:48"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-04 05:06:48"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-04 05:06:48"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-04 05:06:48"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-04 05:06:48"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-04 05:09:04"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-04 05:09:06"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-04 05:09:18"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-04 05:12:16"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-04 05:12:24"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-04 05:12:25"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-04 05:12:25"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-04 05:12:25"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-04 05:12:25"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-04 05:12:25"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-04 05:13:08"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-04 05:13:08"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-04 05:13:08"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-04 05:13:08"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-04 05:13:08"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-04 05:13:08"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-04 05:14:06"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-04 05:15:46"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-04 05:15:46"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-04 05:15:57"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-04 05:15:57"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-04 05:15:58"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-04 05:16:01"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-04 05:16:01"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-04 05:16:01"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-04 05:16:01"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-04 05:16:01"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-04 05:16:01"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-04 05:18:07"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-04 05:18:18"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-04 05:18:26"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-04 05:18:26"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-04 05:18:26"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-04 05:18:26"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-04 05:18:26"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-04 05:18:26"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-04 05:21:33"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-04 05:21:47"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-04 05:24:04"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-04 05:24:04"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-04 05:24:11"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-04 05:24:11"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-04 05:24:46"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-04 05:24:52"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-04 05:24:52"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-04 05:24:52"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-04 05:24:52"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-04 05:24:52"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-04 05:24:52"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-04 05:24:57"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-04 05:24:58"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-04 05:25:12"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-04 05:25:14"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-04 05:26:16"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-04 05:26:19"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-04 05:27:02"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-04 05:27:02"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-04 05:27:02"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-04 05:27:02"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-04 05:27:02"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-04 05:27:02"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-04 05:30:18"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-04 05:30:18"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-04 05:30:18"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-04 05:30:18"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-04 05:30:18"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-04 05:30:18"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-04 05:42:00"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-04 05:42:00"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-04 05:42:00"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-04 05:42:00"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-04 05:42:00"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-04 05:42:00"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-04 05:50:50"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-04 05:50:50"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-04 05:50:50"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-04 05:50:50"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-04 05:50:50"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-04 05:50:50"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-04 05:55:35"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-04 05:55:35"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-04 05:55:35"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-04 05:55:35"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-04 05:55:35"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-04 05:55:35"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-04 05:55:36"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-04 21:33:16"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-04 21:33:16"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-04 21:33:16"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-04 21:33:16"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-04 21:33:16"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-04 21:33:16"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-04 21:33:50"}
+{"level":"info","message":"Folder created successfully with ID: 1","timestamp":"2025-03-04 21:39:09"}
+{"level":"info","message":"List created successfully with ID: 1","timestamp":"2025-03-04 21:39:09"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-05 10:11:06"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-05 10:11:06"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-05 10:11:06"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-05 10:11:06"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-05 10:11:06"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-05 10:11:06"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-05 12:32:44"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-05 12:32:44"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-05 12:32:44"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-05 12:32:44"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-05 12:32:44"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-05 12:32:44"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-05 14:00:31"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-05 14:00:31"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-05 14:00:31"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-05 14:00:31"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-05 14:00:31"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-05 14:00:31"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-05 14:09:01"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-05 14:09:01"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-05 14:09:08"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-05 14:09:08"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-05 14:09:08"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-05 14:09:08"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-05 14:09:08"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-05 14:09:08"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-05 14:09:28"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-05 14:09:28"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-05 14:09:31"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-05 14:09:31"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-05 14:09:31"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-05 14:09:31"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-05 14:09:31"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-05 14:09:31"}
+{"level":"info","message":"Folder created successfully with ID: 2","timestamp":"2025-03-05 14:09:44"}
+{"level":"info","message":"List created successfully with ID: 2","timestamp":"2025-03-05 14:09:44"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-05 14:21:48"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-05 14:21:49"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-05 14:44:02"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-05 14:44:02"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-05 14:44:02"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-05 14:44:02"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-05 14:44:02"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-05 14:44:02"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-05 14:44:43"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-05 14:44:43"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-05 14:44:43"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-05 14:44:43"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-05 14:44:43"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-05 14:44:43"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-05 14:45:08"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-05 14:45:08"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-05 14:45:08"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-05 14:45:08"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-05 14:45:08"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-05 14:45:08"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-05 14:47:53"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-05 14:47:53"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-05 14:47:53"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-05 14:47:53"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-05 14:47:54"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-05 14:47:54"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-05 14:47:56"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-05 14:47:56"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-05 14:47:56"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-05 14:47:56"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-05 14:47:56"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-05 14:47:56"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-05 14:49:29"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-05 14:49:29"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-05 14:49:29"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-05 14:49:29"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-05 14:49:29"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-05 14:49:29"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-05 14:49:36"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-05 14:49:36"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-05 14:49:36"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-05 14:49:36"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-05 14:49:36"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-05 14:49:36"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-05 14:49:50"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-05 14:49:50"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-05 14:49:50"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-05 14:49:50"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-05 14:49:50"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-05 14:49:50"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-05 14:51:00"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-05 14:51:00"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-05 14:51:00"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-05 14:51:00"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-05 14:51:00"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-05 14:51:00"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-05 14:51:05"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-05 14:51:05"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-05 14:51:05"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-05 14:51:05"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-05 14:51:05"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-05 14:51:05"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-05 15:07:44"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-05 15:07:47"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-05 15:24:23"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-05 15:24:27"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-05 15:25:11"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-05 15:25:15"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-05 15:25:19"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-05 15:25:22"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-05 15:28:12"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-05 15:28:12"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-05 15:28:12"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-05 15:28:12"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-05 15:28:12"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-05 15:28:12"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-05 15:28:54"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-05 15:28:54"}

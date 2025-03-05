@@ -167,3 +167,15 @@ export const createWorkspaceWithDefaults = async (req, res) => {
         res.status(500).json({ message: 'Failed to create workspace with defaults' });
     }
 };
+export const getSpacesByUser = async (req, res) => {
+    try {
+        const userId = req.user.id; // Lấy userId từ JWT token (middleware xác thực)
+
+        const spaces = await WorkspaceService.getUserSpaces(userId);
+
+        return res.status(200).json({ success: true, data: spaces });
+    } catch (error) {
+        logger.error("Failed to fetch user spaces:", error.message);
+        return res.status(500).json({ success: false, message: "Internal Server Error" });
+    }
+};

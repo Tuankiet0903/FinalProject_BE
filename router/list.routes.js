@@ -6,7 +6,8 @@ import {
     updateList,
     deleteList,
     getListsByUser,
-    getListsByColor
+    getListsByColor,
+    getListsByWorkspace
 } from "../controller/ListController.js";
 // import Auth from "../middleware/auth.js";
 
@@ -29,5 +30,6 @@ router.put("/lists/:id", updateList); // Update a list by ID
 router.delete("/lists/:id", deleteList); // Delete a list by ID
 router.get("/lists/user/:userId", getListsByUser); // Get lists by user ID
 router.get("/lists/color/:colorTag", getListsByColor); // Get lists by color tag
+router.get('/workspace/:workspaceId/lists', getListsByWorkspace);
 
 export default router;

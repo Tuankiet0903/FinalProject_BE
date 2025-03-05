@@ -22,3 +22,4 @@
 {"level":"error","message":"Task creation error: NotificationService.createTaskAssignmentNotification is not a function","timestamp":"2025-03-03 18:49:07"}
 {"level":"error","message":"Error creating task assignment notification: invalid input value for enum \"enum_Notifications_type\": \"TASK_ASSIGNED\"","timestamp":"2025-03-03 18:49:49"}
 {"level":"error","message":"Task creation error: invalid input value for enum \"enum_Notifications_type\": \"TASK_ASSIGNED\"","timestamp":"2025-03-03 18:49:49"}
+{"level":"error","message":"Workspace with ID null does not exist.","timestamp":"2025-03-04 03:42:13"}

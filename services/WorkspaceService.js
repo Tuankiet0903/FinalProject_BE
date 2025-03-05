@@ -202,6 +202,40 @@ class WorkspaceService {
             throw error;
         }
     }
+    static async getUserSpaces(userId) {
+        try {
+            const spaces = await Space.findAll({
+                where: { createdBy: userId }, // Lọc theo userId
+                include: [
+                    {
+                        model: Workspace,
+                        as: "workspace",
+                        attributes: ["name", "workspaceId"], // Lấy thông tin Workspace
+                    },
+                ],
+                order: [["createdAt", "DESC"]],
+            });
+    
+            logger.info(`Fetched spaces for user ID: ${userId}`);
+            return spaces;
+        } catch (error) {
+            logger.error(`Error fetching spaces for user: ${error.message}`);
+            throw new Error("Failed to fetch user spaces");
+        }
+    }
+
+    static async getWorkspaceById(id) {
+        try {
+            const workspace = await Workspace.findByPk(id);
+            return workspace;
+        } catch (error) {
+            console.error("Error in getWorkspaceById:", error);
+            throw error;
+        }
+    }
+
+    
+    
 }
 
 export default WorkspaceService;
