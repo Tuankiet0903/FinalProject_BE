@@ -1,0 +1,79 @@
+{"level":"error","message":"Error fetching workspace: Space is not associated to Workspace!","timestamp":"2025-03-05 15:44:54"}
+{"level":"error","message":"Failed to fetch workspace","timestamp":"2025-03-05 15:44:54"}
+{"level":"error","message":"Error fetching workspace: Space is not associated to Workspace!","timestamp":"2025-03-05 15:44:58"}
+{"level":"error","message":"Failed to fetch workspace","timestamp":"2025-03-05 15:44:58"}
+{"level":"error","message":"Error fetching workspace: Space is not associated to Workspace!","timestamp":"2025-03-05 15:46:34"}
+{"level":"error","message":"Failed to fetch workspace","timestamp":"2025-03-05 15:46:34"}
+{"level":"error","message":"Error fetching workspace: Space is not associated to Workspace!","timestamp":"2025-03-05 15:46:38"}
+{"level":"error","message":"Failed to fetch workspace","timestamp":"2025-03-05 15:46:38"}
+{"level":"error","message":"Workspace with ID null does not exist.","timestamp":"2025-03-05 15:51:22"}
+{"level":"error","message":"Workspace with ID null does not exist.","timestamp":"2025-03-05 15:51:28"}
+{"level":"error","message":"Workspace with ID null does not exist.","timestamp":"2025-03-05 15:51:30"}
+{"level":"error","message":"Workspace with ID null does not exist.","timestamp":"2025-03-05 15:51:30"}
+{"level":"error","message":"Workspace with ID null does not exist.","timestamp":"2025-03-05 15:51:31"}
+{"level":"error","message":"Error fetching workspace: Space is not associated to Workspace!","timestamp":"2025-03-05 15:54:13"}
+{"level":"error","message":"Failed to fetch workspace","timestamp":"2025-03-05 15:54:13"}
+{"level":"error","message":"Error fetching workspace: Space is not associated to Workspace!","timestamp":"2025-03-05 15:58:08"}
+{"level":"error","message":"Failed to fetch workspace","timestamp":"2025-03-05 15:58:08"}
+{"level":"error","message":"Error fetching workspace: Space is not associated to Workspace!","timestamp":"2025-03-05 15:58:33"}
+{"level":"error","message":"Failed to fetch workspace","timestamp":"2025-03-05 15:58:33"}
+{"level":"error","message":"Error fetching space: invalid input syntax for type integer: \"undefined\"","timestamp":"2025-03-05 16:35:51"}
+{"level":"error","message":"Failed to fetch space","timestamp":"2025-03-05 16:35:51"}
+{"level":"error","message":"Error fetching space: invalid input syntax for type integer: \"undefined\"","timestamp":"2025-03-05 16:35:59"}
+{"level":"error","message":"Failed to fetch space","timestamp":"2025-03-05 16:35:59"}
+{"level":"error","message":"Error fetching space: invalid input syntax for type integer: \"undefined\"","timestamp":"2025-03-05 16:36:43"}
+{"level":"error","message":"Failed to fetch space","timestamp":"2025-03-05 16:36:43"}
+{"level":"error","message":"Error fetching space: invalid input syntax for type integer: \":spaceId\"","timestamp":"2025-03-05 16:36:44"}
+{"level":"error","message":"Failed to fetch space","timestamp":"2025-03-05 16:36:44"}
+{"level":"error","message":"Error fetching space: invalid input syntax for type integer: \":spaceId\"","timestamp":"2025-03-05 16:37:01"}
+{"level":"error","message":"Failed to fetch space","timestamp":"2025-03-05 16:37:01"}
+{"level":"error","message":"Error fetching space: invalid input syntax for type integer: \"undefined\"","timestamp":"2025-03-05 16:37:02"}
+{"level":"error","message":"Failed to fetch space","timestamp":"2025-03-05 16:37:02"}
+{"level":"error","message":"Error fetching space: invalid input syntax for type integer: \"undefined\"","timestamp":"2025-03-05 16:38:07"}
+{"level":"error","message":"Failed to fetch space","timestamp":"2025-03-05 16:38:07"}
+{"level":"error","message":"Error fetching space: invalid input syntax for type integer: \"undefined\"","timestamp":"2025-03-05 16:38:11"}
+{"level":"error","message":"Failed to fetch space","timestamp":"2025-03-05 16:38:11"}
+{"level":"error","message":"Error fetching space: invalid input syntax for type integer: \"undefined\"","timestamp":"2025-03-05 16:38:59"}
+{"level":"error","message":"Failed to fetch space","timestamp":"2025-03-05 16:38:59"}
+{"level":"error","message":"Error fetching space: invalid input syntax for type integer: \"undefined\"","timestamp":"2025-03-05 16:38:59"}
+{"level":"error","message":"Failed to fetch space","timestamp":"2025-03-05 16:38:59"}
+{"level":"error","message":"Error fetching space: invalid input syntax for type integer: \"undefined\"","timestamp":"2025-03-05 16:39:11"}
+{"level":"error","message":"Failed to fetch space","timestamp":"2025-03-05 16:39:11"}
+{"level":"error","message":"Error fetching space: invalid input syntax for type integer: \"undefined\"","timestamp":"2025-03-05 16:39:11"}
+{"level":"error","message":"Failed to fetch space","timestamp":"2025-03-05 16:39:11"}
+{"level":"error","message":"Error fetching folder: invalid input syntax for type integer: \"space\"","timestamp":"2025-03-05 22:05:56"}
+{"level":"error","message":"Failed to fetch folder","timestamp":"2025-03-05 22:05:56"}
+{"level":"error","message":"Error fetching folder: invalid input syntax for type integer: \"space\"","timestamp":"2025-03-05 22:05:57"}
+{"level":"error","message":"Failed to fetch folder","timestamp":"2025-03-05 22:05:57"}
+{"level":"error","message":"Error fetching folder: invalid input syntax for type integer: \"space\"","timestamp":"2025-03-05 22:06:02"}
+{"level":"error","message":"Failed to fetch folder","timestamp":"2025-03-05 22:06:02"}
+{"level":"error","message":"Error fetching folder: invalid input syntax for type integer: \"space\"","timestamp":"2025-03-05 22:06:02"}
+{"level":"error","message":"Failed to fetch folder","timestamp":"2025-03-05 22:06:02"}
+{"level":"error","message":"Error creating list: notNull Violation: List.name cannot be null","timestamp":"2025-03-06 16:56:57"}
+{"level":"error","message":"notNull Violation: List.name cannot be null","timestamp":"2025-03-06 16:56:57"}
+{"level":"error","message":"Error creating folder: invalid input syntax for type integer: \"abc\"","timestamp":"2025-03-06 17:08:03"}
+{"level":"error","message":"invalid input syntax for type integer: \"abc\"","timestamp":"2025-03-06 17:08:03"}
+{"level":"error","message":"Error fetching workspace: could not load C:/Program Files/PostgreSQL/17/data/pg_hba.conf","timestamp":"2025-03-06 17:15:07"}
+{"level":"error","message":"Failed to fetch workspace","timestamp":"2025-03-06 17:15:07"}
+{"level":"error","message":"Error fetching workspace: could not load C:/Program Files/PostgreSQL/17/data/pg_hba.conf","timestamp":"2025-03-06 17:15:07"}
+{"level":"error","message":"Failed to fetch workspace","timestamp":"2025-03-06 17:15:07"}
+{"level":"error","message":"Error fetching user workspaces: could not load C:/Program Files/PostgreSQL/17/data/pg_hba.conf","timestamp":"2025-03-06 17:15:11"}
+{"level":"error","message":"Failed to fetch user workspaces","timestamp":"2025-03-06 17:15:11"}
+{"level":"error","message":"Error fetching workspace: could not load C:/Program Files/PostgreSQL/17/data/pg_hba.conf","timestamp":"2025-03-06 17:15:11"}
+{"level":"error","message":"Failed to fetch workspace","timestamp":"2025-03-06 17:15:11"}
+{"level":"error","message":"Error fetching user workspaces: could not load C:/Program Files/PostgreSQL/17/data/pg_hba.conf","timestamp":"2025-03-06 17:15:12"}
+{"level":"error","message":"Failed to fetch user workspaces","timestamp":"2025-03-06 17:15:12"}
+{"level":"error","message":"Error fetching workspace: could not load C:/Program Files/PostgreSQL/17/data/pg_hba.conf","timestamp":"2025-03-06 17:15:12"}
+{"level":"error","message":"Failed to fetch workspace","timestamp":"2025-03-06 17:15:12"}
+{"level":"error","message":"Error fetching user workspaces: could not load C:/Program Files/PostgreSQL/17/data/pg_hba.conf","timestamp":"2025-03-06 17:15:24"}
+{"level":"error","message":"Failed to fetch user workspaces","timestamp":"2025-03-06 17:15:24"}
+{"level":"error","message":"Error fetching user workspaces: could not load C:/Program Files/PostgreSQL/17/data/pg_hba.conf","timestamp":"2025-03-06 17:15:24"}
+{"level":"error","message":"Failed to fetch user workspaces","timestamp":"2025-03-06 17:15:24"}
+{"level":"error","message":"Error fetching user workspaces: could not load C:/Program Files/PostgreSQL/17/data/pg_hba.conf","timestamp":"2025-03-06 17:15:26"}
+{"level":"error","message":"Failed to fetch user workspaces","timestamp":"2025-03-06 17:15:26"}
+{"level":"error","message":"Error fetching workspace: could not load C:/Program Files/PostgreSQL/17/data/pg_hba.conf","timestamp":"2025-03-06 17:15:26"}
+{"level":"error","message":"Failed to fetch workspace","timestamp":"2025-03-06 17:15:26"}
+{"level":"error","message":"Error fetching user workspaces: could not load C:/Program Files/PostgreSQL/17/data/pg_hba.conf","timestamp":"2025-03-06 17:15:26"}
+{"level":"error","message":"Failed to fetch user workspaces","timestamp":"2025-03-06 17:15:26"}
+{"level":"error","message":"Error fetching workspace: could not load C:/Program Files/PostgreSQL/17/data/pg_hba.conf","timestamp":"2025-03-06 17:15:26"}
+{"level":"error","message":"Failed to fetch workspace","timestamp":"2025-03-06 17:15:26"}
