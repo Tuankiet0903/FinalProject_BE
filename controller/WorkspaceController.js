@@ -3,6 +3,7 @@ import SpaceService from '../services/SpaceService.js';
 import FolderService from '../services/FolderService.js';
 import ListService from '../services/ListService.js';
 import logger from "../utils/logger.js";
+import TaskColumnService from "../services/TaskColumnService.js";
 
 export const createWorkspace = async ({ name, description, type = 'personal' }) => {
     try {
@@ -155,12 +156,32 @@ export const createWorkspaceWithDefaults = async (req, res) => {
             createdBy
         });
 
+        // Tạo 3 cột mặc định trong List với các màu sắc khác nhau
+        const columns = [
+            { name: "To do", color: "gray", status: 1 }, // 1 = To do
+            { name: "In process", color: "blue", status: 2 }, // 2 = In process
+            { name: "Done", color: "green", status: 3 } // 3 = Done
+        ];
+
+        const createdColumns = [];
+        for (let i = 0; i < columns.length; i++) {
+            const column = await TaskColumnService.createTaskColumn({
+                name: columns[i].name,
+                listId: list.listId,
+                createdBy,
+                color: columns[i].color, // Màu sắc cho từng cột
+                status: columns[i].status // Trạng thái cho từng cột
+            });
+            createdColumns.push(column);
+        }
+
         res.status(201).json({
-            message: 'Workspace, Space, Folder, and List created successfully',
+            message: 'Workspace, Space, Folder, List and Task Collumn created successfully',
             workspace,
             space,
             folder,
-            list
+            list,
+            taskColumns: createdColumns
         });
     } catch (error) {
         console.error("Error creating workspace with defaults:", error);
