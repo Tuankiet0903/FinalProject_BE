@@ -1426,3 +1426,944 @@
 {"level":"error","message":"Failed to fetch user workspaces","timestamp":"2025-03-06 17:15:26"}
 {"level":"error","message":"Error fetching workspace: could not load C:/Program Files/PostgreSQL/17/data/pg_hba.conf","timestamp":"2025-03-06 17:15:26"}
 {"level":"error","message":"Failed to fetch workspace","timestamp":"2025-03-06 17:15:26"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-06 17:17:01"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-06 17:17:01"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-06 17:17:01"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-06 17:17:01"}
+{"level":"info","message":"Fetched workspace with ID: 1","timestamp":"2025-03-06 17:17:01"}
+{"level":"info","message":"Fetched space with ID: 3","timestamp":"2025-03-06 17:17:03"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-06 17:17:03"}
+{"level":"info","message":"Fetched space with ID: 3","timestamp":"2025-03-06 17:17:03"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 8","timestamp":"2025-03-06 17:17:03"}
+{"level":"info","message":"✅ Found 1 lists for folderId 8","timestamp":"2025-03-06 17:17:03"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 8","timestamp":"2025-03-06 17:17:03"}
+{"level":"info","message":"✅ Found 1 lists for folderId 8","timestamp":"2025-03-06 17:17:03"}
+{"level":"info","message":"Fetched space with ID: 1","timestamp":"2025-03-06 17:17:11"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 9","timestamp":"2025-03-06 17:17:11"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 7","timestamp":"2025-03-06 17:17:11"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-06 17:17:11"}
+{"level":"info","message":"✅ Found 2 lists for folderId 9","timestamp":"2025-03-06 17:17:11"}
+{"level":"info","message":"✅ Found 1 lists for folderId 7","timestamp":"2025-03-06 17:17:11"}
+{"level":"info","message":"Fetched space with ID: 3","timestamp":"2025-03-06 17:17:23"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 8","timestamp":"2025-03-06 17:17:23"}
+{"level":"info","message":"✅ Found 1 lists for folderId 8","timestamp":"2025-03-06 17:17:23"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-06 17:17:23"}
+{"level":"info","message":"Fetched space with ID: 1","timestamp":"2025-03-06 17:17:31"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 9","timestamp":"2025-03-06 17:17:31"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 7","timestamp":"2025-03-06 17:17:31"}
+{"level":"info","message":"✅ Found 2 lists for folderId 9","timestamp":"2025-03-06 17:17:31"}
+{"level":"info","message":"✅ Found 1 lists for folderId 7","timestamp":"2025-03-06 17:17:31"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-06 17:17:31"}
+{"level":"info","message":"Folder created successfully with ID: 10","timestamp":"2025-03-06 17:17:33"}
+{"level":"info","message":"List created successfully with ID: 15","timestamp":"2025-03-06 17:17:33"}
+{"level":"info","message":"Fetched workspace with ID: 1","timestamp":"2025-03-06 17:17:33"}
+{"level":"info","message":"Fetched workspace with ID: 1","timestamp":"2025-03-06 17:18:17"}
+{"level":"info","message":"Fetched workspace with ID: 1","timestamp":"2025-03-06 17:18:17"}
+{"level":"info","message":"Fetched workspace with ID: 1","timestamp":"2025-03-06 17:19:52"}
+{"level":"info","message":"Fetched workspace with ID: 1","timestamp":"2025-03-06 17:23:40"}
+{"level":"info","message":"Fetched workspace with ID: 1","timestamp":"2025-03-06 17:23:40"}
+{"level":"info","message":"Fetched workspace with ID: 1","timestamp":"2025-03-06 17:23:44"}
+{"level":"info","message":"Fetched workspace with ID: 1","timestamp":"2025-03-06 17:23:44"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-06 17:23:44"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-06 17:23:45"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-06 17:24:11"}
+{"level":"info","message":"Fetched workspace with ID: 1","timestamp":"2025-03-06 17:25:14"}
+{"level":"info","message":"Fetched workspace with ID: 1","timestamp":"2025-03-06 17:25:14"}
+{"level":"info","message":"Fetched workspace with ID: 1","timestamp":"2025-03-06 17:25:38"}
+{"level":"info","message":"Fetched workspace with ID: 1","timestamp":"2025-03-06 17:26:00"}
+{"level":"info","message":"Fetched workspace with ID: 1","timestamp":"2025-03-06 17:26:00"}
+{"level":"info","message":"Fetched workspace with ID: 1","timestamp":"2025-03-06 17:26:09"}
+{"level":"info","message":"Fetched workspace with ID: 1","timestamp":"2025-03-06 17:26:11"}
+{"level":"info","message":"Fetched space with ID: 1","timestamp":"2025-03-06 17:26:15"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-06 17:26:15"}
+{"level":"info","message":"Fetched space with ID: 1","timestamp":"2025-03-06 17:26:15"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 9","timestamp":"2025-03-06 17:26:15"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 10","timestamp":"2025-03-06 17:26:15"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 7","timestamp":"2025-03-06 17:26:15"}
+{"level":"info","message":"✅ Found 2 lists for folderId 9","timestamp":"2025-03-06 17:26:15"}
+{"level":"info","message":"✅ Found 1 lists for folderId 10","timestamp":"2025-03-06 17:26:15"}
+{"level":"info","message":"✅ Found 1 lists for folderId 7","timestamp":"2025-03-06 17:26:15"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 9","timestamp":"2025-03-06 17:26:15"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 10","timestamp":"2025-03-06 17:26:15"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 7","timestamp":"2025-03-06 17:26:15"}
+{"level":"info","message":"✅ Found 2 lists for folderId 9","timestamp":"2025-03-06 17:26:15"}
+{"level":"info","message":"✅ Found 1 lists for folderId 10","timestamp":"2025-03-06 17:26:15"}
+{"level":"info","message":"✅ Found 1 lists for folderId 7","timestamp":"2025-03-06 17:26:15"}
+{"level":"info","message":"Fetched workspace with ID: 1","timestamp":"2025-03-06 17:26:20"}
+{"level":"info","message":"Fetched workspace with ID: 1","timestamp":"2025-03-06 17:26:20"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-06 17:26:20"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-06 17:26:21"}
+{"level":"info","message":"List created successfully with ID: 16","timestamp":"2025-03-06 17:26:24"}
+{"level":"info","message":"Fetched workspace with ID: 1","timestamp":"2025-03-06 17:26:24"}
+{"level":"info","message":"Fetched space with ID: 1","timestamp":"2025-03-06 17:26:28"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 9","timestamp":"2025-03-06 17:26:28"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-06 17:26:28"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 10","timestamp":"2025-03-06 17:26:28"}
+{"level":"info","message":"Fetched space with ID: 1","timestamp":"2025-03-06 17:26:28"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 7","timestamp":"2025-03-06 17:26:28"}
+{"level":"info","message":"✅ Found 2 lists for folderId 9","timestamp":"2025-03-06 17:26:28"}
+{"level":"info","message":"✅ Found 2 lists for folderId 10","timestamp":"2025-03-06 17:26:28"}
+{"level":"info","message":"✅ Found 1 lists for folderId 7","timestamp":"2025-03-06 17:26:28"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 9","timestamp":"2025-03-06 17:26:28"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 10","timestamp":"2025-03-06 17:26:28"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 7","timestamp":"2025-03-06 17:26:28"}
+{"level":"info","message":"✅ Found 2 lists for folderId 9","timestamp":"2025-03-06 17:26:28"}
+{"level":"info","message":"✅ Found 2 lists for folderId 10","timestamp":"2025-03-06 17:26:28"}
+{"level":"info","message":"✅ Found 1 lists for folderId 7","timestamp":"2025-03-06 17:26:28"}
+{"level":"info","message":"Fetched space with ID: 3","timestamp":"2025-03-06 17:26:34"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 8","timestamp":"2025-03-06 17:26:34"}
+{"level":"info","message":"✅ Found 1 lists for folderId 8","timestamp":"2025-03-06 17:26:34"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-06 17:26:34"}
+{"level":"info","message":"Fetched space with ID: 1","timestamp":"2025-03-06 17:26:35"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-06 17:26:35"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 10","timestamp":"2025-03-06 17:26:35"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 9","timestamp":"2025-03-06 17:26:35"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 7","timestamp":"2025-03-06 17:26:35"}
+{"level":"info","message":"✅ Found 2 lists for folderId 10","timestamp":"2025-03-06 17:26:35"}
+{"level":"info","message":"✅ Found 2 lists for folderId 9","timestamp":"2025-03-06 17:26:35"}
+{"level":"info","message":"✅ Found 1 lists for folderId 7","timestamp":"2025-03-06 17:26:35"}
+{"level":"info","message":"Fetched space with ID: 3","timestamp":"2025-03-06 17:26:36"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 8","timestamp":"2025-03-06 17:26:36"}
+{"level":"info","message":"✅ Found 1 lists for folderId 8","timestamp":"2025-03-06 17:26:36"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-06 17:26:36"}
+{"level":"info","message":"Fetched space with ID: 1","timestamp":"2025-03-06 17:28:43"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 10","timestamp":"2025-03-06 17:28:43"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 9","timestamp":"2025-03-06 17:28:43"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 7","timestamp":"2025-03-06 17:28:43"}
+{"level":"info","message":"✅ Found 2 lists for folderId 10","timestamp":"2025-03-06 17:28:43"}
+{"level":"info","message":"✅ Found 2 lists for folderId 9","timestamp":"2025-03-06 17:28:43"}
+{"level":"info","message":"✅ Found 1 lists for folderId 7","timestamp":"2025-03-06 17:28:43"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-06 17:28:43"}
+{"level":"info","message":"Fetched workspace with ID: 1","timestamp":"2025-03-06 17:29:02"}
+{"level":"info","message":"Fetched workspace with ID: 1","timestamp":"2025-03-06 17:29:02"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-06 17:29:02"}
+{"level":"info","message":"Fetched task columns for list ID: 12","timestamp":"2025-03-06 17:29:03"}
+{"level":"info","message":"Fetched task columns for list ID: 12","timestamp":"2025-03-06 17:29:03"}
+{"level":"info","message":"Fetched space with ID: 1","timestamp":"2025-03-06 17:29:08"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-06 17:29:08"}
+{"level":"info","message":"Fetched space with ID: 1","timestamp":"2025-03-06 17:29:08"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 10","timestamp":"2025-03-06 17:29:08"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 9","timestamp":"2025-03-06 17:29:08"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 7","timestamp":"2025-03-06 17:29:08"}
+{"level":"info","message":"✅ Found 2 lists for folderId 10","timestamp":"2025-03-06 17:29:08"}
+{"level":"info","message":"✅ Found 2 lists for folderId 9","timestamp":"2025-03-06 17:29:08"}
+{"level":"info","message":"✅ Found 1 lists for folderId 7","timestamp":"2025-03-06 17:29:08"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 10","timestamp":"2025-03-06 17:29:08"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 9","timestamp":"2025-03-06 17:29:09"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 7","timestamp":"2025-03-06 17:29:09"}
+{"level":"info","message":"✅ Found 2 lists for folderId 10","timestamp":"2025-03-06 17:29:09"}
+{"level":"info","message":"✅ Found 1 lists for folderId 7","timestamp":"2025-03-06 17:29:09"}
+{"level":"info","message":"✅ Found 2 lists for folderId 9","timestamp":"2025-03-06 17:29:09"}
+{"level":"info","message":"Fetched workspace with ID: 1","timestamp":"2025-03-06 17:29:11"}
+{"level":"info","message":"Fetched workspace with ID: 1","timestamp":"2025-03-06 17:29:11"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-06 17:29:11"}
+{"level":"info","message":"Fetched space with ID: 3","timestamp":"2025-03-06 17:29:14"}
+{"level":"info","message":"Fetched space with ID: 3","timestamp":"2025-03-06 17:29:14"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 8","timestamp":"2025-03-06 17:29:14"}
+{"level":"info","message":"✅ Found 1 lists for folderId 8","timestamp":"2025-03-06 17:29:14"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 8","timestamp":"2025-03-06 17:29:14"}
+{"level":"info","message":"✅ Found 1 lists for folderId 8","timestamp":"2025-03-06 17:29:14"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-06 17:29:14"}
+{"level":"info","message":"Fetched space with ID: 1","timestamp":"2025-03-06 17:34:28"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 10","timestamp":"2025-03-06 17:34:28"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 9","timestamp":"2025-03-06 17:34:28"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 7","timestamp":"2025-03-06 17:34:28"}
+{"level":"info","message":"✅ Found 2 lists for folderId 10","timestamp":"2025-03-06 17:34:28"}
+{"level":"info","message":"✅ Found 2 lists for folderId 9","timestamp":"2025-03-06 17:34:28"}
+{"level":"info","message":"✅ Found 1 lists for folderId 7","timestamp":"2025-03-06 17:34:28"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-06 17:34:28"}
+{"level":"info","message":"Fetched space with ID: 3","timestamp":"2025-03-06 17:34:30"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 8","timestamp":"2025-03-06 17:34:30"}
+{"level":"info","message":"✅ Found 1 lists for folderId 8","timestamp":"2025-03-06 17:34:30"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-06 17:34:30"}
+{"level":"info","message":"Fetched space with ID: 1","timestamp":"2025-03-06 17:34:32"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-06 17:34:32"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 10","timestamp":"2025-03-06 17:34:32"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 9","timestamp":"2025-03-06 17:34:32"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 7","timestamp":"2025-03-06 17:34:32"}
+{"level":"info","message":"✅ Found 2 lists for folderId 10","timestamp":"2025-03-06 17:34:32"}
+{"level":"info","message":"✅ Found 2 lists for folderId 9","timestamp":"2025-03-06 17:34:32"}
+{"level":"info","message":"✅ Found 1 lists for folderId 7","timestamp":"2025-03-06 17:34:32"}
+{"level":"info","message":"Fetched space with ID: 3","timestamp":"2025-03-06 17:34:33"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 8","timestamp":"2025-03-06 17:34:33"}
+{"level":"info","message":"✅ Found 1 lists for folderId 8","timestamp":"2025-03-06 17:34:33"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-06 17:34:33"}
+{"level":"info","message":"Fetched space with ID: 1","timestamp":"2025-03-06 17:34:55"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 10","timestamp":"2025-03-06 17:34:55"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 9","timestamp":"2025-03-06 17:34:55"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 7","timestamp":"2025-03-06 17:34:55"}
+{"level":"info","message":"✅ Found 2 lists for folderId 10","timestamp":"2025-03-06 17:34:55"}
+{"level":"info","message":"✅ Found 2 lists for folderId 9","timestamp":"2025-03-06 17:34:55"}
+{"level":"info","message":"✅ Found 1 lists for folderId 7","timestamp":"2025-03-06 17:34:55"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-06 17:34:55"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-06 17:35:03"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-06 17:35:03"}
+{"level":"info","message":"Fetched space with ID: 3","timestamp":"2025-03-06 20:36:45"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 8","timestamp":"2025-03-06 20:36:45"}
+{"level":"info","message":"✅ Found 1 lists for folderId 8","timestamp":"2025-03-06 20:36:45"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-06 20:36:45"}
+{"level":"info","message":"Fetched space with ID: 1","timestamp":"2025-03-06 20:36:46"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-06 20:36:46"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 7","timestamp":"2025-03-06 20:36:46"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 9","timestamp":"2025-03-06 20:36:46"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 10","timestamp":"2025-03-06 20:36:46"}
+{"level":"info","message":"✅ Found 1 lists for folderId 7","timestamp":"2025-03-06 20:36:46"}
+{"level":"info","message":"✅ Found 2 lists for folderId 9","timestamp":"2025-03-06 20:36:46"}
+{"level":"info","message":"✅ Found 2 lists for folderId 10","timestamp":"2025-03-06 20:36:46"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-07 12:28:31"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 12:28:31"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-07 12:28:31"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 12:28:31"}
+{"level":"info","message":"Fetched workspace with ID: 1","timestamp":"2025-03-07 12:28:31"}
+{"level":"info","message":"Fetched space with ID: 3","timestamp":"2025-03-07 12:28:32"}
+{"level":"info","message":"Fetched space with ID: 3","timestamp":"2025-03-07 12:28:32"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 12:28:32"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 8","timestamp":"2025-03-07 12:28:32"}
+{"level":"info","message":"✅ Found 1 lists for folderId 8","timestamp":"2025-03-07 12:28:32"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 8","timestamp":"2025-03-07 12:28:32"}
+{"level":"info","message":"✅ Found 1 lists for folderId 8","timestamp":"2025-03-07 12:28:32"}
+{"level":"info","message":"Fetched workspace with ID: 1","timestamp":"2025-03-07 12:34:36"}
+{"level":"info","message":"Fetched workspace with ID: 1","timestamp":"2025-03-07 12:37:07"}
+{"level":"info","message":"Fetched workspace with ID: 1","timestamp":"2025-03-07 12:37:12"}
+{"level":"info","message":"Fetched workspace with ID: 1","timestamp":"2025-03-07 12:37:43"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-07 12:37:46"}
+{"level":"info","message":"Fetched space with ID: 3","timestamp":"2025-03-07 12:37:46"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-07 12:37:46"}
+{"level":"info","message":"Fetched space with ID: 3","timestamp":"2025-03-07 12:37:46"}
+{"level":"info","message":"Fetched workspace with ID: 1","timestamp":"2025-03-07 12:37:46"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 12:37:46"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 8","timestamp":"2025-03-07 12:37:46"}
+{"level":"info","message":"✅ Found 1 lists for folderId 8","timestamp":"2025-03-07 12:37:46"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 12:37:46"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 8","timestamp":"2025-03-07 12:37:46"}
+{"level":"info","message":"✅ Found 1 lists for folderId 8","timestamp":"2025-03-07 12:37:46"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-07 12:38:40"}
+{"level":"info","message":"Fetched space with ID: 3","timestamp":"2025-03-07 12:38:40"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-07 12:38:40"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 8","timestamp":"2025-03-07 12:38:40"}
+{"level":"info","message":"Fetched space with ID: 3","timestamp":"2025-03-07 12:38:40"}
+{"level":"info","message":"Fetched workspace with ID: 1","timestamp":"2025-03-07 12:38:40"}
+{"level":"info","message":"✅ Found 1 lists for folderId 8","timestamp":"2025-03-07 12:38:40"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 8","timestamp":"2025-03-07 12:38:40"}
+{"level":"info","message":"✅ Found 1 lists for folderId 8","timestamp":"2025-03-07 12:38:40"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 12:38:40"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 12:38:40"}
+{"level":"error","message":"Error fetching space: invalid input syntax for type integer: \"undefined\"","timestamp":"2025-03-07 12:38:41"}
+{"level":"error","message":"Failed to fetch space","timestamp":"2025-03-07 12:38:41"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 12:38:41"}
+{"level":"error","message":"Error fetching space: invalid input syntax for type integer: \"undefined\"","timestamp":"2025-03-07 12:40:32"}
+{"level":"error","message":"Failed to fetch space","timestamp":"2025-03-07 12:40:32"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-07 12:40:32"}
+{"level":"error","message":"Error fetching space: invalid input syntax for type integer: \"undefined\"","timestamp":"2025-03-07 12:40:32"}
+{"level":"error","message":"Failed to fetch space","timestamp":"2025-03-07 12:40:32"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-07 12:40:32"}
+{"level":"info","message":"Fetched workspace with ID: 1","timestamp":"2025-03-07 12:40:32"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 12:40:32"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 12:40:32"}
+{"level":"info","message":"Fetched space with ID: 3","timestamp":"2025-03-07 12:40:49"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 8","timestamp":"2025-03-07 12:40:49"}
+{"level":"info","message":"✅ Found 1 lists for folderId 8","timestamp":"2025-03-07 12:40:49"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 12:40:49"}
+{"level":"info","message":"Fetched space with ID: 1","timestamp":"2025-03-07 12:40:55"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 10","timestamp":"2025-03-07 12:40:55"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 9","timestamp":"2025-03-07 12:40:55"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 7","timestamp":"2025-03-07 12:40:55"}
+{"level":"info","message":"✅ Found 2 lists for folderId 10","timestamp":"2025-03-07 12:40:55"}
+{"level":"info","message":"✅ Found 2 lists for folderId 9","timestamp":"2025-03-07 12:40:55"}
+{"level":"info","message":"✅ Found 1 lists for folderId 7","timestamp":"2025-03-07 12:40:55"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 12:40:55"}
+{"level":"info","message":"Fetched space with ID: 3","timestamp":"2025-03-07 12:40:56"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 8","timestamp":"2025-03-07 12:40:56"}
+{"level":"info","message":"✅ Found 1 lists for folderId 8","timestamp":"2025-03-07 12:40:56"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 12:40:56"}
+{"level":"error","message":"Error fetching space: invalid input syntax for type integer: \"undefined\"","timestamp":"2025-03-07 12:40:57"}
+{"level":"error","message":"Failed to fetch space","timestamp":"2025-03-07 12:40:57"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 12:40:57"}
+{"level":"info","message":"Fetched space with ID: 3","timestamp":"2025-03-07 12:41:01"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 12:41:01"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 8","timestamp":"2025-03-07 12:41:01"}
+{"level":"info","message":"✅ Found 1 lists for folderId 8","timestamp":"2025-03-07 12:41:01"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-07 12:42:15"}
+{"level":"info","message":"Fetched space with ID: 3","timestamp":"2025-03-07 12:42:15"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-07 12:42:15"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 8","timestamp":"2025-03-07 12:42:15"}
+{"level":"info","message":"Fetched space with ID: 3","timestamp":"2025-03-07 12:42:15"}
+{"level":"info","message":"Fetched workspace with ID: 1","timestamp":"2025-03-07 12:42:15"}
+{"level":"info","message":"✅ Found 1 lists for folderId 8","timestamp":"2025-03-07 12:42:15"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 12:42:15"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 12:42:15"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 8","timestamp":"2025-03-07 12:42:15"}
+{"level":"info","message":"✅ Found 1 lists for folderId 8","timestamp":"2025-03-07 12:42:15"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 12:42:17"}
+{"level":"info","message":"Fetched space with ID: 3","timestamp":"2025-03-07 12:42:33"}
+{"level":"info","message":"Fetched space with ID: 3","timestamp":"2025-03-07 12:42:33"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 8","timestamp":"2025-03-07 12:42:33"}
+{"level":"info","message":"✅ Found 1 lists for folderId 8","timestamp":"2025-03-07 12:42:33"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 8","timestamp":"2025-03-07 12:42:33"}
+{"level":"info","message":"✅ Found 1 lists for folderId 8","timestamp":"2025-03-07 12:42:33"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 12:42:33"}
+{"level":"info","message":"Fetched space with ID: 1","timestamp":"2025-03-07 12:42:39"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 10","timestamp":"2025-03-07 12:42:39"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 9","timestamp":"2025-03-07 12:42:39"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 7","timestamp":"2025-03-07 12:42:39"}
+{"level":"info","message":"✅ Found 2 lists for folderId 10","timestamp":"2025-03-07 12:42:39"}
+{"level":"info","message":"✅ Found 2 lists for folderId 9","timestamp":"2025-03-07 12:42:39"}
+{"level":"info","message":"✅ Found 1 lists for folderId 7","timestamp":"2025-03-07 12:42:39"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 12:42:39"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 12:42:40"}
+{"level":"info","message":"Fetched space with ID: 3","timestamp":"2025-03-07 12:42:41"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 12:42:41"}
+{"level":"info","message":"Fetched space with ID: 3","timestamp":"2025-03-07 12:42:41"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 8","timestamp":"2025-03-07 12:42:41"}
+{"level":"info","message":"✅ Found 1 lists for folderId 8","timestamp":"2025-03-07 12:42:41"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 8","timestamp":"2025-03-07 12:42:41"}
+{"level":"info","message":"✅ Found 1 lists for folderId 8","timestamp":"2025-03-07 12:42:41"}
+{"level":"info","message":"Fetched space with ID: 1","timestamp":"2025-03-07 13:18:16"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-07 13:18:16"}
+{"level":"info","message":"Fetched space with ID: 1","timestamp":"2025-03-07 13:18:16"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-07 13:18:16"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 13:18:16"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 13:18:16"}
+{"level":"info","message":"Fetched workspace with ID: 1","timestamp":"2025-03-07 13:18:16"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 10","timestamp":"2025-03-07 13:18:16"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 9","timestamp":"2025-03-07 13:18:16"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 7","timestamp":"2025-03-07 13:18:16"}
+{"level":"info","message":"✅ Found 2 lists for folderId 10","timestamp":"2025-03-07 13:18:16"}
+{"level":"info","message":"✅ Found 2 lists for folderId 9","timestamp":"2025-03-07 13:18:16"}
+{"level":"info","message":"✅ Found 1 lists for folderId 7","timestamp":"2025-03-07 13:18:16"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 10","timestamp":"2025-03-07 13:18:16"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 9","timestamp":"2025-03-07 13:18:16"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 7","timestamp":"2025-03-07 13:18:16"}
+{"level":"info","message":"✅ Found 2 lists for folderId 10","timestamp":"2025-03-07 13:18:16"}
+{"level":"info","message":"✅ Found 2 lists for folderId 9","timestamp":"2025-03-07 13:18:16"}
+{"level":"info","message":"✅ Found 1 lists for folderId 7","timestamp":"2025-03-07 13:18:16"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 13:21:23"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-07 13:21:32"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 13:21:32"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-07 13:21:32"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 13:21:32"}
+{"level":"info","message":"Fetched workspace with ID: 1","timestamp":"2025-03-07 13:21:32"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 13:21:51"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 13:21:52"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 13:21:52"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 13:21:53"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 13:21:54"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 13:21:55"}
+{"level":"info","message":"Fetched space with ID: 3","timestamp":"2025-03-07 13:21:55"}
+{"level":"info","message":"Fetched space with ID: 3","timestamp":"2025-03-07 13:21:55"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 8","timestamp":"2025-03-07 13:21:55"}
+{"level":"info","message":"✅ Found 1 lists for folderId 8","timestamp":"2025-03-07 13:21:55"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 8","timestamp":"2025-03-07 13:21:55"}
+{"level":"info","message":"✅ Found 1 lists for folderId 8","timestamp":"2025-03-07 13:21:55"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 13:21:58"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 13:21:59"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 13:22:01"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-07 13:22:20"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-07 13:22:20"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 13:22:20"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 13:22:20"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-07 13:22:20"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 13:22:20"}
+{"level":"info","message":"Fetched space with ID: 1","timestamp":"2025-03-07 13:22:20"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-07 13:22:20"}
+{"level":"info","message":"Fetched space with ID: 1","timestamp":"2025-03-07 13:22:20"}
+{"level":"info","message":"Fetched workspace with ID: 1","timestamp":"2025-03-07 13:22:20"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 13:22:20"}
+{"level":"info","message":"Fetched workspace with ID: 1","timestamp":"2025-03-07 13:22:20"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 10","timestamp":"2025-03-07 13:22:20"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 9","timestamp":"2025-03-07 13:22:20"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 7","timestamp":"2025-03-07 13:22:20"}
+{"level":"info","message":"✅ Found 2 lists for folderId 10","timestamp":"2025-03-07 13:22:20"}
+{"level":"info","message":"✅ Found 2 lists for folderId 9","timestamp":"2025-03-07 13:22:20"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 10","timestamp":"2025-03-07 13:22:20"}
+{"level":"info","message":"✅ Found 1 lists for folderId 7","timestamp":"2025-03-07 13:22:20"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 9","timestamp":"2025-03-07 13:22:20"}
+{"level":"info","message":"✅ Found 2 lists for folderId 10","timestamp":"2025-03-07 13:22:20"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 7","timestamp":"2025-03-07 13:22:20"}
+{"level":"info","message":"✅ Found 2 lists for folderId 9","timestamp":"2025-03-07 13:22:20"}
+{"level":"info","message":"✅ Found 1 lists for folderId 7","timestamp":"2025-03-07 13:22:20"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-07 13:22:27"}
+{"level":"info","message":"Fetched space with ID: 1","timestamp":"2025-03-07 13:22:27"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-07 13:22:27"}
+{"level":"info","message":"Fetched space with ID: 1","timestamp":"2025-03-07 13:22:27"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 13:22:27"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 13:22:27"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-07 13:22:27"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 13:22:27"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-07 13:22:27"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 13:22:28"}
+{"level":"info","message":"Fetched workspace with ID: 1","timestamp":"2025-03-07 13:22:28"}
+{"level":"info","message":"Fetched workspace with ID: 1","timestamp":"2025-03-07 13:22:28"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 10","timestamp":"2025-03-07 13:22:28"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 9","timestamp":"2025-03-07 13:22:28"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 7","timestamp":"2025-03-07 13:22:28"}
+{"level":"info","message":"✅ Found 2 lists for folderId 10","timestamp":"2025-03-07 13:22:28"}
+{"level":"info","message":"✅ Found 2 lists for folderId 9","timestamp":"2025-03-07 13:22:28"}
+{"level":"info","message":"✅ Found 1 lists for folderId 7","timestamp":"2025-03-07 13:22:28"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 10","timestamp":"2025-03-07 13:22:28"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 9","timestamp":"2025-03-07 13:22:28"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 7","timestamp":"2025-03-07 13:22:28"}
+{"level":"info","message":"✅ Found 2 lists for folderId 10","timestamp":"2025-03-07 13:22:28"}
+{"level":"info","message":"✅ Found 2 lists for folderId 9","timestamp":"2025-03-07 13:22:28"}
+{"level":"info","message":"✅ Found 1 lists for folderId 7","timestamp":"2025-03-07 13:22:28"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 13:22:30"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-07 13:22:30"}
+{"level":"info","message":"Fetched space with ID: 1","timestamp":"2025-03-07 13:22:30"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-07 13:22:31"}
+{"level":"info","message":"Fetched workspace with ID: 1","timestamp":"2025-03-07 13:22:31"}
+{"level":"info","message":"Fetched space with ID: 1","timestamp":"2025-03-07 13:22:31"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 9","timestamp":"2025-03-07 13:22:31"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 10","timestamp":"2025-03-07 13:22:31"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 7","timestamp":"2025-03-07 13:22:31"}
+{"level":"info","message":"✅ Found 2 lists for folderId 9","timestamp":"2025-03-07 13:22:31"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-07 13:22:31"}
+{"level":"info","message":"✅ Found 2 lists for folderId 10","timestamp":"2025-03-07 13:22:31"}
+{"level":"info","message":"✅ Found 1 lists for folderId 7","timestamp":"2025-03-07 13:22:31"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 9","timestamp":"2025-03-07 13:22:31"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 10","timestamp":"2025-03-07 13:22:31"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 7","timestamp":"2025-03-07 13:22:31"}
+{"level":"info","message":"✅ Found 2 lists for folderId 9","timestamp":"2025-03-07 13:22:31"}
+{"level":"info","message":"✅ Found 1 lists for folderId 7","timestamp":"2025-03-07 13:22:31"}
+{"level":"info","message":"Fetched workspace with ID: 1","timestamp":"2025-03-07 13:22:31"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 13:22:31"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-07 13:22:31"}
+{"level":"info","message":"✅ Found 2 lists for folderId 10","timestamp":"2025-03-07 13:22:31"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 13:22:31"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 13:22:31"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 13:23:20"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 13:26:23"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 13:26:29"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 13:27:43"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 13:27:55"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 13:29:43"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 13:34:41"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 13:34:48"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 13:34:50"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 13:37:05"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 13:48:53"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 13:48:54"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 13:48:55"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-07 14:00:37"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-07 14:00:37"}
+{"level":"info","message":"Fetched space with ID: 3","timestamp":"2025-03-07 14:00:43"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 8","timestamp":"2025-03-07 14:00:43"}
+{"level":"info","message":"Fetched space with ID: 3","timestamp":"2025-03-07 14:00:43"}
+{"level":"info","message":"✅ Found 1 lists for folderId 8","timestamp":"2025-03-07 14:00:43"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 8","timestamp":"2025-03-07 14:00:43"}
+{"level":"info","message":"✅ Found 1 lists for folderId 8","timestamp":"2025-03-07 14:00:43"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 14:00:43"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 14:01:57"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-07 17:07:05"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-07 17:07:05"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 17:07:05"}
+{"level":"info","message":"Fetched workspace with ID: 1","timestamp":"2025-03-07 17:07:05"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 17:07:05"}
+{"level":"error","message":"Error fetching workspace: invalid input syntax for type integer: \"undefined\"","timestamp":"2025-03-07 17:09:49"}
+{"level":"error","message":"Failed to fetch workspace","timestamp":"2025-03-07 17:09:49"}
+{"level":"error","message":"Error fetching workspace: invalid input syntax for type integer: \"undefined\"","timestamp":"2025-03-07 17:09:49"}
+{"level":"error","message":"Failed to fetch workspace","timestamp":"2025-03-07 17:09:49"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-07 17:10:08"}
+{"level":"error","message":"Error fetching workspace: invalid input syntax for type integer: \"undefined\"","timestamp":"2025-03-07 17:10:08"}
+{"level":"error","message":"Failed to fetch workspace","timestamp":"2025-03-07 17:10:08"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-07 17:10:08"}
+{"level":"error","message":"Error fetching workspace: invalid input syntax for type integer: \"undefined\"","timestamp":"2025-03-07 17:10:08"}
+{"level":"error","message":"Failed to fetch workspace","timestamp":"2025-03-07 17:10:08"}
+{"level":"info","message":"Fetched workspace with ID: 1","timestamp":"2025-03-07 17:10:08"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 17:10:08"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 17:10:08"}
+{"level":"info","message":"Fetched all workspaces successfully","timestamp":"2025-03-07 17:10:33"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-07 17:11:33"}
+{"level":"info","message":"Fetched all workspaces successfully","timestamp":"2025-03-07 17:11:33"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-07 17:11:33"}
+{"level":"info","message":"Fetched all workspaces successfully","timestamp":"2025-03-07 17:11:33"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 17:11:33"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 17:11:33"}
+{"level":"info","message":"Fetched workspace with ID: 1","timestamp":"2025-03-07 17:11:33"}
+{"level":"info","message":"Fetched all workspaces successfully","timestamp":"2025-03-07 17:17:42"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-07 17:17:42"}
+{"level":"info","message":"Fetched all workspaces successfully","timestamp":"2025-03-07 17:17:42"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-07 17:17:42"}
+{"level":"info","message":"Fetched workspace with ID: 1","timestamp":"2025-03-07 17:17:42"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 17:17:42"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 17:17:42"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-07 17:18:35"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-07 17:18:35"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 17:18:35"}
+{"level":"info","message":"Fetched all spaces successfully","timestamp":"2025-03-07 17:18:35"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 17:18:35"}
+{"level":"info","message":"Fetched all spaces successfully","timestamp":"2025-03-07 17:18:36"}
+{"level":"info","message":"Fetched workspace with ID: 1","timestamp":"2025-03-07 17:18:36"}
+{"level":"info","message":"Fetched space with ID: 3","timestamp":"2025-03-07 17:18:50"}
+{"level":"info","message":"Fetched space with ID: 3","timestamp":"2025-03-07 17:18:50"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 8","timestamp":"2025-03-07 17:18:50"}
+{"level":"info","message":"✅ Found 1 lists for folderId 8","timestamp":"2025-03-07 17:18:50"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 8","timestamp":"2025-03-07 17:18:50"}
+{"level":"info","message":"✅ Found 1 lists for folderId 8","timestamp":"2025-03-07 17:18:50"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 17:18:50"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 17:19:03"}
+{"level":"info","message":"Fetched all spaces successfully","timestamp":"2025-03-07 17:19:03"}
+{"level":"info","message":"Fetched all spaces successfully","timestamp":"2025-03-07 17:19:03"}
+{"level":"info","message":"Fetched space with ID: 3","timestamp":"2025-03-07 17:22:58"}
+{"level":"info","message":"Fetched space with ID: 3","timestamp":"2025-03-07 17:22:58"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 8","timestamp":"2025-03-07 17:22:58"}
+{"level":"info","message":"✅ Found 1 lists for folderId 8","timestamp":"2025-03-07 17:22:58"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 8","timestamp":"2025-03-07 17:22:58"}
+{"level":"info","message":"✅ Found 1 lists for folderId 8","timestamp":"2025-03-07 17:22:58"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 17:22:58"}
+{"level":"info","message":"Fetched space with ID: 1","timestamp":"2025-03-07 17:23:01"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 17:23:01"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 9","timestamp":"2025-03-07 17:23:01"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 7","timestamp":"2025-03-07 17:23:01"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 10","timestamp":"2025-03-07 17:23:01"}
+{"level":"info","message":"✅ Found 2 lists for folderId 9","timestamp":"2025-03-07 17:23:01"}
+{"level":"info","message":"✅ Found 1 lists for folderId 7","timestamp":"2025-03-07 17:23:01"}
+{"level":"info","message":"✅ Found 2 lists for folderId 10","timestamp":"2025-03-07 17:23:01"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 17:23:02"}
+{"level":"info","message":"Fetched all spaces successfully","timestamp":"2025-03-07 17:23:02"}
+{"level":"info","message":"Fetched all spaces successfully","timestamp":"2025-03-07 17:23:02"}
+{"level":"info","message":"Fetched space with ID: 1","timestamp":"2025-03-07 17:26:03"}
+{"level":"info","message":"Fetched space with ID: 1","timestamp":"2025-03-07 17:26:03"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 10","timestamp":"2025-03-07 17:26:03"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 9","timestamp":"2025-03-07 17:26:03"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 7","timestamp":"2025-03-07 17:26:03"}
+{"level":"info","message":"✅ Found 2 lists for folderId 10","timestamp":"2025-03-07 17:26:03"}
+{"level":"info","message":"✅ Found 2 lists for folderId 9","timestamp":"2025-03-07 17:26:03"}
+{"level":"info","message":"✅ Found 1 lists for folderId 7","timestamp":"2025-03-07 17:26:03"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 10","timestamp":"2025-03-07 17:26:03"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 9","timestamp":"2025-03-07 17:26:03"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 7","timestamp":"2025-03-07 17:26:03"}
+{"level":"info","message":"✅ Found 2 lists for folderId 10","timestamp":"2025-03-07 17:26:03"}
+{"level":"info","message":"✅ Found 1 lists for folderId 7","timestamp":"2025-03-07 17:26:03"}
+{"level":"info","message":"✅ Found 2 lists for folderId 9","timestamp":"2025-03-07 17:26:03"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 17:26:03"}
+{"level":"info","message":"Fetched space with ID: 3","timestamp":"2025-03-07 17:26:04"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 8","timestamp":"2025-03-07 17:26:04"}
+{"level":"info","message":"✅ Found 1 lists for folderId 8","timestamp":"2025-03-07 17:26:04"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 17:26:04"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 17:26:12"}
+{"level":"info","message":"Fetched all spaces successfully","timestamp":"2025-03-07 17:26:12"}
+{"level":"info","message":"Fetched all spaces successfully","timestamp":"2025-03-07 17:26:12"}
+{"level":"info","message":"Fetched space with ID: 3","timestamp":"2025-03-07 17:31:31"}
+{"level":"info","message":"Fetched space with ID: 3","timestamp":"2025-03-07 17:31:31"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 8","timestamp":"2025-03-07 17:31:31"}
+{"level":"info","message":"✅ Found 1 lists for folderId 8","timestamp":"2025-03-07 17:31:31"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 8","timestamp":"2025-03-07 17:31:31"}
+{"level":"info","message":"✅ Found 1 lists for folderId 8","timestamp":"2025-03-07 17:31:31"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 17:31:31"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 17:31:39"}
+{"level":"info","message":"Fetched all spaces successfully","timestamp":"2025-03-07 17:31:39"}
+{"level":"info","message":"Fetched all spaces successfully","timestamp":"2025-03-07 17:31:39"}
+{"level":"info","message":"Fetched space with ID: 3","timestamp":"2025-03-07 17:31:40"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 17:31:40"}
+{"level":"info","message":"Fetched space with ID: 3","timestamp":"2025-03-07 17:31:40"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 8","timestamp":"2025-03-07 17:31:40"}
+{"level":"info","message":"✅ Found 1 lists for folderId 8","timestamp":"2025-03-07 17:31:40"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 8","timestamp":"2025-03-07 17:31:40"}
+{"level":"info","message":"✅ Found 1 lists for folderId 8","timestamp":"2025-03-07 17:31:40"}
+{"level":"info","message":"Fetched space with ID: 1","timestamp":"2025-03-07 17:32:00"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 10","timestamp":"2025-03-07 17:32:00"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 9","timestamp":"2025-03-07 17:32:00"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 7","timestamp":"2025-03-07 17:32:00"}
+{"level":"info","message":"✅ Found 2 lists for folderId 10","timestamp":"2025-03-07 17:32:00"}
+{"level":"info","message":"✅ Found 2 lists for folderId 9","timestamp":"2025-03-07 17:32:00"}
+{"level":"info","message":"✅ Found 1 lists for folderId 7","timestamp":"2025-03-07 17:32:00"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 17:32:00"}
+{"level":"info","message":"Fetched space with ID: 3","timestamp":"2025-03-07 17:32:02"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 8","timestamp":"2025-03-07 17:32:02"}
+{"level":"info","message":"✅ Found 1 lists for folderId 8","timestamp":"2025-03-07 17:32:02"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 17:32:02"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 17:32:04"}
+{"level":"info","message":"Fetched all spaces successfully","timestamp":"2025-03-07 17:32:04"}
+{"level":"info","message":"Fetched all spaces successfully","timestamp":"2025-03-07 17:32:04"}
+{"level":"info","message":"Fetched space with ID: 3","timestamp":"2025-03-07 17:32:41"}
+{"level":"info","message":"Fetched space with ID: 3","timestamp":"2025-03-07 17:32:41"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 8","timestamp":"2025-03-07 17:32:41"}
+{"level":"info","message":"✅ Found 1 lists for folderId 8","timestamp":"2025-03-07 17:32:41"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 8","timestamp":"2025-03-07 17:32:41"}
+{"level":"info","message":"✅ Found 1 lists for folderId 8","timestamp":"2025-03-07 17:32:41"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 17:32:41"}
+{"level":"info","message":"Fetched space with ID: 3","timestamp":"2025-03-07 17:37:21"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-07 17:37:21"}
+{"level":"info","message":"Fetched space with ID: 3","timestamp":"2025-03-07 17:37:21"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-07 17:37:21"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 17:37:22"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 8","timestamp":"2025-03-07 17:37:22"}
+{"level":"info","message":"Fetched workspace with ID: 1","timestamp":"2025-03-07 17:37:22"}
+{"level":"info","message":"✅ Found 1 lists for folderId 8","timestamp":"2025-03-07 17:37:22"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 8","timestamp":"2025-03-07 17:37:22"}
+{"level":"info","message":"✅ Found 1 lists for folderId 8","timestamp":"2025-03-07 17:37:22"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 17:37:22"}
+{"level":"info","message":"Fetched space with ID: 3","timestamp":"2025-03-07 17:37:24"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-07 17:37:24"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 17:37:24"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-07 17:37:24"}
+{"level":"info","message":"Fetched space with ID: 3","timestamp":"2025-03-07 17:37:24"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 17:37:24"}
+{"level":"info","message":"Fetched workspace with ID: 1","timestamp":"2025-03-07 17:37:24"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 8","timestamp":"2025-03-07 17:37:24"}
+{"level":"info","message":"✅ Found 1 lists for folderId 8","timestamp":"2025-03-07 17:37:24"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 8","timestamp":"2025-03-07 17:37:24"}
+{"level":"info","message":"✅ Found 1 lists for folderId 8","timestamp":"2025-03-07 17:37:24"}
+{"level":"info","message":"Space created successfully with ID: 7","timestamp":"2025-03-07 17:37:32"}
+{"level":"info","message":"Folder created successfully with ID: 11","timestamp":"2025-03-07 17:37:32"}
+{"level":"info","message":"List created successfully with ID: 17","timestamp":"2025-03-07 17:37:32"}
+{"level":"info","message":"Fetched workspace with ID: 1","timestamp":"2025-03-07 17:37:32"}
+{"level":"info","message":"Fetched space with ID: 7","timestamp":"2025-03-07 17:37:34"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 11","timestamp":"2025-03-07 17:37:34"}
+{"level":"info","message":"✅ Found 1 lists for folderId 11","timestamp":"2025-03-07 17:37:34"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 17:37:34"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 17:37:38"}
+{"level":"info","message":"Fetched all spaces successfully","timestamp":"2025-03-07 17:37:38"}
+{"level":"info","message":"Fetched all spaces successfully","timestamp":"2025-03-07 17:37:38"}
+{"level":"info","message":"Fetched all spaces successfully","timestamp":"2025-03-07 17:38:48"}
+{"level":"info","message":"Fetched all spaces successfully","timestamp":"2025-03-07 17:38:49"}
+{"level":"info","message":"Fetched all spaces successfully","timestamp":"2025-03-07 17:38:55"}
+{"level":"info","message":"Fetched all spaces successfully","timestamp":"2025-03-07 17:38:57"}
+{"level":"info","message":"Fetched all spaces successfully","timestamp":"2025-03-07 17:39:02"}
+{"level":"info","message":"Fetched all spaces successfully","timestamp":"2025-03-07 17:39:05"}
+{"level":"info","message":"Fetched all spaces successfully","timestamp":"2025-03-07 17:39:10"}
+{"level":"info","message":"Fetched all spaces successfully","timestamp":"2025-03-07 17:39:14"}
+{"level":"info","message":"Fetched all spaces successfully","timestamp":"2025-03-07 17:39:18"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 17:39:46"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 17:39:46"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 17:39:55"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 17:39:58"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 17:39:58"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-07 17:39:59"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 17:39:59"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-07 17:39:59"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 17:39:59"}
+{"level":"info","message":"Fetched workspace with ID: 1","timestamp":"2025-03-07 17:39:59"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 17:40:03"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 17:40:03"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 17:40:04"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 17:40:04"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 17:40:04"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 17:40:04"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 17:40:20"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 17:40:59"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 17:40:59"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 17:40:59"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-07 17:40:59"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 17:40:59"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-07 17:40:59"}
+{"level":"info","message":"Fetched workspace with ID: 1","timestamp":"2025-03-07 17:40:59"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 17:40:59"}
+{"level":"info","message":"Fetched space with ID: 3","timestamp":"2025-03-07 17:41:01"}
+{"level":"info","message":"Fetched space with ID: 3","timestamp":"2025-03-07 17:41:01"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 17:41:01"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 8","timestamp":"2025-03-07 17:41:01"}
+{"level":"info","message":"✅ Found 1 lists for folderId 8","timestamp":"2025-03-07 17:41:01"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 8","timestamp":"2025-03-07 17:41:01"}
+{"level":"info","message":"✅ Found 1 lists for folderId 8","timestamp":"2025-03-07 17:41:01"}
+{"level":"info","message":"Fetched space with ID: 7","timestamp":"2025-03-07 17:41:49"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 11","timestamp":"2025-03-07 17:41:49"}
+{"level":"info","message":"✅ Found 1 lists for folderId 11","timestamp":"2025-03-07 17:41:49"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 17:41:49"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 17:41:50"}
+{"level":"info","message":"Fetched workspace with ID: 1","timestamp":"2025-03-07 17:41:50"}
+{"level":"info","message":"Fetched workspace with ID: 1","timestamp":"2025-03-07 17:41:50"}
+{"level":"info","message":"Fetched task columns for list ID: 17","timestamp":"2025-03-07 17:41:51"}
+{"level":"info","message":"Fetched task columns for list ID: 17","timestamp":"2025-03-07 17:41:51"}
+{"level":"info","message":"Fetched task columns for list ID: 17","timestamp":"2025-03-07 17:42:23"}
+{"level":"info","message":"Fetched task columns for list ID: 17","timestamp":"2025-03-07 17:42:23"}
+{"level":"info","message":"Fetched space with ID: 3","timestamp":"2025-03-07 17:42:38"}
+{"level":"info","message":"Fetched space with ID: 3","timestamp":"2025-03-07 17:42:38"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 8","timestamp":"2025-03-07 17:42:38"}
+{"level":"info","message":"✅ Found 1 lists for folderId 8","timestamp":"2025-03-07 17:42:38"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 8","timestamp":"2025-03-07 17:42:38"}
+{"level":"info","message":"✅ Found 1 lists for folderId 8","timestamp":"2025-03-07 17:42:38"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 17:42:38"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 17:42:40"}
+{"level":"info","message":"Fetched all spaces successfully","timestamp":"2025-03-07 17:42:40"}
+{"level":"info","message":"Fetched all spaces successfully","timestamp":"2025-03-07 17:42:40"}
+{"level":"info","message":"Fetched space with ID: 7","timestamp":"2025-03-07 17:42:50"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 17:42:50"}
+{"level":"info","message":"Fetched space with ID: 7","timestamp":"2025-03-07 17:42:50"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 11","timestamp":"2025-03-07 17:42:50"}
+{"level":"info","message":"✅ Found 1 lists for folderId 11","timestamp":"2025-03-07 17:42:50"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 11","timestamp":"2025-03-07 17:42:50"}
+{"level":"info","message":"✅ Found 1 lists for folderId 11","timestamp":"2025-03-07 17:42:50"}
+{"level":"info","message":"Fetched all spaces successfully","timestamp":"2025-03-07 17:42:53"}
+{"level":"info","message":"Fetched all spaces successfully","timestamp":"2025-03-07 17:42:53"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 17:42:53"}
+{"level":"info","message":"Fetched space with ID: 7","timestamp":"2025-03-07 17:42:54"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 17:42:54"}
+{"level":"info","message":"Fetched space with ID: 7","timestamp":"2025-03-07 17:42:54"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 11","timestamp":"2025-03-07 17:42:54"}
+{"level":"info","message":"✅ Found 1 lists for folderId 11","timestamp":"2025-03-07 17:42:54"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 11","timestamp":"2025-03-07 17:42:54"}
+{"level":"info","message":"✅ Found 1 lists for folderId 11","timestamp":"2025-03-07 17:42:54"}
+{"level":"info","message":"Fetched space with ID: 1","timestamp":"2025-03-07 17:42:58"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 17:42:58"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 7","timestamp":"2025-03-07 17:42:58"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 9","timestamp":"2025-03-07 17:42:58"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 10","timestamp":"2025-03-07 17:42:58"}
+{"level":"info","message":"✅ Found 1 lists for folderId 7","timestamp":"2025-03-07 17:42:58"}
+{"level":"info","message":"✅ Found 2 lists for folderId 9","timestamp":"2025-03-07 17:42:59"}
+{"level":"info","message":"✅ Found 2 lists for folderId 10","timestamp":"2025-03-07 17:42:59"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 17:43:01"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 17:43:02"}
+{"level":"info","message":"Fetched all spaces successfully","timestamp":"2025-03-07 17:43:04"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 17:43:04"}
+{"level":"info","message":"Fetched all spaces successfully","timestamp":"2025-03-07 17:43:04"}
+{"level":"info","message":"Fetched space with ID: 3","timestamp":"2025-03-07 17:43:14"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 17:43:14"}
+{"level":"info","message":"Fetched space with ID: 3","timestamp":"2025-03-07 17:43:14"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 8","timestamp":"2025-03-07 17:43:14"}
+{"level":"info","message":"✅ Found 1 lists for folderId 8","timestamp":"2025-03-07 17:43:14"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 8","timestamp":"2025-03-07 17:43:14"}
+{"level":"info","message":"✅ Found 1 lists for folderId 8","timestamp":"2025-03-07 17:43:14"}
+{"level":"info","message":"Fetched space with ID: 1","timestamp":"2025-03-07 17:43:15"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 10","timestamp":"2025-03-07 17:43:15"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 9","timestamp":"2025-03-07 17:43:15"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 7","timestamp":"2025-03-07 17:43:15"}
+{"level":"info","message":"✅ Found 2 lists for folderId 10","timestamp":"2025-03-07 17:43:15"}
+{"level":"info","message":"✅ Found 2 lists for folderId 9","timestamp":"2025-03-07 17:43:15"}
+{"level":"info","message":"✅ Found 1 lists for folderId 7","timestamp":"2025-03-07 17:43:15"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 17:43:15"}
+{"level":"info","message":"Fetched space with ID: 3","timestamp":"2025-03-07 17:43:15"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 17:43:15"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 8","timestamp":"2025-03-07 17:43:15"}
+{"level":"info","message":"✅ Found 1 lists for folderId 8","timestamp":"2025-03-07 17:43:15"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 17:43:29"}
+{"level":"info","message":"Fetched all spaces successfully","timestamp":"2025-03-07 17:43:29"}
+{"level":"info","message":"Fetched all spaces successfully","timestamp":"2025-03-07 17:43:29"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 17:43:33"}
+{"level":"info","message":"Fetched space with ID: 1","timestamp":"2025-03-07 17:43:33"}
+{"level":"info","message":"Fetched space with ID: 1","timestamp":"2025-03-07 17:43:33"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 10","timestamp":"2025-03-07 17:43:33"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 9","timestamp":"2025-03-07 17:43:33"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 7","timestamp":"2025-03-07 17:43:33"}
+{"level":"info","message":"✅ Found 2 lists for folderId 10","timestamp":"2025-03-07 17:43:33"}
+{"level":"info","message":"✅ Found 2 lists for folderId 9","timestamp":"2025-03-07 17:43:33"}
+{"level":"info","message":"✅ Found 1 lists for folderId 7","timestamp":"2025-03-07 17:43:33"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 10","timestamp":"2025-03-07 17:43:33"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 9","timestamp":"2025-03-07 17:43:33"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 7","timestamp":"2025-03-07 17:43:33"}
+{"level":"info","message":"✅ Found 2 lists for folderId 10","timestamp":"2025-03-07 17:43:33"}
+{"level":"info","message":"✅ Found 1 lists for folderId 7","timestamp":"2025-03-07 17:43:33"}
+{"level":"info","message":"✅ Found 2 lists for folderId 9","timestamp":"2025-03-07 17:43:33"}
+{"level":"info","message":"Fetched space with ID: 7","timestamp":"2025-03-07 17:43:34"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 11","timestamp":"2025-03-07 17:43:34"}
+{"level":"info","message":"✅ Found 1 lists for folderId 11","timestamp":"2025-03-07 17:43:34"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 17:43:34"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 17:43:42"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 17:57:48"}
+{"level":"info","message":"Fetched all spaces successfully","timestamp":"2025-03-07 17:57:48"}
+{"level":"info","message":"Fetched all spaces successfully","timestamp":"2025-03-07 17:57:48"}
+{"level":"info","message":"Fetched space with ID: 3","timestamp":"2025-03-07 17:59:33"}
+{"level":"info","message":"Fetched space with ID: 3","timestamp":"2025-03-07 17:59:33"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 8","timestamp":"2025-03-07 17:59:33"}
+{"level":"info","message":"✅ Found 1 lists for folderId 8","timestamp":"2025-03-07 17:59:33"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 8","timestamp":"2025-03-07 17:59:33"}
+{"level":"info","message":"✅ Found 1 lists for folderId 8","timestamp":"2025-03-07 17:59:33"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 17:59:33"}
+{"level":"info","message":"Fetched space with ID: 1","timestamp":"2025-03-07 17:59:41"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 10","timestamp":"2025-03-07 17:59:42"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 9","timestamp":"2025-03-07 17:59:42"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 7","timestamp":"2025-03-07 17:59:42"}
+{"level":"info","message":"✅ Found 2 lists for folderId 10","timestamp":"2025-03-07 17:59:42"}
+{"level":"info","message":"✅ Found 2 lists for folderId 9","timestamp":"2025-03-07 17:59:42"}
+{"level":"info","message":"✅ Found 1 lists for folderId 7","timestamp":"2025-03-07 17:59:42"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 17:59:42"}
+{"level":"info","message":"Fetched all spaces successfully","timestamp":"2025-03-07 17:59:44"}
+{"level":"info","message":"Fetched all spaces successfully","timestamp":"2025-03-07 17:59:44"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 17:59:44"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-07 18:07:02"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-07 18:07:02"}
+{"level":"info","message":"Fetched workspace with ID: 1","timestamp":"2025-03-07 18:07:02"}
+{"level":"info","message":"Fetched all spaces successfully","timestamp":"2025-03-07 18:07:02"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 18:07:02"}
+{"level":"info","message":"Fetched all spaces successfully","timestamp":"2025-03-07 18:07:02"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 18:07:02"}
+{"level":"error","message":"Workspace with ID undefined does not exist.","timestamp":"2025-03-07 18:07:06"}
+{"level":"error","message":"Workspace with ID undefined does not exist.","timestamp":"2025-03-07 18:07:12"}
+{"level":"error","message":"Workspace with ID undefined does not exist.","timestamp":"2025-03-07 18:07:39"}
+{"level":"error","message":"Workspace with ID undefined does not exist.","timestamp":"2025-03-07 18:10:54"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-07 18:11:10"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-07 18:11:10"}
+{"level":"info","message":"Fetched all spaces successfully","timestamp":"2025-03-07 18:11:11"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 18:11:11"}
+{"level":"info","message":"Fetched all spaces successfully","timestamp":"2025-03-07 18:11:11"}
+{"level":"info","message":"Fetched workspace with ID: 1","timestamp":"2025-03-07 18:11:11"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 18:11:11"}
+{"level":"info","message":"Space created successfully with ID: 8","timestamp":"2025-03-07 18:11:14"}
+{"level":"info","message":"Folder created successfully with ID: 12","timestamp":"2025-03-07 18:11:14"}
+{"level":"info","message":"List created successfully with ID: 18","timestamp":"2025-03-07 18:11:14"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-07 18:11:18"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 18:11:18"}
+{"level":"info","message":"Fetched all spaces successfully","timestamp":"2025-03-07 18:11:18"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-07 18:11:18"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 18:11:18"}
+{"level":"info","message":"Fetched all spaces successfully","timestamp":"2025-03-07 18:11:18"}
+{"level":"info","message":"Fetched workspace with ID: 1","timestamp":"2025-03-07 18:11:18"}
+{"level":"info","message":"Fetched space with ID: 8","timestamp":"2025-03-07 18:11:21"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 18:11:21"}
+{"level":"info","message":"Fetched space with ID: 8","timestamp":"2025-03-07 18:11:21"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 12","timestamp":"2025-03-07 18:11:21"}
+{"level":"info","message":"✅ Found 1 lists for folderId 12","timestamp":"2025-03-07 18:11:21"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 12","timestamp":"2025-03-07 18:11:21"}
+{"level":"info","message":"✅ Found 1 lists for folderId 12","timestamp":"2025-03-07 18:11:21"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 18:11:25"}
+{"level":"info","message":"Fetched all spaces successfully","timestamp":"2025-03-07 18:11:25"}
+{"level":"info","message":"Fetched all spaces successfully","timestamp":"2025-03-07 18:11:25"}
+{"level":"info","message":"Space created successfully with ID: 9","timestamp":"2025-03-07 18:11:32"}
+{"level":"info","message":"Folder created successfully with ID: 13","timestamp":"2025-03-07 18:11:32"}
+{"level":"info","message":"List created successfully with ID: 19","timestamp":"2025-03-07 18:11:32"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-07 18:11:34"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-07 18:11:34"}
+{"level":"info","message":"Fetched all spaces successfully","timestamp":"2025-03-07 18:11:34"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 18:11:34"}
+{"level":"info","message":"Fetched all spaces successfully","timestamp":"2025-03-07 18:11:34"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 18:11:34"}
+{"level":"info","message":"Fetched workspace with ID: 1","timestamp":"2025-03-07 18:11:34"}
+{"level":"info","message":"Fetched all spaces successfully","timestamp":"2025-03-07 18:12:34"}
+{"level":"info","message":"Fetched all spaces successfully","timestamp":"2025-03-07 18:12:34"}
+{"level":"info","message":"Fetched all spaces successfully","timestamp":"2025-03-07 18:12:35"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-07 18:12:42"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 18:12:42"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-07 18:12:42"}
+{"level":"info","message":"Fetched all spaces successfully","timestamp":"2025-03-07 18:12:42"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 18:12:43"}
+{"level":"info","message":"Fetched all spaces successfully","timestamp":"2025-03-07 18:12:43"}
+{"level":"info","message":"Fetched workspace with ID: 1","timestamp":"2025-03-07 18:12:43"}
+{"level":"info","message":"Space created successfully with ID: 10","timestamp":"2025-03-07 18:12:48"}
+{"level":"info","message":"Folder created successfully with ID: 14","timestamp":"2025-03-07 18:12:48"}
+{"level":"info","message":"List created successfully with ID: 20","timestamp":"2025-03-07 18:12:48"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-07 18:12:51"}
+{"level":"info","message":"Fetched all spaces successfully","timestamp":"2025-03-07 18:12:51"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-07 18:12:51"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 18:12:51"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 18:12:51"}
+{"level":"info","message":"Fetched all spaces successfully","timestamp":"2025-03-07 18:12:51"}
+{"level":"info","message":"Fetched workspace with ID: 1","timestamp":"2025-03-07 18:12:51"}
+{"level":"info","message":"Space deleted successfully with ID: 10","timestamp":"2025-03-07 18:14:25"}
+{"level":"info","message":"Fetched workspace with ID: 1","timestamp":"2025-03-07 18:14:26"}
+{"level":"info","message":"Space deleted successfully with ID: 9","timestamp":"2025-03-07 18:14:28"}
+{"level":"info","message":"Fetched workspace with ID: 1","timestamp":"2025-03-07 18:14:28"}
+{"level":"info","message":"Space deleted successfully with ID: 8","timestamp":"2025-03-07 18:14:30"}
+{"level":"info","message":"Fetched workspace with ID: 1","timestamp":"2025-03-07 18:14:30"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-07 18:14:32"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-07 18:14:32"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 18:14:32"}
+{"level":"info","message":"Fetched all spaces successfully","timestamp":"2025-03-07 18:14:32"}
+{"level":"info","message":"Fetched workspace with ID: 1","timestamp":"2025-03-07 18:14:32"}
+{"level":"info","message":"Fetched all spaces successfully","timestamp":"2025-03-07 18:14:32"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 18:14:32"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-07 18:15:43"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-07 18:15:43"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 18:15:44"}
+{"level":"info","message":"Fetched all spaces successfully","timestamp":"2025-03-07 18:15:44"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 18:15:44"}
+{"level":"info","message":"Fetched all spaces successfully","timestamp":"2025-03-07 18:15:44"}
+{"level":"info","message":"Fetched workspace with ID: 1","timestamp":"2025-03-07 18:15:44"}
+{"level":"info","message":"Space created successfully with ID: 11","timestamp":"2025-03-07 18:15:47"}
+{"level":"info","message":"Folder created successfully with ID: 15","timestamp":"2025-03-07 18:15:47"}
+{"level":"info","message":"List created successfully with ID: 21","timestamp":"2025-03-07 18:15:47"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-07 18:15:51"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-07 18:15:51"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 18:15:51"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 18:15:51"}
+{"level":"info","message":"Fetched all spaces successfully","timestamp":"2025-03-07 18:15:51"}
+{"level":"info","message":"Fetched all spaces successfully","timestamp":"2025-03-07 18:15:51"}
+{"level":"info","message":"Fetched workspace with ID: 1","timestamp":"2025-03-07 18:15:51"}
+{"level":"info","message":"Fetched all spaces successfully","timestamp":"2025-03-07 18:16:29"}
+{"level":"info","message":"Fetched all spaces successfully","timestamp":"2025-03-07 18:16:40"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-07 18:16:45"}
+{"level":"info","message":"Fetched all spaces successfully","timestamp":"2025-03-07 18:16:45"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 18:16:45"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-07 18:16:45"}
+{"level":"info","message":"Fetched all spaces successfully","timestamp":"2025-03-07 18:16:45"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 18:16:45"}
+{"level":"info","message":"Fetched workspace with ID: 1","timestamp":"2025-03-07 18:16:45"}
+{"level":"error","message":"Argument passed to findByPk is invalid: [object Object]","timestamp":"2025-03-07 18:16:52"}
+{"level":"info","message":"Fetched all spaces successfully","timestamp":"2025-03-07 18:17:06"}
+{"level":"info","message":"Fetched all spaces successfully","timestamp":"2025-03-07 18:17:07"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-07 18:18:38"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-07 18:18:38"}
+{"level":"info","message":"Fetched workspace with ID: 1","timestamp":"2025-03-07 18:18:38"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 18:18:38"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 18:18:39"}
+{"level":"info","message":"Fetched all spaces successfully","timestamp":"2025-03-07 18:19:12"}
+{"level":"info","message":"Fetched all spaces successfully","timestamp":"2025-03-07 18:19:12"}
+{"level":"info","message":"Fetched space with ID: 1","timestamp":"2025-03-07 18:19:25"}
+{"level":"info","message":"Fetched space with ID: 1","timestamp":"2025-03-07 18:19:25"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 7","timestamp":"2025-03-07 18:19:25"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 10","timestamp":"2025-03-07 18:19:25"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 9","timestamp":"2025-03-07 18:19:25"}
+{"level":"info","message":"✅ Found 1 lists for folderId 7","timestamp":"2025-03-07 18:19:25"}
+{"level":"info","message":"✅ Found 2 lists for folderId 10","timestamp":"2025-03-07 18:19:25"}
+{"level":"info","message":"✅ Found 2 lists for folderId 9","timestamp":"2025-03-07 18:19:25"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 7","timestamp":"2025-03-07 18:19:25"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 10","timestamp":"2025-03-07 18:19:25"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 9","timestamp":"2025-03-07 18:19:25"}
+{"level":"info","message":"✅ Found 1 lists for folderId 7","timestamp":"2025-03-07 18:19:25"}
+{"level":"info","message":"✅ Found 2 lists for folderId 10","timestamp":"2025-03-07 18:19:25"}
+{"level":"info","message":"✅ Found 2 lists for folderId 9","timestamp":"2025-03-07 18:19:25"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 18:19:25"}
+{"level":"info","message":"Fetched space with ID: 11","timestamp":"2025-03-07 18:19:28"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 15","timestamp":"2025-03-07 18:19:28"}
+{"level":"info","message":"✅ Found 1 lists for folderId 15","timestamp":"2025-03-07 18:19:28"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 18:19:28"}
+{"level":"info","message":"Fetched workspace with ID: 1","timestamp":"2025-03-07 18:19:32"}
+{"level":"info","message":"Fetched workspace with ID: 1","timestamp":"2025-03-07 18:19:33"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 18:19:33"}
+{"level":"info","message":"Fetched space with ID: 11","timestamp":"2025-03-07 18:19:34"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 18:19:34"}
+{"level":"info","message":"Fetched space with ID: 11","timestamp":"2025-03-07 18:19:34"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 15","timestamp":"2025-03-07 18:19:35"}
+{"level":"info","message":"✅ Found 1 lists for folderId 15","timestamp":"2025-03-07 18:19:35"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 15","timestamp":"2025-03-07 18:19:35"}
+{"level":"info","message":"✅ Found 1 lists for folderId 15","timestamp":"2025-03-07 18:19:35"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 18:19:37"}
+{"level":"info","message":"Fetched all spaces successfully","timestamp":"2025-03-07 18:19:37"}
+{"level":"info","message":"Fetched all spaces successfully","timestamp":"2025-03-07 18:19:37"}
+{"level":"info","message":"Space created successfully with ID: 12","timestamp":"2025-03-07 18:19:48"}
+{"level":"info","message":"Folder created successfully with ID: 16","timestamp":"2025-03-07 18:19:48"}
+{"level":"info","message":"List created successfully with ID: 22","timestamp":"2025-03-07 18:19:48"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-07 18:19:51"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 18:19:51"}
+{"level":"info","message":"Fetched workspaces for user ID: 1","timestamp":"2025-03-07 18:19:51"}
+{"level":"info","message":"Fetched all spaces successfully","timestamp":"2025-03-07 18:19:51"}
+{"level":"info","message":"Fetched all spaces successfully","timestamp":"2025-03-07 18:19:51"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 18:19:51"}
+{"level":"info","message":"Fetched workspace with ID: 1","timestamp":"2025-03-07 18:19:51"}
+{"level":"info","message":"Fetched space with ID: 12","timestamp":"2025-03-07 18:19:56"}
+{"level":"info","message":"Fetched space with ID: 12","timestamp":"2025-03-07 18:19:56"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 16","timestamp":"2025-03-07 18:19:57"}
+{"level":"info","message":"✅ Found 1 lists for folderId 16","timestamp":"2025-03-07 18:19:57"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 16","timestamp":"2025-03-07 18:19:57"}
+{"level":"info","message":"✅ Found 1 lists for folderId 16","timestamp":"2025-03-07 18:19:57"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 18:19:57"}
+{"level":"info","message":"Fetched space with ID: 11","timestamp":"2025-03-07 18:19:58"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 18:19:58"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 15","timestamp":"2025-03-07 18:19:58"}
+{"level":"info","message":"✅ Found 1 lists for folderId 15","timestamp":"2025-03-07 18:19:58"}
+{"level":"info","message":"Fetched space with ID: 7","timestamp":"2025-03-07 18:19:58"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 18:19:58"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 11","timestamp":"2025-03-07 18:19:58"}
+{"level":"info","message":"✅ Found 1 lists for folderId 11","timestamp":"2025-03-07 18:19:58"}
+{"level":"info","message":"Fetched space with ID: 1","timestamp":"2025-03-07 18:19:59"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 18:19:59"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 10","timestamp":"2025-03-07 18:19:59"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 9","timestamp":"2025-03-07 18:19:59"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 7","timestamp":"2025-03-07 18:19:59"}
+{"level":"info","message":"✅ Found 2 lists for folderId 10","timestamp":"2025-03-07 18:19:59"}
+{"level":"info","message":"✅ Found 2 lists for folderId 9","timestamp":"2025-03-07 18:19:59"}
+{"level":"info","message":"✅ Found 1 lists for folderId 7","timestamp":"2025-03-07 18:19:59"}
+{"level":"info","message":"Fetched space with ID: 7","timestamp":"2025-03-07 18:20:01"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 11","timestamp":"2025-03-07 18:20:01"}
+{"level":"info","message":"✅ Found 1 lists for folderId 11","timestamp":"2025-03-07 18:20:01"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 18:20:01"}
+{"level":"info","message":"Fetched space with ID: 11","timestamp":"2025-03-07 18:20:02"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 15","timestamp":"2025-03-07 18:20:02"}
+{"level":"info","message":"✅ Found 1 lists for folderId 15","timestamp":"2025-03-07 18:20:02"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 18:20:02"}
+{"level":"info","message":"Fetched space with ID: 12","timestamp":"2025-03-07 18:20:02"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 18:20:02"}
+{"level":"info","message":"🔍 Fetching lists for folderId: 16","timestamp":"2025-03-07 18:20:02"}
+{"level":"info","message":"✅ Found 1 lists for folderId 16","timestamp":"2025-03-07 18:20:02"}
+{"level":"info","message":"Fetched user with ID: 1","timestamp":"2025-03-07 18:20:04"}
+{"level":"info","message":"Fetched all spaces successfully","timestamp":"2025-03-07 18:20:04"}
+{"level":"info","message":"Fetched all spaces successfully","timestamp":"2025-03-07 18:20:04"}

@@ -77,3 +77,24 @@
 {"level":"error","message":"Failed to fetch user workspaces","timestamp":"2025-03-06 17:15:26"}
 {"level":"error","message":"Error fetching workspace: could not load C:/Program Files/PostgreSQL/17/data/pg_hba.conf","timestamp":"2025-03-06 17:15:26"}
 {"level":"error","message":"Failed to fetch workspace","timestamp":"2025-03-06 17:15:26"}
+{"level":"error","message":"Error fetching space: invalid input syntax for type integer: \"undefined\"","timestamp":"2025-03-07 12:38:41"}
+{"level":"error","message":"Failed to fetch space","timestamp":"2025-03-07 12:38:41"}
+{"level":"error","message":"Error fetching space: invalid input syntax for type integer: \"undefined\"","timestamp":"2025-03-07 12:40:32"}
+{"level":"error","message":"Failed to fetch space","timestamp":"2025-03-07 12:40:32"}
+{"level":"error","message":"Error fetching space: invalid input syntax for type integer: \"undefined\"","timestamp":"2025-03-07 12:40:32"}
+{"level":"error","message":"Failed to fetch space","timestamp":"2025-03-07 12:40:32"}
+{"level":"error","message":"Error fetching space: invalid input syntax for type integer: \"undefined\"","timestamp":"2025-03-07 12:40:57"}
+{"level":"error","message":"Failed to fetch space","timestamp":"2025-03-07 12:40:57"}
+{"level":"error","message":"Error fetching workspace: invalid input syntax for type integer: \"undefined\"","timestamp":"2025-03-07 17:09:49"}
+{"level":"error","message":"Failed to fetch workspace","timestamp":"2025-03-07 17:09:49"}
+{"level":"error","message":"Error fetching workspace: invalid input syntax for type integer: \"undefined\"","timestamp":"2025-03-07 17:09:49"}
+{"level":"error","message":"Failed to fetch workspace","timestamp":"2025-03-07 17:09:49"}
+{"level":"error","message":"Error fetching workspace: invalid input syntax for type integer: \"undefined\"","timestamp":"2025-03-07 17:10:08"}
+{"level":"error","message":"Failed to fetch workspace","timestamp":"2025-03-07 17:10:08"}
+{"level":"error","message":"Error fetching workspace: invalid input syntax for type integer: \"undefined\"","timestamp":"2025-03-07 17:10:08"}
+{"level":"error","message":"Failed to fetch workspace","timestamp":"2025-03-07 17:10:08"}
+{"level":"error","message":"Workspace with ID undefined does not exist.","timestamp":"2025-03-07 18:07:06"}
+{"level":"error","message":"Workspace with ID undefined does not exist.","timestamp":"2025-03-07 18:07:12"}
+{"level":"error","message":"Workspace with ID undefined does not exist.","timestamp":"2025-03-07 18:07:39"}
+{"level":"error","message":"Workspace with ID undefined does not exist.","timestamp":"2025-03-07 18:10:54"}
+{"level":"error","message":"Argument passed to findByPk is invalid: [object Object]","timestamp":"2025-03-07 18:16:52"}
