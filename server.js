@@ -16,6 +16,7 @@ import authRouter from './router/auth.routes.js';
 import adminRouter from './router/admin.routes.js';
 import notificationRouter from './router/notification.routes.js'; // Import notification routes
 import session from "express-session";
+import MemoryStore from 'memorystore'
 import cookieParser from "cookie-parser";
 import passport from "./config/passport.js";
 import './cron/notificationCron.js';
@@ -26,17 +27,29 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 5000;
 
+const session = MemoryStore(session);
+
+app.use(session({
+    cookie: { maxAge: 86400000 },
+    store: new MemoryStore({
+      checkPeriod: 86400000 // prune expired entries every 24h
+    }),
+    resave: false,
+    secret: process.env.SESSION_SECRET,
+    saveUninitialized: false,
+}))
+
 app.use(cors(corsOptions));
 app.use(express.json());
 app.use(morgan('combined')); // Hoặc 'dev' cho log đơn giản hơn
 // Cấu hình session để lưu thông tin người dùng
-app.use(
-    session({
-        secret: process.env.SESSION_SECRET,
-        resave: false,
-        saveUninitialized: false,
-    })
-);
+// app.use(
+//     session({
+//         secret: process.env.SESSION_SECRET,
+//         resave: false,
+//         saveUninitialized: false,
+//     })
+// );
 
 // Middleware Passport
 app.use(passport.initialize());
