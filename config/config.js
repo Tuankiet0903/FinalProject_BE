@@ -1,6 +1,29 @@
-const ENV = {
-   JWT_SECRET: process.env.JWT_SECRET || '4e047e81f4d2ba87838b41e3',
-   JWT_EXPIRES_IN: process.env.JWT_EXPIRES_IN || "1d",
+import dotenv from 'dotenv';
+
+dotenv.config();
+
+const config = {
+  development: {
+    username: process.env.DB_USERNAME,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME,
+    host: process.env.DB_HOST,
+    dialect: process.env.DB_DIALECT,
+  },
+  test: {
+    username: process.env.DB_USERNAME,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME,
+    host: process.env.DB_HOST,
+    dialect: process.env.DB_DIALECT,
+  },
+  production: {
+    username: process.env.DB_USERNAME,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME,
+    host: process.env.DB_HOST,
+    dialect: process.env.DB_DIALECT,
+  },
 };
 
-export default ENV;
+export default config;
