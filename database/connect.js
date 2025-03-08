@@ -17,9 +17,14 @@ const sequelize = new Sequelize(
       idle: 10000, // Thời gian tối đa một kết nối có thể nhàn rỗi (ms)
     },
     logging: false, // Tắt log SQL trong môi trường sản xuất
+    dialectOptions: {
+      ssl: {
+        require: true,
+        rejectUnauthorized: false, // Bỏ qua kiểm tra chứng chỉ
+      },
+    },
   }
 );
-
 
 // const sequelize = new Sequelize(process.env.DB_CONNECT_URL, {
 //     dialect: 'postgres',
@@ -36,17 +41,19 @@ const connectDB = async () => {
   try {
     // Authenticate the connection to the database
     // await sequelize.authenticate();
-    await sequelize.authenticate()
+    await sequelize.authenticate();
     console.log("Connected to the PostgreSQL database successfully.");
 
     // Sync the database schema
-    await sequelize.sync({ alter: true }); // Use `alter: true` to update schema without dropping tables
-    console.log('Database synced successfully.');
+    // await sequelize.sync({ alter: true }); // Use `alter: true` to update schema without dropping tables
+    console.log("Database synced successfully.");
   } catch (error) {
-    console.error("Error connecting to or syncing the database:", error.message);
+    console.error(
+      "Error connecting to or syncing the database:",
+      error.message
+    );
     process.exit(1); // Stop the application if there's an error
   }
 };
 // Xuất `sequelize` để sử dụng trong model
 export { sequelize, connectDB };
-  
