@@ -4,35 +4,29 @@ import logger from "../utils/logger.js";
 
 class TaskColumnService {
     static async createTaskColumn(data) {
-        const { name, color, listId, createdBy } = data;
-        
+        const { name, color, listId, createdBy, status = 1 } = data; // Cung cấp giá trị mặc định cho status = 1 (To do)
+
         try {
-            // Verify list exists
+            // Kiểm tra xem List có tồn tại không
             const list = await List.findByPk(listId);
             if (!list) {
                 throw new Error("List not found");
             }
 
-            // Validate color if provided
-            if (color && !["red", "blue", "green"].includes(color)) {
-                throw new Error("Invalid color. Must be red, blue, or green");
+            // Kiểm tra màu sắc nếu có
+            if (color && !["gray", "blue", "green"].includes(color)) {
+                throw new Error("Invalid color. Must be gray, blue, or green");
             }
 
-            // Get max orderIndex for the list
-            const maxOrderColumn = await TaskColumn.findOne({
-                where: { listId },
-                order: [['orderIndex', 'DESC']]
-            });
-            const orderIndex = maxOrderColumn ? maxOrderColumn.orderIndex + 1 : 0;
-
+            // Tạo TaskColumn với giá trị mặc định cho status là 1 (To do)
             const taskColumn = await TaskColumn.create({
                 name,
                 color,
                 listId,
                 createdBy,
-                orderIndex
+                status,  // Truyền giá trị status (1: To do, 2: In process, 3: Done)
             });
-            
+
             logger.info(`TaskColumn created successfully with ID: ${taskColumn.columnId}`);
             return taskColumn;
         } catch (error) {
@@ -44,9 +38,9 @@ class TaskColumnService {
     static async getAllTaskColumns() {
         try {
             const taskColumns = await TaskColumn.findAll({
-                order: [['listId', 'ASC'], ['orderIndex', 'ASC']]
+                order: [['listId', 'ASC']]
             });
-            
+
             logger.info("Fetched all task columns successfully");
             return taskColumns;
         } catch (error) {
@@ -58,12 +52,12 @@ class TaskColumnService {
     static async getTaskColumnById(id) {
         try {
             const taskColumn = await TaskColumn.findByPk(id);
-            
+
             if (!taskColumn) {
                 logger.warn(`TaskColumn not found with ID: ${id}`);
                 return null;
             }
-            
+
             logger.info(`Fetched task column with ID: ${id}`);
             return taskColumn;
         } catch (error) {
@@ -75,15 +69,20 @@ class TaskColumnService {
     static async updateTaskColumn(id, data) {
         try {
             const taskColumn = await TaskColumn.findByPk(id);
-            
+
             if (!taskColumn) {
                 logger.warn(`TaskColumn not found for update with ID: ${id}`);
                 throw new Error("TaskColumn not found");
             }
 
-            // Validate color if being updated
-            if (data.color && !["red", "blue", "green"].includes(data.color)) {
-                throw new Error("Invalid color. Must be red, blue, or green");
+            // Kiểm tra màu sắc nếu có thay đổi
+            if (data.color && !["gray", "blue", "green"].includes(data.color)) {
+                throw new Error("Invalid color. Must be gray, blue, or green");
+            }
+
+            // Kiểm tra status nếu có thay đổi
+            if (data.status && ![1, 2, 3].includes(data.status)) {
+                throw new Error("Invalid status. Must be 1 (To do), 2 (In process), or 3 (Done)");
             }
 
             await taskColumn.update(data);
@@ -98,25 +97,13 @@ class TaskColumnService {
     static async deleteTaskColumn(id) {
         try {
             const taskColumn = await TaskColumn.findByPk(id);
-            
+
             if (!taskColumn) {
                 logger.warn(`TaskColumn not found for deletion with ID: ${id}`);
                 throw new Error("TaskColumn not found");
             }
 
             await taskColumn.destroy();
-            
-            // Reorder remaining columns
-            await TaskColumn.update(
-                { orderIndex: sequelize.literal('orderIndex - 1') },
-                { 
-                    where: { 
-                        listId: taskColumn.listId,
-                        orderIndex: { [Op.gt]: taskColumn.orderIndex }
-                    }
-                }
-            );
-
             logger.info(`TaskColumn deleted successfully with ID: ${id}`);
         } catch (error) {
             logger.error(`Error deleting task column: ${error.message}`);
@@ -128,40 +115,14 @@ class TaskColumnService {
         try {
             const taskColumns = await TaskColumn.findAll({
                 where: { listId },
-                order: [['orderIndex', 'ASC']]
+                order: [['columnId', 'ASC']]  // Không cần sử dụng orderIndex
             });
-            
+
             logger.info(`Fetched task columns for list ID: ${listId}`);
             return taskColumns;
         } catch (error) {
             logger.error(`Error fetching list task columns: ${error.message}`);
             throw new Error("Failed to fetch list task columns");
-        }
-    }
-
-    static async updateColumnOrder(listId, columnOrders) {
-        try {
-            // columnOrders should be an array of { columnId, orderIndex }
-            await sequelize.transaction(async (t) => {
-                for (const order of columnOrders) {
-                    await TaskColumn.update(
-                        { orderIndex: order.orderIndex },
-                        { 
-                            where: { 
-                                columnId: order.columnId,
-                                listId: listId
-                            },
-                            transaction: t
-                        }
-                    );
-                }
-            });
-
-            logger.info(`Updated order of columns in list ID: ${listId}`);
-            return await this.getTaskColumnsByList(listId);
-        } catch (error) {
-            logger.error(`Error updating column order: ${error.message}`);
-            throw new Error("Failed to update column order");
         }
     }
 }

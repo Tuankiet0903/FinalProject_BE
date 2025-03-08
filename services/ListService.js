@@ -6,9 +6,8 @@ class ListService {
         const { name, description, colorTag, folderId, createdBy } = data;
         
         try {
-            // Validate color tag if provided
-            if (colorTag && !["red", "blue", "green"].includes(colorTag)) {
-                throw new Error("Invalid color tag. Must be red, blue, or green");
+            if (colorTag && !["gray", "blue", "green"].includes(colorTag)) {
+                throw new Error("Invalid color tag. Must be gray, blue, or green");
             }
 
             const list = await List.create({
@@ -68,9 +67,8 @@ class ListService {
                 throw new Error("List not found");
             }
 
-            // Validate color tag if being updated
-            if (data.colorTag && !["red", "blue", "green"].includes(data.colorTag)) {
-                throw new Error("Invalid color tag. Must be red, blue, or green");
+            if (data.colorTag && !["gray", "blue", "green"].includes(data.colorTag)) {
+                throw new Error("Invalid color tag. Must be gray, blue, or green");
             }
 
             const updatedData = {
@@ -135,6 +133,30 @@ class ListService {
         } catch (error) {
             logger.error(`Error fetching lists by color: ${error.message}`);
             throw error;
+        }
+    }
+
+    /**
+     * ✅ Thêm hàm lấy danh sách Lists theo Folder ID
+     */
+    static async getListsByFolderId(folderId) {
+        try {
+            if (!folderId) {
+                throw new Error("❌ Folder ID is required");
+            }
+
+            logger.info(`🔍 Fetching lists for folderId: ${folderId}`);
+
+            const lists = await List.findAll({
+                where: { folderId },
+                order: [['createdAt', 'DESC']]
+            });
+
+            logger.info(`✅ Found ${lists.length} lists for folderId ${folderId}`);
+            return lists;
+        } catch (error) {
+            logger.error(`❌ Error fetching lists by folderId: ${error.message}`);
+            throw new Error("Failed to fetch lists for this folder");
         }
     }
 }

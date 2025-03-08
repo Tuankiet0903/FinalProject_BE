@@ -7,9 +7,9 @@ export const createTaskColumn = async (req, res) => {
             ...req.body,
             createdBy: req.user?.userId || req.body.createdBy // Fallback for now
         });
-        return res.status(201).json({ 
-            message: "Task column created successfully", 
-            taskColumn 
+        return res.status(201).json({
+            message: "Task column created successfully",
+            taskColumn
         });
     } catch (error) {
         logger.error(error.message);
@@ -46,9 +46,9 @@ export const getTaskColumnById = async (req, res) => {
 export const updateTaskColumn = async (req, res) => {
     try {
         const taskColumn = await TaskColumnService.updateTaskColumn(req.params.id, req.body);
-        return res.status(200).json({ 
-            message: "Task column updated successfully", 
-            taskColumn 
+        return res.status(200).json({
+            message: "Task column updated successfully",
+            taskColumn
         });
     } catch (error) {
         logger.error(error.message);
@@ -62,8 +62,8 @@ export const updateTaskColumn = async (req, res) => {
 export const deleteTaskColumn = async (req, res) => {
     try {
         await TaskColumnService.deleteTaskColumn(req.params.id);
-        return res.status(200).json({ 
-            message: "Task column deleted successfully" 
+        return res.status(200).json({
+            message: "Task column deleted successfully"
         });
     } catch (error) {
         logger.error(error.message);
@@ -86,13 +86,13 @@ export const updateColumnOrder = async (req, res) => {
     try {
         const { listId } = req.params;
         const { columnOrders } = req.body;
-        
+
         if (!Array.isArray(columnOrders)) {
             return res.status(400).json({ error: "Column orders must be an array" });
         }
 
         const updatedColumns = await TaskColumnService.updateColumnOrder(listId, columnOrders);
-        return res.status(200).json({ 
+        return res.status(200).json({
             message: "Column order updated successfully",
             taskColumns: updatedColumns
         });

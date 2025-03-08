@@ -14,6 +14,7 @@ import TaskRouter from './router/task.routes.js';
 import OTPRouter from './router/OTP.routes.js';
 import authRouter from './router/auth.routes.js';
 import adminRouter from './router/admin.routes.js';
+import notificationRouter from './router/notification.routes.js'; // Import notification routes
 import session from "express-session";
 import cookieParser from "cookie-parser";
 import passport from "./config/passport.js";
@@ -45,6 +46,7 @@ app.use(cookieParser());
 connectDB().then(async () => {
     //Chay syncDatabase khi co thay doi db
     // await syncDatabase();
+  
     // chi chay lan dau khi khong co data
     // await clearAndSeedDatabase();    
 
@@ -57,6 +59,7 @@ connectDB().then(async () => {
 
 app.use('/api/user', UserTestRouter);
 app.use('/auth', authRouter);
+app.use('/notifications', notificationRouter); // Thêm route notifications
 app.use('/space', SpaceRouter);
 app.use('/workspace', WorkspaceRouter);
 app.use('/folder', FolderRouter);
@@ -67,5 +70,5 @@ app.use('/api/otp', OTPRouter);
 app.use('/api/admin', adminRouter);
 
 // app.listen(PORT, () => {
-//     console.log(`Server is running on http://localhost:${PORT}`);
+//     console.log(Server is running on http://localhost:${PORT});
 // });
