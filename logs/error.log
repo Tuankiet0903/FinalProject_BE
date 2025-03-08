@@ -66,3 +66,6 @@
 {"level":"error","message":"Error deleting premium plan: invalid input syntax for type integer: \"delete-multiple\"","timestamp":"2025-03-07 22:23:48"}
 {"level":"error","message":"Error deleting premium plan: invalid input syntax for type integer: \"delete-multiple\"","timestamp":"2025-03-07 22:24:24"}
 {"level":"error","message":"Error deleting premium plan: invalid input syntax for type integer: \"delete-multiple\"","timestamp":"2025-03-07 22:26:54"}
+{"level":"error","message":"Failed to fetch lists.","timestamp":"2025-03-08 16:16:46"}
+{"level":"error","message":"Failed to fetch lists. column \"isactive\" does not exist","timestamp":"2025-03-08 16:17:18"}
+{"level":"error","message":"Failed to fetch lists. column \"id\" does not exist","timestamp":"2025-03-08 16:26:46"}

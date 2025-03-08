@@ -15,6 +15,7 @@ import {
   deleteMultiplePremiumPlans,
   editPlan,
   createPlan,
+  getCountAllActiveUsers,
 } from "../controller/AdminController.js";
 
 import {
@@ -29,6 +30,8 @@ router.get("/getCountAllUsers", getCountAllUser); // get number of user
 router.get("/getCountAllWorkspaceType", getCountAllWorkspaceType); // get number of workspace by type
 router.get("/getCountAllWorkspaceByMonth", getCountAllWorkspaceByMonth); // get number of workspace by month
 router.get("/getCountAllWorkspaceByYear", getCountAllWorkspaceByYear);  // get number of workspace by year
+router.get("/getCountAllActiveUsers", getCountAllActiveUsers); // get number of active user
+
 
 // Workspace List
 router.get("/getAllWorkspace", getAllWorkspaces); // get all workspace

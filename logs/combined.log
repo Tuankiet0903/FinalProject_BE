@@ -190,3 +190,16 @@
 {"level":"info","message":"Plan 3 created successfully","timestamp":"2025-03-08 00:07:58"}
 {"level":"info","message":"Plan 4 created successfully","timestamp":"2025-03-08 00:13:01"}
 {"level":"info","message":"Premium plan deleted successfully with ID: 4","timestamp":"2025-03-08 00:13:07"}
+{"level":"info","message":"Plan 5 created successfully","timestamp":"2025-03-08 15:47:55"}
+{"level":"info","message":"Plan 6 created successfully","timestamp":"2025-03-08 15:50:22"}
+{"level":"info","message":"Plan 1 updated successfully","timestamp":"2025-03-08 15:57:34"}
+{"level":"info","message":"Plan 1 updated successfully","timestamp":"2025-03-08 15:58:51"}
+{"level":"info","message":"Plan 1 updated successfully","timestamp":"2025-03-08 16:00:59"}
+{"level":"info","message":"Plan 1 updated successfully","timestamp":"2025-03-08 16:01:27"}
+{"level":"info","message":"Plan 1 updated successfully","timestamp":"2025-03-08 16:02:24"}
+{"level":"info","message":"Successfully deleted 1 premium plans.","timestamp":"2025-03-08 16:02:33"}
+{"level":"info","message":"Successfully deleted 2 premium plans.","timestamp":"2025-03-08 16:02:45"}
+{"level":"info","message":"Plan 1 updated successfully","timestamp":"2025-03-08 16:02:54"}
+{"level":"error","message":"Failed to fetch lists.","timestamp":"2025-03-08 16:16:46"}
+{"level":"error","message":"Failed to fetch lists. column \"isactive\" does not exist","timestamp":"2025-03-08 16:17:18"}
+{"level":"error","message":"Failed to fetch lists. column \"id\" does not exist","timestamp":"2025-03-08 16:26:46"}

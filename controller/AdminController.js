@@ -1,4 +1,5 @@
 import AdminService from "../services/AdminService.js";
+import logger from "../utils/logger.js";
 
 // DASHBOARD PAGE
 export const getCountAllUser = async (req, res) => {
@@ -6,7 +7,7 @@ export const getCountAllUser = async (req, res) => {
     const lists = await AdminService.getCountAllUsers();
     return res.status(200).json(lists);
   } catch (error) {
-    logger.error("Failed to fetch lists.");
+    logger.error(`Failed to fetch lists. ${error.message}`);
     return res.status(500).json({ error: "Internal Server Error" });
   }
 };
@@ -37,6 +38,16 @@ export const getCountAllWorkspaceByYear = async (req, res) => {
     return res.status(200).json(lists);
   } catch (error) {
     console.error(`Failed to fetch workspace counts: ${error.message}`);
+    return res.status(500).json({ error: "Internal Server Error" });
+  }
+};
+
+export const getCountAllActiveUsers = async (req, res) => {
+  try {
+    const lists = await AdminService.getCountAllActiveUsers();
+    return res.status(200).json(lists);
+  } catch (error) {
+    logger.error(`Failed to fetch lists. ${error.message}`);
     return res.status(500).json({ error: "Internal Server Error" });
   }
 };
@@ -170,7 +181,8 @@ export const editPlan = async (req, res) => {
     const lists = await AdminService.editPlan(
       req.body.id,
       req.body.description,
-      req.body.price
+      req.body.price,
+      req.body.isPopular,
     );
     return res.status(200).json(lists);
   } catch (error) {
@@ -189,6 +201,7 @@ export const createPlan = async (req, res) => {
       req.body.price,
       req.body.duration,
       req.body.description,
+      req.body.isPopular,
     );
     return res.status(200).json(plans);
   } catch (error) {

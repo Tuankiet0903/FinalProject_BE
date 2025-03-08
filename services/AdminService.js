@@ -93,6 +93,17 @@ class AdminService {
     }
   }
 
+  static async getCountAllActiveUsers() {
+    const users = await User.findOne({
+      attributes: [
+        [Sequelize.fn("COUNT", Sequelize.col("userId")), "totalUser"],
+        [Sequelize.fn("COUNT", Sequelize.literal("CASE WHEN active = 'true' THEN 1 END")), "active"],
+      ],
+    });
+    return users;
+  }
+  
+
   // WORKSPACE LIST PAGE
   static async getAllWorkspaces() {
     try {
@@ -239,102 +250,112 @@ class AdminService {
     }
   }
 
-// PREMIUM PAGE
-static async getAllPremiumPlan() {
-  try {
-    const plans = await PremiumPlans.findAll()
-    return plans;
-  } catch (error) {
-    console.error("Error fetching users:", error);
-    throw new Error("Database Error");
-  }
-}
-
-static async deletePremiumPlanById(id) {
-  try {
-    const premiumPlan = await PremiumPlans.findByPk(id);
-    if (!premiumPlan) {
-      logger.warn(`Premium plan not found for deletion with ID: ${id}`);
-      throw new Error("Premium plan not found");
+  // PREMIUM PAGE
+  static async getAllPremiumPlan() {
+    try {
+      const plans = await PremiumPlans.findAll();
+      return plans;
+    } catch (error) {
+      console.error("Error fetching users:", error);
+      throw new Error("Database Error");
     }
-
-    await premiumPlan.destroy();
-    logger.info(`Premium plan deleted successfully with ID: ${id}`);
-  } catch (error) {
-    logger.error(`Error deleting premium plan: ${error.message}`);
-    throw new Error("Failed to delete premium plan");
   }
-}
 
-static async deleteMultiplePremiumPlans(ids) {
-  console.log("Deleting premium plans with IDs:", ids); // Debugging
-  try {
-    if (!Array.isArray(ids) || ids.length === 0 || !ids.every(id => Number.isInteger(id))) {
-      logger.warn("Invalid or empty premium plan IDs provided:", ids);
-      throw new Error("Invalid or empty premium plan IDs format");
+  static async deletePremiumPlanById(id) {
+    try {
+      const premiumPlan = await PremiumPlans.findByPk(id);
+      if (!premiumPlan) {
+        logger.warn(`Premium plan not found for deletion with ID: ${id}`);
+        throw new Error("Premium plan not found");
+      }
+
+      await premiumPlan.destroy();
+      logger.info(`Premium plan deleted successfully with ID: ${id}`);
+    } catch (error) {
+      logger.error(`Error deleting premium plan: ${error.message}`);
+      throw new Error("Failed to delete premium plan");
     }
-
-    const deletedCount = await PremiumPlans.destroy({
-      where: { planId: ids },
-    });
-
-    if (deletedCount === 0) {
-      logger.warn(`No premium plans found for deletion with IDs: ${ids}`);
-      throw new Error("No premium plans found for deletion");
-    }
-
-    logger.info(`Successfully deleted ${deletedCount} premium plans.`);
-  } catch (error) {
-    logger.error(`Error deleting premium plans: ${error.message}`);
-    throw new Error("Failed to delete premium plans");
   }
-}
 
-static async editPlan(id, description, price) {
-  try {
+  static async deleteMultiplePremiumPlans(ids) {
+    console.log("Deleting premium plans with IDs:", ids); // Debugging
+    try {
+      if (
+        !Array.isArray(ids) ||
+        ids.length === 0 ||
+        !ids.every((id) => Number.isInteger(id))
+      ) {
+        logger.warn("Invalid or empty premium plan IDs provided:", ids);
+        throw new Error("Invalid or empty premium plan IDs format");
+      }
 
-    // Ensure the ID is valid
-    if (!id || isNaN(Number(id))) {
-      console.error("Invalid Plan ID:", id);
-      throw new Error("Invalid Plan ID format");
+      const deletedCount = await PremiumPlans.destroy({
+        where: { planId: ids },
+      });
+
+      if (deletedCount === 0) {
+        logger.warn(`No premium plans found for deletion with IDs: ${ids}`);
+        throw new Error("No premium plans found for deletion");
+      }
+
+      logger.info(`Successfully deleted ${deletedCount} premium plans.`);
+    } catch (error) {
+      logger.error(`Error deleting premium plans: ${error.message}`);
+      throw new Error("Failed to delete premium plans");
     }
+  }
 
-    // Find the plan by ID
-    const plan = await PremiumPlans.findByPk(id);
+  static async editPlan(id, description, price, isPopular) {
+    try {
+      // Ensure the ID is valid
+      if (!id || isNaN(Number(id))) {
+        console.error("Invalid Plan ID:", id);
+        throw new Error("Invalid Plan ID format");
+      }
 
-    if (!plan) {
-      throw new Error(`Plan with ID ${id} not found`);
+      // Find the plan by ID
+      const plan = await PremiumPlans.findByPk(id);
+
+      if (!plan) {
+        throw new Error(`Plan with ID ${id} not found`);
+      }
+
+      // Update plan details
+      await plan.update({ description, price, isPopular });
+
+      logger.info(`Plan ${id} updated successfully`);
+      return { message: `Plan ${id} updated successfully`, updatedId: id };
+    } catch (error) {
+      logger.error(`Error updating plan ${id}: ${error.message}`);
+      throw new Error("Failed to update plan");
     }
-
-    // Update plan details
-    await plan.update({ description, price });
-
-    logger.info(`Plan ${id} updated successfully`);
-    return { message: `Plan ${id} updated successfully`, updatedId: id };
-  } catch (error) {
-    logger.error(`Error updating plan ${id}: ${error.message}`);
-    throw new Error("Failed to update plan");
   }
-}
 
-static async createPlan(name, price, duration, description) {
-  try {
-    console.log("Create Plan:", { name, price, duration, description });
+  static async createPlan(name, price, duration, description, isPopular) {
+    try {
+      console.log("Create Plan:", {
+        name,
+        price,
+        duration,
+        description,
+        isPopular,
+      });
 
-    const res = await PremiumPlans.create({ planName: name, description, price, duration });
+      const res = await PremiumPlans.create({
+        planName: name,
+        description,
+        price,
+        duration,
+        isPopular,
+      });
 
-    logger.info(`Plan ${res.planId} created successfully`);
-    return { message: `Plan ${res.planId} created successfully`, res };
-  } catch (error) {
-    logger.error(`Error creating plan: ${error.message}`);
-    throw new Error("Failed to create plan");
+      logger.info(`Plan ${res.planId} created successfully`);
+      return { message: `Plan ${res.planId} created successfully`, res };
+    } catch (error) {
+      logger.error(`Error creating plan: ${error.message}`);
+      throw new Error("Failed to create plan");
+    }
   }
-}
-
-
-
-
-
 }
 
 export default AdminService;
