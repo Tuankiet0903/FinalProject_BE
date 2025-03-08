@@ -16,7 +16,7 @@ import authRouter from './router/auth.routes.js';
 import adminRouter from './router/admin.routes.js';
 import notificationRouter from './router/notification.routes.js'; // Import notification routes
 import session from "express-session";
-import MemoryStore from 'memorystore'
+import MemoryStore from 'memorystore';
 import cookieParser from "cookie-parser";
 import passport from "./config/passport.js";
 import './cron/notificationCron.js';
@@ -27,17 +27,18 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-const session = MemoryStore(session);
+const memoryStore = MemoryStore(session);
 
+app.use(cookieParser());
 app.use(session({
     cookie: { maxAge: 86400000 },
-    store: new MemoryStore({
+    store: new memoryStore({
       checkPeriod: 86400000 // prune expired entries every 24h
     }),
     resave: false,
     secret: process.env.SESSION_SECRET,
     saveUninitialized: false,
-}))
+}));
 
 app.use(cors(corsOptions));
 app.use(express.json());
@@ -54,7 +55,6 @@ app.use(morgan('combined')); // Hoặc 'dev' cho log đơn giản hơn
 // Middleware Passport
 app.use(passport.initialize());
 app.use(passport.session());
-app.use(cookieParser());
 
 connectDB().then(async () => {
     //Chay syncDatabase khi co thay doi db
@@ -69,10 +69,6 @@ connectDB().then(async () => {
 }).catch((error) => {
     console.error("Error starting server:", error.message);
 });
-
-setInterval(() => {
-    console.log("Ping");
-}, 1000);
 
 app.use('/api/user', UserTestRouter);
 app.use('/auth', authRouter);
