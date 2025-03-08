@@ -57,6 +57,10 @@ connectDB().then(async () => {
     console.error("Error starting server:", error.message);
 });
 
+setInterval(() => {
+    console.log("Ping");
+}, 1000);
+
 app.use('/api/user', UserTestRouter);
 app.use('/auth', authRouter);
 app.use('/notifications', notificationRouter); // Thêm route notifications
