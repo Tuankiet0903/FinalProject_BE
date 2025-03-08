@@ -8,6 +8,9 @@ export const createSpace = async (req, res) => {
     const { createdBy } = req.body;
 
     try {
+        console.log("🔍 Debug: Data received from frontend:", req.body);
+
+
         const space = await SpaceService.createSpace({
             ...req.body,
             // createdBy: req.user.userId 
@@ -28,8 +31,8 @@ export const createSpace = async (req, res) => {
             createdBy
         });
 
-        return res.status(201).json({ 
-            message: "Space created successfully", 
+        return res.status(201).json({
+            message: "Space created successfully",
             space,
             folder,
             list
@@ -67,9 +70,9 @@ export const getSpaceById = async (req, res) => {
 export const updateSpace = async (req, res) => {
     try {
         const space = await SpaceService.updateSpace(req.params.id, req.body);
-        return res.status(200).json({ 
-            message: "Space updated successfully", 
-            space 
+        return res.status(200).json({
+            message: "Space updated successfully",
+            space
         });
     } catch (error) {
         logger.error(error.message);
@@ -81,8 +84,8 @@ export const updateSpace = async (req, res) => {
 export const deleteSpace = async (req, res) => {
     try {
         await SpaceService.deleteSpace(req.params.id);
-        return res.status(200).json({ 
-            message: "Space deleted successfully" 
+        return res.status(200).json({
+            message: "Space deleted successfully"
         });
     } catch (error) {
         logger.error(error.message);
@@ -104,9 +107,9 @@ export const getUserSpaces = async (req, res) => {
 export const toggleFavorite = async (req, res) => {
     try {
         const space = await SpaceService.toggleFavorite(req.params.id);
-        return res.status(200).json({ 
-            message: "Space favorite status updated successfully", 
-            space 
+        return res.status(200).json({
+            message: "Space favorite status updated successfully",
+            space
         });
     } catch (error) {
         logger.error(error.message);

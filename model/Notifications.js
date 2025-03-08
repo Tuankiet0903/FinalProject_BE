@@ -5,36 +5,32 @@ const Notifications = sequelize.define("Notifications", {
   id: {
     type: DataTypes.INTEGER,
     primaryKey: true,
-    allowNull: false,
     autoIncrement: true
-  },
-  taskId: {
-    type: DataTypes.INTEGER,
-    allowNull: false
-  },
-  commentId: {
-    type: DataTypes.INTEGER,
-    allowNull: false
   },
   userId: {
     type: DataTypes.INTEGER,
-  },
-  title: {
-    type: DataTypes.STRING,
     allowNull: false
+  },
+  taskId: {
+    type: DataTypes.INTEGER,
+    allowNull: true
   },
   content: {
     type: DataTypes.TEXT,
     allowNull: false
   },
-  createdAt: {
+  type: {
+    type: DataTypes.ENUM('WELCOME_MESSAGE', 'NEW_TASK', 'TASK_UPDATE', 'TASK_DEADLINE'),
+    allowNull: false
+  },
+  isRead: {
+    type: DataTypes.BOOLEAN,
+    defaultValue: false
+  },
+  expiresAt: {
     type: DataTypes.DATE,
-    allowNull: false,
-    defaultValue: DataTypes.NOW
+    allowNull: true
   }
-}, {
-  freezeTableName: true,
-  timestamps: false
 });
 
 export default Notifications;

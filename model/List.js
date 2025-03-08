@@ -22,16 +22,7 @@ const List = sequelize.define("List", {
     allowNull: true
   },
   colorTag: {
-    type: DataTypes.ENUM("red", "blue", "green"),
-    allowNull: true
-  },
-  createdAt: {
-    type: DataTypes.DATE,
-    allowNull: false,
-    defaultValue: DataTypes.NOW
-  },
-  updatedAt: {
-    type: DataTypes.DATE,
+    type: DataTypes.STRING,
     allowNull: true
   },
   createdBy: {
@@ -40,7 +31,7 @@ const List = sequelize.define("List", {
   }
 },{
   freezeTableName: true,
-  timestamps: false
+  timestamps: true
 });
 
 export default List;

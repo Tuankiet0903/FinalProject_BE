@@ -27,19 +27,10 @@ const Workspace = sequelize.define("Workspace", {
   createdBy: {
     type: DataTypes.INTEGER,
     allowNull: false
-  },
-  createdAt: {
-    type: DataTypes.DATE,
-    allowNull: false,
-    defaultValue: DataTypes.NOW
-  },
-  updatedAt: {
-    type: DataTypes.DATE,
-    allowNull: true
-  } 
+  }
 },{
   freezeTableName: true,
-  timestamps: false
+  timestamps: true
 });
 
 export default Workspace;

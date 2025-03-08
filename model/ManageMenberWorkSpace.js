@@ -13,7 +13,7 @@
         allowNull: false
       },
       roleWorkSpace: {
-        type: DataTypes.ENUM("owner", "admin", "member"),
+        type: DataTypes.STRING,
         allowNull: false
       },
       userId: { 

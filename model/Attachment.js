@@ -20,6 +20,10 @@ const Attachment = sequelize.define("Attachment", {
     type: DataTypes.DATE,
     allowNull: false,
     defaultValue: DataTypes.NOW
+  },
+  taskId: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
   }
 },{
   freezeTableName: true,

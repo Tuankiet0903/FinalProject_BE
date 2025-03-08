@@ -1,11 +1,18 @@
 import Space from "../model/Space.js";
+import Workspace from "../model/WorkSpace.js";
 import logger from "../utils/logger.js";
 
 class SpaceService {
     static async createSpace(data) {
         const { name, description, workspaceId, createdBy, favorite = false } = data;
-        
+
         try {
+
+            const workspace = await Workspace.findByPk(workspaceId);
+            if (!workspace) {
+                throw new Error(`Workspace with ID ${workspaceId} does not exist.`);
+            }
+
             const space = await Space.create({
                 name,
                 description,
@@ -14,12 +21,12 @@ class SpaceService {
                 favorite,
                 createdAt: new Date()
             });
-            
+
             logger.info(`Space created successfully with ID: ${space.spaceId}`);
             return space;
         } catch (error) {
             console.error("Error creating space:", error);
-    throw error;
+            throw error;
         }
     }
 
@@ -28,7 +35,7 @@ class SpaceService {
             const spaces = await Space.findAll({
                 order: [['createdAt', 'DESC']]
             });
-            
+
             logger.info("Fetched all spaces successfully");
             return spaces;
         } catch (error) {
@@ -40,12 +47,12 @@ class SpaceService {
     static async getSpaceById(id) {
         try {
             const space = await Space.findByPk(id);
-            
+
             if (!space) {
                 logger.warn(`Space not found with ID: ${id}`);
                 return null;
             }
-            
+
             logger.info(`Fetched space with ID: ${id}`);
             return space;
         } catch (error) {
@@ -57,7 +64,7 @@ class SpaceService {
     static async updateSpace(id, data) {
         try {
             const space = await Space.findByPk(id);
-            
+
             if (!space) {
                 logger.warn(`Space not found for update with ID: ${id}`);
                 throw new Error("Space not found");
@@ -80,7 +87,7 @@ class SpaceService {
     static async deleteSpace(id) {
         try {
             const space = await Space.findByPk(id);
-            
+
             if (!space) {
                 logger.warn(`Space not found for deletion with ID: ${id}`);
                 throw new Error("Space not found");
@@ -100,7 +107,7 @@ class SpaceService {
                 where: { createdBy: userId },
                 order: [['createdAt', 'DESC']]
             });
-            
+
             logger.info(`Fetched spaces for user ID: ${userId}`);
             return spaces;
         } catch (error) {
@@ -112,7 +119,7 @@ class SpaceService {
     static async toggleFavorite(id) {
         try {
             const space = await Space.findByPk(id);
-            
+
             if (!space) {
                 logger.warn(`Space not found with ID: ${id}`);
                 throw new Error("Space not found");

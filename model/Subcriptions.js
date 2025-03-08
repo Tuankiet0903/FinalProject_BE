@@ -18,8 +18,8 @@ const Subscription = sequelize.define(
         type: DataTypes.INTEGER,
         allowNull: false,
     },
-    plan : {
-        type: DataTypes.STRING,
+    planId: {
+        type: DataTypes.INTEGER,
         allowNull: false,
     },
     startDate : {
@@ -28,7 +28,6 @@ const Subscription = sequelize.define(
     },
     endDate : {
         type: DataTypes.DATE,
-        allowNull: false,
     },
   },
   {

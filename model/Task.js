@@ -21,14 +21,14 @@ const Task = sequelize.define("Task", {
     allowNull: true
   },
   status: {
-    type: DataTypes.ENUM("todo", "inProgress", "done"),
+    type: DataTypes.INTEGER,
     allowNull: false,
-    defaultValue: "todo"
+    defaultValue: 1
   },
   priority: {
-    type: DataTypes.ENUM("low", "medium", "high"),
+    type: DataTypes.STRING,
     allowNull: false,
-    defaultValue: "medium"
+    defaultValue: "Easy"
   },
   startDate: {
     type: DataTypes.DATE,
@@ -38,8 +38,8 @@ const Task = sequelize.define("Task", {
     type: DataTypes.DATE,
     allowNull: true
   },
-  category: {
-    type: DataTypes.ENUM("bug", "feature", "task"),
+  type: {
+    type: DataTypes.STRING,
     allowNull: true
   },
   assigneeId: {
@@ -54,9 +54,14 @@ const Task = sequelize.define("Task", {
     type: DataTypes.INTEGER,
     allowNull: true
   },
-  timeProcess: {
-    type: DataTypes.TIME,
-    allowNull: true
+  createAt: {
+    type: DataTypes.DATE,
+    allowNull: true,
+    defaultValue : DataTypes.NOW
+  },
+  cpmpletedAt: {
+    type: DataTypes.DATE,
+    allowNull: true,
   }
 }, {
   freezeTableName: true,

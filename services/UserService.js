@@ -28,7 +28,7 @@ class UserService {
    }
 
    static async getUserById(id) {
-      const user = await User.findByPk(id, { attributes: ["userId", "fullName", "email", "status"] });
+      const user = await User.findByPk(id, { attributes: ["userId", "fullName", "email", "active", "avatar"] });
       if (!user) {
          logger.warn(`User not found with ID: ${id}`);
          return null;
@@ -40,18 +40,19 @@ class UserService {
    static async updateUser(id, data) {
       const user = await User.findByPk(id);
       if (!user) {
-         logger.warn(`User not found for update with ID: ${id}`);
          throw new Error("User not found");
       }
 
       const updatedData = {};
+
       if (data.fullName) updatedData.fullName = data.fullName;
       if (data.email) updatedData.email = data.email;
-      if (data.password) updatedData.password = await hashPassword(data.password);
-      if (data.status) updatedData.status = data.status;
+      if (data.newPassword) {
+         // Nếu có mật khẩu mới, mã hóa và thay đổi mật khẩu
+         updatedData.password = await hashPassword(data.newPassword);
+      }
 
       await user.update(updatedData);
-      logger.info(`User updated successfully with ID: ${id}`);
       return user;
    }
 
@@ -64,6 +65,18 @@ class UserService {
 
       await user.destroy();
       logger.info(`User deleted successfully with ID: ${id}`);
+   }
+   
+   static async updateUserAvatar(userId, avatarUrl) {
+      const user = await User.findByPk(userId);
+      if (!user) {
+         throw new Error("User not found");
+      }
+
+      user.avatar = avatarUrl; // Lưu URL avatar vào cơ sở dữ liệu
+      await user.save(); // Lưu thay đổi vào cơ sở dữ liệu
+
+      return user;
    }
 }
 

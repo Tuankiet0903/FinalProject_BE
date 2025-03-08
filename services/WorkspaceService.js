@@ -7,28 +7,46 @@ import logger from "../utils/logger.js";
 
 class WorkspaceService {
     static async createWorkspace(data) {
-        const { name, description, type, createdBy, favorite = false } = data;
-        
         try {
-            // Validate workspace type
-            if (!["personal", "team", "organization"].includes(type)) {
-                throw new Error("Invalid workspace type");
+            const {
+                name,
+                description,
+                type = 'personal', // Giá trị mặc định
+                createdBy,
+                favorite = false
+            } = data;
+
+            // Validate required fields
+            if (!name) {
+                throw new Error("Workspace name is required");
+            }
+
+            if (!createdBy) {
+                throw new Error("Creator ID is required");
+            }
+
+            // Validate và chuẩn hóa type
+            const validTypes = ["personal", "team", "organization"];
+            const normalizedType = type.toLowerCase();
+
+            if (!validTypes.includes(normalizedType)) {
+                throw new Error(`Invalid workspace type. Must be one of: ${validTypes.join(', ')}`);
             }
 
             const workspace = await Workspace.create({
                 name,
                 description,
-                type,
+                type: normalizedType,
                 createdBy,
                 favorite,
-                createdAt: new Date()
+                createdAt: new Date(),
+                updatedAt: new Date()
             });
-            
-            logger.info(`Workspace created successfully with ID: ${workspace.workspaceId}`);
+
+            console.log(`Workspace created successfully:`, workspace);
             return workspace;
         } catch (error) {
-            // logger.error(`Error creating workspace: ${error.message}`);
-            console.error("Validation error detail:", error);
+            console.error(`Error in createWorkspace:`, error);
             throw error;
         }
     }
@@ -38,7 +56,7 @@ class WorkspaceService {
             const workspaces = await Workspace.findAll({
                 order: [['createdAt', 'DESC']]
             });
-            
+
             logger.info("Fetched all workspaces successfully");
             return workspaces;
         } catch (error) {
@@ -70,12 +88,12 @@ class WorkspaceService {
                     }
                 ]
             });
-            
+
             if (!workspace) {
                 logger.warn(`Workspace not found with ID: ${id}`);
                 return null;
             }
-            
+
             logger.info(`Fetched workspace with ID: ${id}`);
             return workspace;
         } catch (error) {
@@ -87,7 +105,7 @@ class WorkspaceService {
     static async updateWorkspace(id, data) {
         try {
             const workspace = await Workspace.findByPk(id);
-            
+
             if (!workspace) {
                 logger.warn(`Workspace not found for update with ID: ${id}`);
                 throw new Error("Workspace not found");
@@ -115,7 +133,7 @@ class WorkspaceService {
     static async deleteWorkspace(id) {
         try {
             const workspace = await Workspace.findByPk(id);
-            
+
             if (!workspace) {
                 logger.warn(`Workspace not found for deletion with ID: ${id}`);
                 throw new Error("Workspace not found");
@@ -135,7 +153,7 @@ class WorkspaceService {
                 where: { createdBy: userId },
                 order: [['createdAt', 'DESC']]
             });
-            
+
             logger.info(`Fetched workspaces for user ID: ${userId}`);
             return workspaces;
         } catch (error) {
@@ -147,7 +165,7 @@ class WorkspaceService {
     static async toggleFavorite(id) {
         try {
             const workspace = await Workspace.findByPk(id);
-            
+
             if (!workspace) {
                 logger.warn(`Workspace not found with ID: ${id}`);
                 throw new Error("Workspace not found");
@@ -176,7 +194,7 @@ class WorkspaceService {
                 where: { type },
                 order: [['createdAt', 'DESC']]
             });
-            
+
             logger.info(`Fetched workspaces of type: ${type}`);
             return workspaces;
         } catch (error) {
