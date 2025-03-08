@@ -232,16 +232,6 @@ const seedDatabase = async () => {
       { taskId: 3, uploadedBy: 3, fileURL: "http://example.com/file3", taskId : 3 },
     ]);
 
-    // Create Notifications
-    await Notifications.bulkCreate([
-      {
-        content: "Task 1 updated successfully",
-      },
-      {
-        content: "Task 4 moved to review",
-      },
-    ]);
-
     await PremiumPlans.bulkCreate([
       {
         planId: 1,

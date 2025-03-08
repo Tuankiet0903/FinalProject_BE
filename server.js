@@ -13,12 +13,14 @@ import TaskColumnRouter from './router/taskColumn.routes.js';
 import TaskRouter from './router/task.routes.js';
 import OTPRouter from './router/OTP.routes.js';
 import authRouter from './router/auth.routes.js';
+import adminRouter from './router/admin.routes.js';
 import notificationRouter from './router/notification.routes.js'; // Import notification routes
 import session from "express-session";
 import cookieParser from "cookie-parser";
 import passport from "./config/passport.js";
 import './cron/notificationCron.js';
-import sycnDatabase from './model/Association.js';
+import clearAndSeedDatabase from './database/seedDatabase.js';
+import syncDatabase from './model/Association.js';
 dotenv.config();
 
 const app = express();
@@ -43,9 +45,10 @@ app.use(cookieParser());
 
 connectDB().then(async () => {
     //Chay syncDatabase khi co thay doi db
-    // await sycnDatabase();
+    // await syncDatabase();
+  
     // chi chay lan dau khi khong co data
-    // await clearAndSeedDatabase();
+    // await clearAndSeedDatabase();    
 
     app.listen(PORT, () => {
         console.log(`Server is running on http://localhost:${PORT}`);
@@ -64,6 +67,7 @@ app.use('/list', ListRouter);
 app.use('/task-column', TaskColumnRouter);
 app.use('/task', TaskRouter);
 app.use('/api/otp', OTPRouter);
+app.use('/api/admin', adminRouter);
 
 // app.listen(PORT, () => {
 //     console.log(Server is running on http://localhost:${PORT});
