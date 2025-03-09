@@ -25,6 +25,11 @@ const PremiumPlans = sequelize.define(
         type: DataTypes.INTEGER,
         allowNull: false,
     },
+    // Highlight pack muốn user đăng kí
+    isPopular : {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false,
+  },
   },
   { 
     freezeTableName: true,
