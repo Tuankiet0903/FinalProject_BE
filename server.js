@@ -18,6 +18,7 @@ import session from "express-session";
 import cookieParser from "cookie-parser";
 import passport from "./config/passport.js";
 import './cron/notificationCron.js';
+import syncDatabase from './model/Association.js'; // Correct function name
 dotenv.config();
 
 const app = express();
@@ -42,7 +43,7 @@ app.use(cookieParser());
 
 connectDB().then(async () => {
     //Chay syncDatabase khi co thay doi db
-    //await syncDatabase();
+    await syncDatabase(); // Correct function name
     // chi chay lan dau khi khong co data
     // await clearAndSeedDatabase();
 
@@ -63,7 +64,3 @@ app.use('/list', ListRouter);
 app.use('/task-column', TaskColumnRouter);
 app.use('/task', TaskRouter);
 app.use('/api/otp', OTPRouter);
-
-// app.listen(PORT, () => {
-//     console.log(`Server is running on http://localhost:${PORT}`);
-// });

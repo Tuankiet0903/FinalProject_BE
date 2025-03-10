@@ -1,0 +1,49 @@
+{"level":"error","message":"Error fetching workspace: Space is not associated to Workspace!","timestamp":"2025-03-04 22:08:35"}
+{"level":"error","message":"Failed to fetch workspace","timestamp":"2025-03-04 22:08:35"}
+{"level":"error","message":"Error fetching workspace: Space is not associated to Workspace!","timestamp":"2025-03-04 22:08:51"}
+{"level":"error","message":"Failed to fetch workspace","timestamp":"2025-03-04 22:08:51"}
+{"level":"error","message":"Error fetching workspace: Space is not associated to Workspace!","timestamp":"2025-03-04 22:08:54"}
+{"level":"error","message":"Failed to fetch workspace","timestamp":"2025-03-04 22:08:54"}
+{"level":"error","message":"Error fetching workspace: Space is not associated to Workspace!","timestamp":"2025-03-04 22:14:51"}
+{"level":"error","message":"Failed to fetch workspace","timestamp":"2025-03-04 22:14:51"}
+{"level":"error","message":"Error fetching workspace: Space is not associated to Workspace!","timestamp":"2025-03-04 22:14:53"}
+{"level":"error","message":"Failed to fetch workspace","timestamp":"2025-03-04 22:14:53"}
+{"level":"error","message":"Error fetching workspace: Space is not associated to Workspace!","timestamp":"2025-03-04 22:15:12"}
+{"level":"error","message":"Failed to fetch workspace","timestamp":"2025-03-04 22:15:12"}
+{"level":"error","message":"Error fetching user workspaces: relation \"Workspace\" does not exist","timestamp":"2025-03-04 22:17:41"}
+{"level":"error","message":"Failed to fetch user workspaces","timestamp":"2025-03-04 22:17:41"}
+{"level":"error","message":"Error fetching user workspaces: relation \"Workspace\" does not exist","timestamp":"2025-03-04 22:17:41"}
+{"level":"error","message":"Failed to fetch user workspaces","timestamp":"2025-03-04 22:17:41"}
+{"level":"error","message":"Error fetching workspace: Space is not associated to Workspace!","timestamp":"2025-03-04 22:18:24"}
+{"level":"error","message":"Failed to fetch workspace","timestamp":"2025-03-04 22:18:24"}
+{"level":"error","message":"Error fetching workspace: Space is not associated to Workspace!","timestamp":"2025-03-04 22:18:29"}
+{"level":"error","message":"Failed to fetch workspace","timestamp":"2025-03-04 22:18:29"}
+{"level":"error","message":"Error fetching workspace: Space is not associated to Workspace!","timestamp":"2025-03-04 22:20:21"}
+{"level":"error","message":"Failed to fetch workspace","timestamp":"2025-03-04 22:20:21"}
+{"level":"error","message":"Error fetching workspace: Space is not associated to Workspace!","timestamp":"2025-03-04 22:20:41"}
+{"level":"error","message":"Failed to fetch workspace","timestamp":"2025-03-04 22:20:41"}
+{"level":"error","message":"Error fetching workspace: Space is not associated to Workspace!","timestamp":"2025-03-04 22:32:06"}
+{"level":"error","message":"Failed to fetch workspace","timestamp":"2025-03-04 22:32:06"}
+{"level":"error","message":"Error fetching workspace: Space is not associated to Workspace!","timestamp":"2025-03-04 22:32:20"}
+{"level":"error","message":"Failed to fetch workspace","timestamp":"2025-03-04 22:32:20"}
+{"level":"error","message":"Error fetching workspace: Space is not associated to Workspace!","timestamp":"2025-03-04 22:32:41"}
+{"level":"error","message":"Failed to fetch workspace","timestamp":"2025-03-04 22:32:41"}
+{"level":"error","message":"Error fetching workspace: Space is not associated to Workspace!","timestamp":"2025-03-04 22:48:18"}
+{"level":"error","message":"Failed to fetch workspace","timestamp":"2025-03-04 22:48:18"}
+{"level":"error","message":"Error fetching workspace: Space is not associated to Workspace!","timestamp":"2025-03-04 22:50:19"}
+{"level":"error","message":"Failed to fetch workspace","timestamp":"2025-03-04 22:50:19"}
+{"level":"error","message":"Error fetching workspace: Space is not associated to Workspace!","timestamp":"2025-03-04 22:51:34"}
+{"level":"error","message":"Error fetching workspace: Space is not associated to Workspace!","timestamp":"2025-03-04 22:52:13"}
+{"level":"error","message":"Error fetching workspace: Space is not associated to Workspace!","timestamp":"2025-03-04 22:52:36"}
+{"level":"error","message":"Error fetching workspace: Space is not associated to Workspace!","timestamp":"2025-03-04 22:53:29"}
+{"level":"error","message":"Error fetching workspace: Space is not associated to Workspace!","timestamp":"2025-03-04 23:12:35"}
+{"level":"error","message":"Error fetching space tasks: column Task.spaceId does not exist","timestamp":"2025-03-10 00:31:09"}
+{"level":"error","message":"Failed to fetch space tasks","timestamp":"2025-03-10 00:31:09"}
+{"level":"error","message":"Error fetching space tasks: column Task.spaceId does not exist","timestamp":"2025-03-10 00:31:18"}
+{"level":"error","message":"Failed to fetch space tasks","timestamp":"2025-03-10 00:31:18"}
+{"level":"error","message":"Error fetching space tasks: column Task.spaceId does not exist","timestamp":"2025-03-10 00:32:47"}
+{"level":"error","message":"Failed to fetch space tasks","timestamp":"2025-03-10 00:32:47"}
+{"level":"error","message":"Error fetching space tasks: TaskColumn is associated to Task using an alias. You've included an alias (taskColumn), but it does not match the alias(es) defined in your association (TaskColumn).","timestamp":"2025-03-10 15:57:47"}
+{"level":"error","message":"Failed to fetch space tasks","timestamp":"2025-03-10 15:57:47"}
+{"level":"error","message":"Task creation error: NotificationService is not defined","timestamp":"2025-03-10 16:02:25"}
+{"level":"error","message":"Task creation error: NotificationService is not defined","timestamp":"2025-03-10 16:44:40"}

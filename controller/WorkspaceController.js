@@ -49,13 +49,14 @@ export const getAllWorkspaces = async (req, res) => {
 
 export const getWorkspaceById = async (req, res) => {
     try {
+        console.log("HIHI", req.params.id);
         const workspace = await WorkspaceService.getWorkspaceById(req.params.id);
         if (!workspace) {
             return res.status(404).json({ error: "Workspace not found" });
         }
         return res.status(200).json(workspace);
     } catch (error) {
-        logger.error(error.message);
+        console.log(error);
         return res.status(500).json({ error: "Internal Server Error" });
     }
 };

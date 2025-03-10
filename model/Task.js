@@ -54,12 +54,12 @@ const Task = sequelize.define("Task", {
     type: DataTypes.INTEGER,
     allowNull: true
   },
-  createAt: {
+  createdAt: {
     type: DataTypes.DATE,
     allowNull: true,
-    defaultValue : DataTypes.NOW
+    defaultValue: DataTypes.NOW
   },
-  cpmpletedAt: {
+  completedAt: {
     type: DataTypes.DATE,
     allowNull: true,
   }
