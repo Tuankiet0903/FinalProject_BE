@@ -4,6 +4,8 @@ import FolderService from '../services/FolderService.js';
 import ListService from '../services/ListService.js';
 import logger from "../utils/logger.js";
 import TaskColumnService from "../services/TaskColumnService.js";
+import ManageMemberWorkSpaceService from "../services/ManagerMemberWorkspaceService.js";
+import { sequelize } from "../database/connect.js";
 
 export const createWorkspace = async ({ name, description, type = 'personal' }) => {
     try {
@@ -127,36 +129,43 @@ export const getWorkspacesByType = async (req, res) => {
 export const createWorkspaceWithDefaults = async (req, res) => {
     const { createdBy } = req.body;
 
-    try {
-        // Tạo Workspace mới
-        const workspace = await WorkspaceService.createWorkspace({ ...req.body });
+    const transaction = await sequelize.transaction();
 
-        // Tạo Space mới liên quan đến Workspace
+    try {
+        const workspace = await WorkspaceService.createWorkspace({ ...req.body }, { transaction});
+
+        const manageMember = await ManageMemberWorkSpaceService.createMember({
+            workspaceId: workspace.workspaceId,
+            roleWorkSpace: "owner",
+            userId: createdBy
+        }, { transaction });
+
+        await WorkspaceService.updateWorkspace(workspace.workspaceId, {
+            createdBy: manageMember.idManageMember
+        }, { transaction });
+
         const space = await SpaceService.createSpace({
             name: 'Default Space',
             description: 'This is a default space',
             createdBy,
             workspaceId: workspace.workspaceId
-        });
+        }, { transaction });
 
-        // Tạo Folder mới liên quan đến Space
         const folder = await FolderService.createFolder({
             name: 'Default Folder',
             description: 'This is a default folder',
             spaceId: space.spaceId,
             createdBy: createdBy,
-        });
+        }, { transaction });
 
-        // Tạo List mới liên quan đến Folder
         const list = await ListService.createList({
             name: 'Default List',
             description: 'This is a default list',
             tag: 'blue',
             folderId: folder.folderId,
             createdBy
-        });
+        }, { transaction });
 
-        // Tạo 3 cột mặc định trong List với các màu sắc khác nhau
         const columns = [
             { name: "To do", color: "gray", status: 1 }, // 1 = To do
             { name: "In process", color: "blue", status: 2 }, // 2 = In process
@@ -171,19 +180,23 @@ export const createWorkspaceWithDefaults = async (req, res) => {
                 createdBy,
                 color: columns[i].color, // Màu sắc cho từng cột
                 status: columns[i].status // Trạng thái cho từng cột
-            });
+            }, { transaction });
             createdColumns.push(column);
         }
 
+        await transaction.commit();
+
         res.status(201).json({
-            message: 'Workspace, Space, Folder, List and Task Collumn created successfully',
+            message: 'Workspace, Member, Space, Folder, List and Task Columns created successfully',
             workspace,
+            manageMember,
             space,
             folder,
             list,
             taskColumns: createdColumns
         });
     } catch (error) {
+        await transaction.rollback();
         console.error("Error creating workspace with defaults:", error);
         res.status(500).json({ message: 'Failed to create workspace with defaults' });
     }
