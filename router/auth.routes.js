@@ -3,6 +3,10 @@ import passport from "../config/passport.js";
 import jwt from "jsonwebtoken";
 import AuthService from "../services/AuthService.js";
 import { createWelcomeNotification } from "../controller/NotificationController.js";
+import dotenv from 'dotenv';
+dotenv.config();
+
+const FE_URL = process.env.FE_URL;
 
 const router = express.Router();
 
@@ -53,13 +57,13 @@ router.get("/google", passport.authenticate("google", { scope: ["profile", "emai
 // Google OAuth - Xử lý callback
 router.get(
    "/google/callback",
-   passport.authenticate("google", { failureRedirect: "http://localhost:5173/login" }),
+   passport.authenticate("google", { failureRedirect: `${FE_URL}/login` }),
    async (req, res) => {
       try {
          const user = req.user;
 
          if (!user) {
-            return res.redirect("http://localhost:5173/login?error=auth_failed");
+            return res.redirect(`${FE_URL}/login?error=auth_failed`);
          }
 
          // Tạo JWT token
@@ -82,10 +86,10 @@ router.get(
          console.log('Welcome notification created for Google login:', notification);
 
          // Chuyển hướng về FE
-         res.redirect(`http://localhost:5173/user?fullName=${encodeURIComponent(user.fullName)}`);
+         res.redirect(`${FE_URL}/user?fullName=${encodeURIComponent(user.fullName)}`);
       } catch (error) {
          console.error("Google callback error:", error);
-         res.redirect("http://localhost:5173/login?error=server_error");
+         res.redirect(`${FE_URL}/login?error=server_error`);
       }
    }
 );
@@ -112,7 +116,7 @@ router.get("/google/success", (req, res) => {
 router.get("/logout", (req, res) => {
    res.clearCookie("token", { httpOnly: true, secure: false, sameSite: "Lax" }); // Xóa token trong cookies
    res.json({ message: "Đã đăng xuất thành công!" }); // Gửi response về FE để xử lý tiếp
-   res.redirect("http://localhost:5173/login");
+   res.redirect(`${FE_URL}/login`);
 });
 
 export default router;

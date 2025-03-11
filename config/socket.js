@@ -1,6 +1,7 @@
 import { Server } from 'socket.io';
 import logger from '../utils/logger.js';
-
+import dotenv from 'dotenv';
+dotenv.config();
 class SocketService {
    constructor() {
       this.io = null;
@@ -9,7 +10,7 @@ class SocketService {
    initialize(server) {
       this.io = new Server(server, {
          cors: {
-            origin: "http://localhost:5173",
+            origin: process.env.FE_URL,
             methods: ["GET", "POST"],
             credentials: true
          }

@@ -68,7 +68,3 @@ app.use('/task-column', TaskColumnRouter);
 app.use('/task', TaskRouter);
 app.use('/api/otp', OTPRouter);
 app.use('/api/admin', adminRouter);
-
-// app.listen(PORT, () => {
-//     console.log(Server is running on http://localhost:${PORT});
-// });
