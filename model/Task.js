@@ -28,7 +28,7 @@ const Task = sequelize.define("Task", {
   priority: {
     type: DataTypes.STRING,
     allowNull: false,
-    defaultValue: "Easy"
+    defaultValue: "Normal"
   },
   startDate: {
     type: DataTypes.DATE,
