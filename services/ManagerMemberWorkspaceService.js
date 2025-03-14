@@ -86,6 +86,18 @@ class ManageMemberWorkSpaceService {
             throw new Error("Failed to delete workspace member");
         }
     }
+
+    static async isMemberOfWorkspace(workspaceId, userId) {
+        try {
+            const member = await ManageMemberWorkSpace.findOne({
+                where: { workspaceId, userId }
+            });
+            return !!member;
+        } catch (error) {
+            logger.error(`Error checking membership: ${error.message}`);
+            throw new Error("Failed to check workspace membership");
+        }
+    }
 }
 
 export default ManageMemberWorkSpaceService;

@@ -1,0 +1,30 @@
+{"level":"error","message":"ManageMemberWorkSpaceService.isMemberOfWorkspace is not a function","timestamp":"2025-03-14 14:51:28"}
+{"level":"error","message":"Error checking membership: createdBy is not defined","timestamp":"2025-03-14 15:02:05"}
+{"level":"error","message":"Failed to check workspace membership","timestamp":"2025-03-14 15:02:05"}
+{"level":"error","message":"Error checking membership: createdBy is not defined","timestamp":"2025-03-14 15:03:22"}
+{"level":"error","message":"Failed to check workspace membership","timestamp":"2025-03-14 15:03:22"}
+{"level":"error","message":"Error checking membership: column ManageMemberWorkSpace.createdBy does not exist","timestamp":"2025-03-14 15:05:41"}
+{"level":"error","message":"Failed to check workspace membership","timestamp":"2025-03-14 15:05:41"}
+{"level":"error","message":"Error checking membership: column ManageMemberWorkSpace.createdBy does not exist","timestamp":"2025-03-14 15:06:48"}
+{"level":"error","message":"Failed to check workspace membership","timestamp":"2025-03-14 15:06:48"}
+{"level":"error","message":"Error creating message: insert or update on table \"WorkspaceMessage\" violates foreign key constraint \"WorkspaceMessage_workspaceId_fkey\"","timestamp":"2025-03-14 15:57:08"}
+{"level":"error","message":"insert or update on table \"WorkspaceMessage\" violates foreign key constraint \"WorkspaceMessage_workspaceId_fkey\"","timestamp":"2025-03-14 15:57:08"}
+{"level":"error","message":"Error retrieving messages: column User.username does not exist","timestamp":"2025-03-14 17:47:57"}
+{"level":"error","message":"column User.username does not exist","timestamp":"2025-03-14 17:47:57"}
+{"level":"error","message":"Error retrieving messages: column User.username does not exist","timestamp":"2025-03-14 17:47:57"}
+{"level":"error","message":"column User.username does not exist","timestamp":"2025-03-14 17:47:57"}
+{"level":"error","message":"Error retrieving messages: column User.username does not exist","timestamp":"2025-03-14 17:50:31"}
+{"level":"error","message":"column User.username does not exist","timestamp":"2025-03-14 17:50:31"}
+{"level":"error","message":"Error retrieving messages: column User.username does not exist","timestamp":"2025-03-14 17:50:31"}
+{"level":"error","message":"column User.username does not exist","timestamp":"2025-03-14 17:50:31"}
+{"level":"error","message":"Error retrieving messages: column User.username does not exist","timestamp":"2025-03-14 17:52:17"}
+{"level":"error","message":"column User.username does not exist","timestamp":"2025-03-14 17:52:17"}
+{"level":"error","message":"Error retrieving messages: column User.username does not exist","timestamp":"2025-03-14 17:52:19"}
+{"level":"error","message":"column User.username does not exist","timestamp":"2025-03-14 17:52:19"}
+{"level":"error","message":"Error retrieving messages: column User.username does not exist","timestamp":"2025-03-14 17:52:19"}
+{"level":"error","message":"column User.username does not exist","timestamp":"2025-03-14 17:52:19"}
+{"level":"error","message":"Error retrieving messages: column Reactions->User.username does not exist","timestamp":"2025-03-14 17:56:14"}
+{"level":"error","message":"column Reactions->User.username does not exist","timestamp":"2025-03-14 17:56:14"}
+{"level":"error","message":"Error retrieving messages: column Reactions->User.username does not exist","timestamp":"2025-03-14 17:56:14"}
+{"level":"error","message":"column Reactions->User.username does not exist","timestamp":"2025-03-14 17:56:14"}
+{"level":"error","message":"❌ Error uploading file: Must supply api_key","stack":"Error: Must supply api_key\n    at ensureOption (D:\\Web\\Final\\FinalProject_BE\\node_modules\\cloudinary\\lib\\utils\\ensureOption.js:19:13)\n    at Object.sign_request (D:\\Web\\Final\\FinalProject_BE\\node_modules\\cloudinary\\lib\\utils\\index.js:1164:16)\n    at Object.process_request_params (D:\\Web\\Final\\FinalProject_BE\\node_modules\\cloudinary\\lib\\utils\\index.js:1214:22)\n    at call_api (D:\\Web\\Final\\FinalProject_BE\\node_modules\\cloudinary\\lib\\uploader.js:474:18)\n    at Object.upload (D:\\Web\\Final\\FinalProject_BE\\node_modules\\cloudinary\\lib\\uploader.js:53:10)\n    at Object.upload (D:\\Web\\Final\\FinalProject_BE\\node_modules\\cloudinary\\lib\\utils\\index.js:1411:21)\n    at uploadFile (file:///D:/Web/Final/FinalProject_BE/controller/UploadFileController.js:27:48)\n    at Layer.handle [as handle_request] (D:\\Web\\Final\\FinalProject_BE\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (D:\\Web\\Final\\FinalProject_BE\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at done (D:\\Web\\Final\\FinalProject_BE\\node_modules\\multer\\lib\\make-middleware.js:45:7)","timestamp":"2025-03-14 17:57:48"}

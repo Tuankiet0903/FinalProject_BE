@@ -140,10 +140,6 @@ export const createWorkspaceWithDefaults = async (req, res) => {
             userId: createdBy
         }, { transaction });
 
-        await WorkspaceService.updateWorkspace(workspace.workspaceId, {
-            createdBy: manageMember.idManageMember
-        }, { transaction });
-
         const space = await SpaceService.createSpace({
             name: 'Default Space',
             description: 'This is a default space',
