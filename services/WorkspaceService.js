@@ -4,6 +4,8 @@ import Space from "../model/Space.js";
 import Folder from "../model/Folder.js";
 import List from "../model/List.js";
 import logger from "../utils/logger.js";
+import ManageMemberWorkSpace from "../model/ManageMenberWorkSpace.js";
+import { Op } from "sequelize"; // ✅ Import Op
 
 class WorkspaceService {
     static async createWorkspace(data) {
@@ -68,6 +70,7 @@ class WorkspaceService {
 
     static async getWorkspaceById(id) {
         try {
+            console.log("Workspace ID:", id);
             const workspace = await Workspace.findByPk(id, {
                 include: [
                     {
@@ -88,7 +91,7 @@ class WorkspaceService {
                     }
                 ]
             });
-
+            console.log("Workspace:", workspace);
             if (!workspace) {
                 logger.warn(`Workspace not found with ID: ${id}`);
                 return null;
@@ -202,6 +205,39 @@ class WorkspaceService {
             throw error;
         }
     }
+    static async getUserWorkspaces(userId) {
+        try {
+            console.log(`🔍 Searching workspaces for userId: ${userId}`);
+
+            // ✅ Tìm tất cả workspace mà userId thuộc vào và có status = true
+            const memberWorkspaces = await ManageMemberWorkSpace.findAll({
+                where: { userId, status: true }, // 🔥 Kiểm tra status
+                attributes: ["workspaceId"],
+            });
+
+            if (memberWorkspaces.length === 0) {
+                console.warn(`⚠️ User ${userId} is not part of any workspace.`);
+                return [];
+            }
+
+            const workspaceIds = memberWorkspaces.map((m) => m.workspaceId);
+
+            // ✅ Lấy thông tin workspace từ bảng Workspace
+            const workspaces = await Workspace.findAll({
+                where: { workspaceId: { [Op.in]: workspaceIds } }, // Lọc danh sách workspace
+                order: [["createdAt", "DESC"]],
+            });
+
+            console.log("✅ Workspaces retrieved successfully:", workspaces);
+            return workspaces;
+        } catch (error) {
+            console.error("❌ Error fetching user workspaces:", error.message);
+            throw new Error("Failed to retrieve workspaces");
+        }
+    }
+
+
+    
 }
 
 export default WorkspaceService;
