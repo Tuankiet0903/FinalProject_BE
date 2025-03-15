@@ -1,5 +1,6 @@
 import { DataTypes } from "sequelize";
 import { sequelize } from "../database/connect.js";
+import List from "./List.js"; // Import model List
 
 const TaskColumn = sequelize.define("TaskColumn", {
   columnId: {
@@ -22,13 +23,13 @@ const TaskColumn = sequelize.define("TaskColumn", {
   },
   createdBy: {
     type: DataTypes.INTEGER,
-    allowNull: false
+    allowNull: true // Cho phép giá trị null
   },
   status: {
     type: DataTypes.INTEGER,
     allowNull: false
   }
-},{
+}, {
   freezeTableName: true,
   timestamps: false
 });

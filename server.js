@@ -24,6 +24,7 @@ import passport from "./config/passport.js";
 import './cron/notificationCron.js';
 import clearAndSeedDatabase from './database/seedDatabase.js';
 import syncDatabase from './model/Association.js';
+
 dotenv.config();
 
 const app = express();
@@ -57,6 +58,7 @@ app.use(cookieParser());
 
 connectDB().then(async () => {
     //Chay syncDatabase khi co thay doi db
+
     // await syncDatabase();
   
     // chi chay lan dau khi khong co data

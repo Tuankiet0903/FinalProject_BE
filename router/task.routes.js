@@ -6,16 +6,20 @@ import {
     updateTask,
     deleteTask,
     getTasksByColumn,
+    getTasksBySpace,
+    getTasksByWorkspace,
 } from "../controller/TaskController.js";
 
 const router = express.Router();
 
 // Sửa các routes để khớp với prefix trong server.js
-router.post("/", createTask);           // Thay vì /tasks
-router.get("/", getAllTasks);           // Thay vì /tasks
-router.get("/:id", getTaskById);        // Thay vì /tasks/:id
-router.put("/:id", updateTask);         // Thay vì /tasks/:id
-router.delete("/:id", deleteTask);      // Thay vì /tasks/:id
+router.post("/", createTask);
+router.get("/", getAllTasks);
+router.get("/:id", getTaskById);
+router.put("/:id", updateTask);
+router.delete("/:id", deleteTask);
 router.get("/column/:taskColumnId", getTasksByColumn);
+router.get("/space/:spaceId", getTasksBySpace);
+router.get("/workspace/:workspaceId", getTasksByWorkspace);
 
 export default router;
