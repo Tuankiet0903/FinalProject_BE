@@ -51,6 +51,7 @@ class TaskColumnService {
 
     static async getTaskColumnById(id) {
         try {
+            
             const taskColumn = await TaskColumn.findByPk(id);
 
             if (!taskColumn) {
