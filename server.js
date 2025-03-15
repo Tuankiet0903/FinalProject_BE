@@ -14,6 +14,8 @@ import TaskRouter from './router/task.routes.js';
 import OTPRouter from './router/OTP.routes.js';
 import authRouter from './router/auth.routes.js';
 import adminRouter from './router/admin.routes.js';
+import paymentRouter from './router/payment.routes.js';
+import premiumPlanRouter from './router/premiumPlan.routes.js';
 import notificationRouter from './router/notification.routes.js'; // Import notification routes
 import session from "express-session";
 import cookieParser from "cookie-parser";
@@ -68,3 +70,5 @@ app.use('/task-column', TaskColumnRouter);
 app.use('/task', TaskRouter);
 app.use('/api/otp', OTPRouter);
 app.use('/api/admin', adminRouter);
+app.use('/api/payment', paymentRouter);
+app.use('/api/premium', premiumPlanRouter);

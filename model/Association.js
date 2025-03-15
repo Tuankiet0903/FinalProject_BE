@@ -14,6 +14,7 @@ import Subscription from "./Subcriptions.js";
 import PremiumPlans from "./PremiunPlans.js";
 import Otp from "./OTP.js";
 import TaskHistory from "./TaskHistory.js";
+import PaymentHistory from "./PaymentHistory.js";
 
 // User ↔ Workspace
 User.hasMany(Workspace, { foreignKey: "createdBy", onDelete: "CASCADE" });
@@ -121,6 +122,13 @@ TaskHistory.belongsTo(Task, { foreignKey: "taskId", onDelete: "CASCADE" });
 // User ↔ TaskHistory
 User.hasMany(TaskHistory, { foreignKey: "updatedBy", onDelete: "CASCADE" });
 TaskHistory.belongsTo(User, { foreignKey: "updatedBy", onDelete: "CASCADE" });
+
+// User ↔ PaymentHistory
+User.hasMany(PaymentHistory, { foreignKey: 'user_id', onDelete: 'CASCADE' });
+PaymentHistory.belongsTo(User, { foreignKey: 'user_id', onDelete: 'CASCADE' });
+
+PremiumPlans.hasMany(PaymentHistory, { foreignKey: 'plan_id', onDelete: 'CASCADE' });
+PaymentHistory.belongsTo(PremiumPlans, { foreignKey: 'plan_id', onDelete: 'CASCADE' });
 
 
 // Synchronize Database
