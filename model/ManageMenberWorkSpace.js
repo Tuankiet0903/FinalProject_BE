@@ -14,12 +14,17 @@
       },
       roleWorkSpace: {
         type: DataTypes.STRING,
-        allowNull: false
+        allowNull: false // Owner , Member , Leader Workspace
       },
       userId: { 
         type: DataTypes.INTEGER,
         allowNull: false
+      },
+      status:{
+        type:DataTypes.BOOLEAN ,
+        defaultValue: false
       }
+    
     },{
       freezeTableName: true,
       timestamps: false

@@ -9,7 +9,6 @@ passport.use(
          clientID: process.env.GOOGLE_CLIENT_ID,
          clientSecret: process.env.GOOGLE_CLIENT_SECRET,
          callbackURL: process.env.GOOGLE_CALLBACK_URL || "http://localhost:5000/auth/google/callback",
-
       },
       async (accessToken, refreshToken, profile, done) => {
          try {
@@ -17,20 +16,28 @@ passport.use(
             const email = emails && emails[0]?.value;
             const avatar = photos && photos[0]?.value;
 
-            // Tìm người dùng theo Google ID hoặc email
+            // 🔥 Tìm user theo Google ID hoặc email
             let user = await User.findOne({
                where: {
                   [Op.or]: [{ googleId }, { email }],
                },
             });
 
-            if (!user) {
+            if (user) {
+               // 🔥 Nếu user đã tồn tại, CẬP NHẬT DỮ LIỆU từ Google
+               user.fullName = fullName || user.fullName; // Chỉ cập nhật nếu fullName có giá trị
+               user.avatar = avatar || user.avatar; // Chỉ cập nhật nếu avatar có giá trị
+               user.googleId = googleId; // Đảm bảo Google ID được lưu
+               user.active = true; // Đảm bảo tài khoản được kích hoạt
+               await user.save();
+            } else {
+               // 🔥 Nếu user chưa tồn tại, tạo mới
                user = await User.create({
                   fullName,
                   email,
                   googleId,
                   avatar,
-                  password: "",
+                  password: "", // Không cần mật khẩu
                   active: true,
                });
             }
@@ -47,8 +54,7 @@ passport.use(
    )
 );
 
-
-// Serialize and deserialize user
+// ✅ Serialize & Deserialize User
 passport.serializeUser((user, done) => {
    done(null, user.userId);
 });

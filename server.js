@@ -21,6 +21,7 @@ import workspaceMessageRouter from './router/workspaceMessage.routes.js';
 import session from "express-session";
 import cookieParser from "cookie-parser";
 import passport from "./config/passport.js";
+
 import './cron/notificationCron.js';
 import clearAndSeedDatabase from './database/seedDatabase.js';
 import syncDatabase from './model/Association.js';
@@ -83,6 +84,7 @@ app.use('/task', TaskRouter);
 app.use('/api/otp', OTPRouter);
 app.use('/api/admin', adminRouter);
 app.use('/api', workspaceMessageRouter); // Add workspace message routes
+
 
 // app.listen(PORT, () => {
 //     console.log(Server is running on http://localhost:${PORT});

@@ -1,5 +1,6 @@
 import AdminService from "../services/AdminService.js";
 import logger from "../utils/logger.js";
+import ManageMemberWorkspaceService from "../services/ManageMemberWorkspaceService.js";
 
 // DASHBOARD PAGE
 export const getCountAllUser = async (req, res) => {
@@ -209,3 +210,114 @@ export const createPlan = async (req, res) => {
     return res.status(500).json({ error: "Internal Server Error" });
   }
 };
+
+export const getMembersByWorkspace = async (req, res) => {
+  try {
+      const { workspaceId } = req.params;
+
+      if (!workspaceId) {
+          return res.status(400).json({ error: "workspaceId is required" });
+      }
+
+      console.log("🔍 Fetching members for workspaceId:", workspaceId);
+
+      const members = await AdminService.getMembersByWorkspace(workspaceId);
+
+      if (!members || members.length === 0) {
+          return res.status(404).json({ error: "No members found for this workspace" });
+      }
+
+      return res.status(200).json(members);
+  } catch (error) {
+      console.error("❌ Error fetching members:", error);
+      return res.status(500).json({ error: "Internal Server Error", details: error.message });
+  }
+};
+
+export const inviteMemberToWorkspace = async (req, res) => {
+  try {
+    const { workspaceId, email, roleWorkSpace } = req.body;
+
+    if (!workspaceId || !email || !roleWorkSpace) {
+      return res.status(400).json({ error: "workspaceId, email, and roleWorkSpace are required" });
+    }
+
+    console.log(`📩 Checking if ${email} is already in workspace ${workspaceId}`);
+
+    // Kiểm tra xem email đã tồn tại trong workspace chưa
+    const userExists = await AdminService.checkUserExistsInWorkspace(workspaceId, email);
+    if (userExists) {
+      return res.status(400).json({ error: "This email is already a member of this workspace." });
+    }
+
+    // Nếu chưa tồn tại, tiến hành gửi lời mời
+    const invitedMember = await AdminService.inviteUserToWorkspace(workspaceId, email, roleWorkSpace);
+
+    return res.status(201).json({
+      message: "Invitation sent successfully!",
+      user: invitedMember
+    });
+
+  } catch (error) {
+    console.error("❌ Error inviting member:", error.message);
+    return res.status(500).json({ error: "Internal Server Error", details: error.message });
+  }
+};
+
+/**
+ * Kích hoạt tài khoản khi người dùng nhấn vào link kích hoạt
+ */
+export const activateUser = async (req, res) => {
+  try {
+    const { token, fullName, avatar } = req.body;
+
+    if (!token || !fullName || !avatar) {
+      return res.status(400).json({ error: "Token, fullName, and avatar are required" });
+    }
+
+    const activatedUser = await AdminService.activateUser(token, fullName, avatar);
+
+    return res.status(200).json({ message: "User activated successfully!", user: activatedUser });
+
+  } catch (error) {
+    console.error("❌ Error activating user:", error.message);
+    return res.status(500).json({ error: "Internal Server Error", details: error.message });
+  }
+};
+
+export const getUserRoleInWorkspace = async (req, res) => {
+  try {
+    const { userId, workspaceId } = req.params;
+
+    if (!userId || !workspaceId) {
+      return res.status(400).json({ error: "Missing userId or workspaceId" });
+    }
+
+    const role = await ManageMemberWorkspaceService.getUserRoleInWorkspace(userId, workspaceId);
+
+    if (!role) {
+      return res.status(404).json({ error: "User not found in workspace" });
+    }
+
+    return res.status(200).json({ role });
+  } catch (error) {
+    console.error("❌ Error getting user role:", error);
+    return res.status(500).json({ error: "Internal Server Error" });
+  }
+};
+export const resendInviteToWorkspace = async (req, res) => {
+  try {
+    const { workspaceId, email } = req.body;
+
+    if (!workspaceId || !email) {
+      return res.status(400).json({ error: "workspaceId và email là bắt buộc" });
+    }
+
+    const result = await AdminService.resendInviteToWorkspace(workspaceId, email);
+    return res.status(200).json(result);
+  } catch (error) {
+    console.error("❌ Error resending invite:", error.message);
+    return res.status(500).json({ error: "Không thể gửi lại lời mời" });
+  }
+};
+

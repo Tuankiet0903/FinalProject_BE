@@ -8,8 +8,12 @@ import {
     getUserWorkspaces,
     toggleFavorite,
     getWorkspacesByType,
-    createWorkspaceWithDefaults
+    createWorkspaceWithDefaults,
+    getUserWorkspacesInTeam,
 } from "../controller/WorkspaceController.js";
+import {  deleteUserFromWorkspace } from "../controller/manageMemberWorkspaceController.js";
+import Auth from "../middleware/auth.js";
+
 // import Auth from "../middleware/auth.js";
 
 const router = express.Router();
@@ -22,6 +26,10 @@ router.delete("/workspaces/:id", deleteWorkspace); // Delete a workspace by ID
 router.get("/workspaces/user/:userId", getUserWorkspaces); // Get workspaces by user ID
 router.patch("/workspaces/:id/favorite", toggleFavorite); // Toggle favorite status of a workspace
 router.get("/workspaces/type/:type", getWorkspacesByType); // Get workspaces by type
+router.get("/workspaces/workspaceinteam/:userId", Auth, getUserWorkspacesInTeam);
+router.delete("/workspaces/:workspaceId/delete/user/:userId", deleteUserFromWorkspace);
+
+ 
 
 
 

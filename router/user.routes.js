@@ -23,4 +23,6 @@ router.get("/profile", Auth, getUserProfile);
 router.post("/change-password", Auth, changePassword);
 router.post("/upload-file", Auth, upload.single("file"), uploadFile); // Gọi đúng hàm uploadFile từ controller
 
+
+
 export default router;

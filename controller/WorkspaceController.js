@@ -4,8 +4,8 @@ import FolderService from '../services/FolderService.js';
 import ListService from '../services/ListService.js';
 import logger from "../utils/logger.js";
 import TaskColumnService from "../services/TaskColumnService.js";
-import ManageMemberWorkSpaceService from "../services/ManagerMemberWorkspaceService.js";
-import { sequelize } from "../database/connect.js";
+import ManageMemberWorkSpace from "../model/ManageMenberWorkSpace.js";
+import Workspace from "../model/WorkSpace.js";
 
 export const createWorkspace = async ({ name, description, type = 'personal' }) => {
     try {
@@ -196,6 +196,28 @@ export const createWorkspaceWithDefaults = async (req, res) => {
         await transaction.rollback();
         console.error("Error creating workspace with defaults:", error);
         res.status(500).json({ message: 'Failed to create workspace with defaults' });
+    }
+};
+
+export const getUserWorkspacesInTeam = async (req, res) => {
+    try {
+        console.log("📌 Checking user authentication...");
+        const userId = req.user?.userId; // ✅ Lấy userId từ middleware Auth
+        
+        if (!userId) {
+            console.error("❌ Unauthorized: No userId found in request.");
+            return res.status(401).json({ error: "Unauthorized" });
+        }
+
+        console.log(`🔍 Fetching workspaces for userId: ${userId}`);
+
+        const workspaces = await WorkspaceService.getUserWorkspaces(userId);
+
+        console.log("✅ Workspaces fetched successfully:", workspaces);
+        return res.status(200).json(workspaces);
+    } catch (error) {
+        console.error("❌ Error fetching user workspaces:", error.message);
+        return res.status(500).json({ error: error.message });
     }
 };
 
