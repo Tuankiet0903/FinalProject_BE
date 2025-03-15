@@ -14,7 +14,7 @@ const ManageMemberSpace = sequelize.define("ManageMemberSpace", {
   },
   roleSpace: {
     type: DataTypes.STRING,
-    allowNull: false
+    allowNull: false // Leader Space , Member 
   },
   spaceId: {
     type: DataTypes.INTEGER,

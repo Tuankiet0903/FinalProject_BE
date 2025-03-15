@@ -16,6 +16,11 @@ import {
   editPlan,
   createPlan,
   getCountAllActiveUsers,
+  getMembersByWorkspace,
+  inviteMemberToWorkspace,
+  activateUser,
+  getUserRoleInWorkspace,
+  resendInviteToWorkspace,
 } from "../controller/AdminController.js";
 
 import {
@@ -43,6 +48,13 @@ router.get("/getAllUser", getAllUsers);
 router.delete("/users/delete-multiple", deleteMultipleUsers);
 router.delete("/users/:id", deleteUser);
 router.put("/users/update-block-status", editBlockStatus);
+router.get("/manage-people/workspace/:workspaceId", getMembersByWorkspace);
+router.post('/manage-people/invite', inviteMemberToWorkspace);
+router.post("/manage-people/activate", activateUser);
+router.get("/getRole/:userId/:workspaceId", getUserRoleInWorkspace);
+router.post("/resend-invite", resendInviteToWorkspace);
+
+
 
 //Premium
 router.get("/getAllPremiumPlan", getAllPremiumPlan);
