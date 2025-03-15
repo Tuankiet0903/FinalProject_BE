@@ -117,3 +117,21 @@ export const toggleFavorite = async (req, res) => {
         return res.status(status).json({ error: error.message });
     }
 };
+
+export const getSpacesByWorkspaceId = async (req, res) => {
+    try {
+      const { workspaceId } = req.params; // ✅ Lấy workspaceId từ URL
+  
+      if (!workspaceId) {
+        return res.status(400).json({ error: "Workspace ID is required" });
+      }
+  
+      const spaces = await SpaceService.getSpacesByWorkspaceId(workspaceId);
+  
+      return res.status(200).json(spaces);
+    } catch (error) {
+      console.error("Error fetching spaces:", error);
+      return res.status(500).json({ error: "Failed to fetch spaces" });
+    }
+  };
+

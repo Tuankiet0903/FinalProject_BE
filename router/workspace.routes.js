@@ -24,6 +24,8 @@ router.patch("/workspaces/:id/favorite", toggleFavorite); // Toggle favorite sta
 router.get("/workspaces/type/:type", getWorkspacesByType); // Get workspaces by type
 
 
+
+
 // Create a example workspace
 router.post('/create-with-defaults', createWorkspaceWithDefaults);
 
