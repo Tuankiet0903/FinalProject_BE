@@ -3,6 +3,10 @@ import AuthService from "../services/AuthService.js";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 import logger from "../utils/logger.js";
+import dotenv from 'dotenv';
+dotenv.config();
+
+const FE_URL = process.env.FE_URL;
 
 export const createUser = async (req, res) => {
   try {
@@ -81,7 +85,7 @@ export const ggLogin = async (req, res) => {
       { expiresIn: "24h" }
     );
 
-    res.redirect(`http://localhost:5173/user?token=${token}&avatar=${encodeURIComponent(user.avatar)}&fullName=${encodeURIComponent(user.fullName)}`);
+    res.redirect(`${FE_URL}/user?token=${token}&avatar=${encodeURIComponent(user.avatar)}&fullName=${encodeURIComponent(user.fullName)}`);
   } catch (error) {
     logger.error("Google login error:", error);
     res.status(500).json({ error: "Đăng nhập thất bại." });
@@ -90,10 +94,7 @@ export const ggLogin = async (req, res) => {
 
 export const getUserProfile = async (req, res) => {
   try {
-    console.log("📌 Đang lấy thông tin user với ID:", req.user.userId); // Kiểm tra ID
-
     const user = await UserService.getUserById(req.user.userId);
-    console.log("✅ Kết quả truy vấn user:", user);
 
     if (!user) {
       return res.status(404).json({ message: "User not found" });

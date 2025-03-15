@@ -3,8 +3,13 @@ import passport from "../config/passport.js";
 import jwt from "jsonwebtoken";
 import AuthService from "../services/AuthService.js";
 import { createWelcomeNotification } from "../controller/NotificationController.js";
+import dotenv from 'dotenv';
 import User from "../model/User.js"; // Import model User
 import ManageMemberWorkSpace from "../model/ManageMenberWorkSpace.js";
+
+dotenv.config();
+
+const FE_URL = process.env.FE_URL;
 
 const router = express.Router();
 
@@ -55,14 +60,13 @@ router.get("/google", passport.authenticate("google", { scope: ["profile", "emai
 // Google OAuth - Xử lý callback
 router.get(
    "/google/callback",
-   passport.authenticate("google", { failureRedirect: "http://localhost:5173/login" }),
+   passport.authenticate("google", { failureRedirect: `${FE_URL}/login` }),
    async (req, res) => {
       try {
          const googleUser = req.user;
-
          if (!googleUser) {
             console.error("❌ Google authentication failed.");
-            return res.redirect("http://localhost:5173/login?error=auth_failed");
+            return res.redirect(`${FE_URL}/login?error=auth_failed`);
          }
 
          console.log("✅ Google User Info:", googleUser);
@@ -111,10 +115,11 @@ router.get(
          console.log(`✅ User ${user.email} logged in successfully!`);
 
          // ✅ Chuyển hướng đến trang chính
-         res.redirect(`http://localhost:5173/user`);
+         res.redirect(`${FE_URL}/user`);
+
       } catch (error) {
          console.error("Google callback error:", error);
-         res.redirect("http://localhost:5173/login?error=server_error");
+         res.redirect(`${FE_URL}/login?error=server_error`);
       }
    }
 );
@@ -256,7 +261,7 @@ router.post("/activate-from-google", async (req, res) => {
 router.get("/logout", (req, res) => {
    res.clearCookie("token", { httpOnly: true, secure: false, sameSite: "Lax" }); // Xóa token trong cookies
    res.json({ message: "Đã đăng xuất thành công!" }); // Gửi response về FE để xử lý tiếp
-   res.redirect("http://localhost:5173/login");
+   res.redirect(`${FE_URL}/login`);
 });
 
 export default router;

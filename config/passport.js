@@ -2,13 +2,17 @@ import passport from "passport";
 import { Strategy as GoogleStrategy } from "passport-google-oauth20";
 import User from "../model/User.js";
 import { Op } from "sequelize";
+import dotenv from 'dotenv';
+dotenv.config();
+
+const BE_URL = process.env.BE_URL;
 
 passport.use(
    new GoogleStrategy(
       {
          clientID: process.env.GOOGLE_CLIENT_ID,
          clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-         callbackURL: process.env.GOOGLE_CALLBACK_URL || "http://localhost:5000/auth/google/callback",
+         callbackURL: process.env.GOOGLE_CALLBACK_URL || `${BE_URL}/auth/google/callback`,
       },
       async (accessToken, refreshToken, profile, done) => {
          try {
