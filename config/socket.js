@@ -1,16 +1,11 @@
-import { Server } from 'socket.io';
-import logger from '../utils/logger.js';
-import dotenv from 'dotenv';
-dotenv.config();
-class SocketService {
-   constructor() {
-      this.io = null;
-   }
+import { Server } from "socket.io";
+import jwt from "jsonwebtoken";
+import ManageMemberWorkSpaceService from "../services/ManagerMemberWorkspaceService.js";
 
-   initialize(server) {
-      this.io = new Server(server, {
-         cors: {
-            origin: process.env.FE_URL,
+const configureSocket = (server) => {
+    const io = new Server(server, {
+        cors: {
+            origin: process.env.CLIENT_URL || "http://localhost:5173",
             methods: ["GET", "POST"],
             credentials: true
         }
