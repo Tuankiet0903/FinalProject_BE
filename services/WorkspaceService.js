@@ -70,6 +70,7 @@ class WorkspaceService {
 
     static async getWorkspaceById(id) {
         try {
+            console.log("Workspace ID:", id);
             const workspace = await Workspace.findByPk(id, {
                 include: [
                     {
@@ -90,7 +91,7 @@ class WorkspaceService {
                     }
                 ]
             });
-
+            console.log("Workspace:", workspace);
             if (!workspace) {
                 logger.warn(`Workspace not found with ID: ${id}`);
                 return null;

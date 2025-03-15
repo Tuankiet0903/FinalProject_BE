@@ -1,39 +1,79 @@
-import { Server } from 'socket.io';
-import logger from '../utils/logger.js';
+import { Server } from "socket.io";
+import jwt from "jsonwebtoken";
+import ManageMemberWorkSpaceService from "../services/ManagerMemberWorkspaceService.js";
 
-class SocketService {
-   constructor() {
-      this.io = null;
-   }
-
-   initialize(server) {
-      this.io = new Server(server, {
-         cors: {
-            origin: "http://localhost:5173",
+const configureSocket = (server) => {
+    const io = new Server(server, {
+        cors: {
+            origin: process.env.CLIENT_URL || "http://localhost:5173",
             methods: ["GET", "POST"],
             credentials: true
-         }
-      });
+        }
+    });
 
-      this.io.on('connection', (socket) => {
-         logger.info('Client connected:', socket.id);
+    // Middleware to authenticate socket connections
+    io.use(async (socket, next) => {
+        try {
+            const token = socket.handshake.auth.token;
+            if (!token) {
+                return next(new Error("Authentication error"));
+            }
 
-         socket.on('join_notification_room', (userId) => {
-            socket.join(`notification_${userId}`);
-            logger.info(`User ${userId} joined notification room`);
-         });
+            const decoded = jwt.verify(token, process.env.JWT_SECRET);
+            socket.userId = decoded.userId;
+            next();
+        } catch (error) {
+            next(new Error("Authentication error"));
+        }
+    });
 
-         socket.on('disconnect', () => {
-            logger.info('Client disconnected:', socket.id);
-         });
-      });
-   }
+    io.on("connection", async (socket) => {
+        console.log(`User connected: ${socket.userId}`);
 
-   emit(room, event, data) {
-      if (this.io) {
-         this.io.to(room).emit(event, data);
-      }
-   }
-}
+        // Join workspace rooms
+        socket.on("join-workspace", async ({ workspaceId }) => {
+            try {
+                // const isMember = await ManageMemberWorkSpaceService.isMemberOfWorkspace(workspaceId, socket.userId);
+                const isMember = true;
+                if (isMember) {
+                    socket.join(`workspace-${workspaceId}`);
+                    console.log(`User ${socket.userId} joined workspace ${workspaceId}`);
+                }else {
+                    socket.emit("join-error", { message: "You are not a member of this workspace" });
+                }
+            } catch (error) {
+                console.error("Error joining workspace:", error);
+            }
+        });
 
-export default new SocketService();
+        // Leave workspace rooms
+        socket.on("leave-workspace", ({ workspaceId }) => {
+            socket.leave(`workspace-${workspaceId}`);
+            console.log(`User ${socket.userId} left workspace ${workspaceId}`);
+        });
+
+        // Handle typing status
+        socket.on("typing-start", ({ workspaceId }) => {
+            socket.to(`workspace-${workspaceId}`).emit("user-typing", {
+                userId: socket.userId,
+                status: true
+            });
+        });
+
+        socket.on("typing-end", ({ workspaceId }) => {
+            socket.to(`workspace-${workspaceId}`).emit("user-typing", {
+                userId: socket.userId,
+                status: false
+            });
+        });
+
+        // Handle disconnection
+        socket.on("disconnect", () => {
+            console.log(`User disconnected: ${socket.userId}`);
+        });
+    });
+
+    return io;
+};
+
+export default configureSocket;
