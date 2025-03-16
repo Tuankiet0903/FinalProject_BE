@@ -1,6 +1,10 @@
 import PayOS from "@payos/node";
 import PaymentHistory from "../model/PaymentHistory.js";
 import { sequelize } from "../database/connect.js";
+import Subscription from "../model/Subcriptions.js";
+import PremiumPlans from "../model/PremiunPlans.js";
+import User from "../model/User.js";
+import Workspace from "../model/WorkSpace.js";
 
 const callbackUrl = `${process.env.FE_URL}/setting/upgrade`;
 
@@ -10,8 +14,7 @@ const payOS = new PayOS(
   process.env.PAYOS_CHECKSUM_KEY
 );
 
-export const createPaymentLinkService = async (userId, planId, name, price) => {
-
+export const createPaymentLinkService = async (userId, workspaceId, planId, name, price) => {
   const transaction = await sequelize.transaction();
 
   try {
@@ -26,6 +29,7 @@ export const createPaymentLinkService = async (userId, planId, name, price) => {
       {
         user_id: userId,
         plan_id: planId,
+        workspace_id : workspaceId,
         amount: price,
         status: "pending", // Chưa thanh toán
         order_code: orderCode,
@@ -60,11 +64,14 @@ export const createPaymentLinkService = async (userId, planId, name, price) => {
   }
 };
 
-
-export const updatePaymentStatusService = async (orderCode, status) => {
-
+export const updatePaymentStatusService = async (
+  orderCode,
+  status,
+  userId,
+  workspaceId
+) => {
   const transaction = await sequelize.transaction();
-  
+
   try {
     const payment = await PaymentHistory.findOne({
       where: { order_code: orderCode },
@@ -75,14 +82,66 @@ export const updatePaymentStatusService = async (orderCode, status) => {
       throw new Error("Payment record not found");
     }
 
+    const subscription = await Subscription.findOne({
+      where: { userId: userId, workspaceId: workspaceId },
+      transaction,
+    });
+
+    if (!subscription) {
+      throw new Error("Subscription record not found");
+    }
+
+    subscription.planId = payment.plan_id;
+    await subscription.save({ transaction });
+
     payment.status = status;
     await payment.save({ transaction });
 
-    await transaction.commit(); // ✅ Commit nếu cập nhật thành công
+    await transaction.commit(); // ✅ Commit only if everything is successful
     return payment;
   } catch (error) {
-    await transaction.rollback(); // ❌ Rollback nếu có lỗi
+    await transaction.rollback(); // ❌ Rollback on error
     console.error("Error updating payment:", error);
+    throw error;
+  }
+};
+
+export const getPaymentHistoryService = async () => {
+  try {
+    const query = `SELECT
+    ph.order_code,
+    ph.status,
+    ph.created_at,
+    u."userId",
+    u."fullName",
+    w."workspaceId",
+    w.name AS workspace_name,
+    ph.plan_id,
+    pp."planName",
+    pp.price
+FROM payment_history ph
+INNER JOIN "User" u
+    ON ph.user_id = u."userId"
+INNER JOIN "Workspace" w
+    ON ph.workspace_id = w."workspaceId"
+INNER JOIN "PremiumPlans" pp
+    ON ph.plan_id = pp."planId";
+`;
+
+    const results = await sequelize.query(query, {
+      type: sequelize.QueryTypes.SELECT,
+    });
+
+    console.log(results);
+    
+
+    if (!results || results.length === 0) {
+      throw new Error("Không có lịch sử thanh toán");
+    }
+
+    return results;
+  } catch (error) {
+    console.error("Lỗi khi lấy lịch sử thanh toán:", error);
     throw error;
   }
 };

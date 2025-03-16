@@ -11,6 +11,10 @@ const PaymentHistory = sequelize.define('PaymentHistory', {
         type: DataTypes.INTEGER,
         allowNull: false
     },
+    workspace_id: {
+        type: DataTypes.INTEGER,
+        allowNull: false
+    },
     plan_id: {
         type: DataTypes.INTEGER,
         allowNull: false

@@ -135,6 +135,10 @@ PaymentHistory.belongsTo(User, { foreignKey: 'user_id', onDelete: 'CASCADE' });
 PremiumPlans.hasMany(PaymentHistory, { foreignKey: 'plan_id', onDelete: 'CASCADE' });
 PaymentHistory.belongsTo(PremiumPlans, { foreignKey: 'plan_id', onDelete: 'CASCADE' });
 
+// Workspace ↔ PaymentHistory
+Workspace.hasMany(PaymentHistory, { foreignKey: 'plan_id', onDelete: 'CASCADE' });
+PaymentHistory.belongsTo(Workspace, { foreignKey: 'plan_id', onDelete: 'CASCADE' });
+
 // Workspace ↔ WorkspaceMessage
 Workspace.hasMany(WorkspaceMessage, { foreignKey: "workspaceId", onDelete: "CASCADE" });
 WorkspaceMessage.belongsTo(Workspace, { foreignKey: "workspaceId", onDelete: "CASCADE" });
