@@ -6,6 +6,8 @@ import logger from "../utils/logger.js";
 import TaskColumnService from "../services/TaskColumnService.js";
 import ManageMemberWorkSpace from "../model/ManageMenberWorkSpace.js";
 import Workspace from "../model/WorkSpace.js";
+import ManageMemberWorkSpaceService from "../services/ManagerMemberWorkspaceService.js";
+import { sequelize } from "../database/connect.js";
 
 export const createWorkspace = async ({ name, description, type = 'personal' }) => {
     try {
