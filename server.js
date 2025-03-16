@@ -17,6 +17,7 @@ import notificationRouter from './router/notification.routes.js'; // Import noti
 import session from "express-session";
 import cookieParser from "cookie-parser";
 import passport from "./config/passport.js";
+import syncDatabase from './model/Association.js';
 import './cron/notificationCron.js';
 dotenv.config();
 
@@ -42,7 +43,7 @@ app.use(cookieParser());
 
 connectDB().then(async () => {
     //Chay syncDatabase khi co thay doi db
-    //await syncDatabase();
+    // await syncDatabase();
     // chi chay lan dau khi khong co data
     // await clearAndSeedDatabase();
 
