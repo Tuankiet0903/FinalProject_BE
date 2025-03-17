@@ -5,9 +5,9 @@ import logger from "../utils/logger.js";
 class ReactionService {
     static async addReaction(data) {
         try {
-            const { workspaceMessageId, emoji, createdBy } = data;
+            const { workspaceMessageId, type, createdBy } = data;
 
-            if (!workspaceMessageId || !emoji || !createdBy) {
+            if (!workspaceMessageId || !type || !createdBy) {
                 throw new Error("Message ID, emoji, and user ID are required");
             }
 
@@ -16,7 +16,7 @@ class ReactionService {
                 where: {
                     workspaceMessageId,
                     createdBy,
-                    emoji
+                    type
                 }
             });
 
@@ -26,7 +26,7 @@ class ReactionService {
 
             const reaction = await Reaction.create({
                 workspaceMessageId,
-                emoji,
+                type,
                 createdBy,
                 createdAt: new Date()
             });

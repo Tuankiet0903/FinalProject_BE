@@ -87,3 +87,33 @@
 {"level":"error","message":"Error creating task column: Validation error","timestamp":"2025-03-16 13:13:27"}
 {"level":"error","message":"Error creating task column: Validation error","timestamp":"2025-03-16 13:13:30"}
 {"level":"error","message":"Error creating task column: Validation error","timestamp":"2025-03-16 13:13:34"}
+{"level":"error","message":"❌ Error uploading file: Must supply api_key","stack":"Error: Must supply api_key\n    at ensureOption (D:\\Web\\Final\\FinalProject_BE\\node_modules\\cloudinary\\lib\\utils\\ensureOption.js:19:13)\n    at Object.sign_request (D:\\Web\\Final\\FinalProject_BE\\node_modules\\cloudinary\\lib\\utils\\index.js:1164:16)\n    at Object.process_request_params (D:\\Web\\Final\\FinalProject_BE\\node_modules\\cloudinary\\lib\\utils\\index.js:1214:22)\n    at call_api (D:\\Web\\Final\\FinalProject_BE\\node_modules\\cloudinary\\lib\\uploader.js:474:18)\n    at Object.upload (D:\\Web\\Final\\FinalProject_BE\\node_modules\\cloudinary\\lib\\uploader.js:53:10)\n    at Object.upload (D:\\Web\\Final\\FinalProject_BE\\node_modules\\cloudinary\\lib\\utils\\index.js:1411:21)\n    at uploadFile (file:///D:/Web/Final/FinalProject_BE/controller/UploadFileController.js:27:48)\n    at Layer.handle [as handle_request] (D:\\Web\\Final\\FinalProject_BE\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (D:\\Web\\Final\\FinalProject_BE\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at done (D:\\Web\\Final\\FinalProject_BE\\node_modules\\multer\\lib\\make-middleware.js:45:7)","timestamp":"2025-03-17 09:12:44"}
+{"level":"error","message":"WorkspaceMessageService.getMessageById is not a function","timestamp":"2025-03-17 11:33:17"}
+{"level":"error","message":"Error retrieving message: invalid input syntax for type integer: \"undefined\"","timestamp":"2025-03-17 11:52:31"}
+{"level":"error","message":"invalid input syntax for type integer: \"undefined\"","timestamp":"2025-03-17 11:52:31"}
+{"level":"error","message":"Error retrieving message: invalid input syntax for type integer: \"undefined\"","timestamp":"2025-03-17 11:52:44"}
+{"level":"error","message":"invalid input syntax for type integer: \"undefined\"","timestamp":"2025-03-17 11:52:44"}
+{"level":"error","message":"Error retrieving message: Message not found","timestamp":"2025-03-17 12:10:01"}
+{"level":"error","message":"Message not found","timestamp":"2025-03-17 12:10:01"}
+{"level":"error","message":"Error retrieving message: Message not found","timestamp":"2025-03-17 13:05:27"}
+{"level":"error","message":"Message not found","timestamp":"2025-03-17 13:05:27"}
+{"level":"error","message":"Error retrieving message: Message not found","timestamp":"2025-03-17 13:06:07"}
+{"level":"error","message":"Message not found","timestamp":"2025-03-17 13:06:07"}
+{"level":"error","message":"Error retrieving message: Message not found","timestamp":"2025-03-17 13:25:05"}
+{"level":"error","message":"Message not found","timestamp":"2025-03-17 13:25:05"}
+{"level":"error","message":"Error adding reaction: Message ID, emoji, and user ID are required","timestamp":"2025-03-17 13:26:19"}
+{"level":"error","message":"Message ID, emoji, and user ID are required","timestamp":"2025-03-17 13:26:19"}
+{"level":"error","message":"Error adding reaction: Message ID, emoji, and user ID are required","timestamp":"2025-03-17 13:27:44"}
+{"level":"error","message":"Message ID, emoji, and user ID are required","timestamp":"2025-03-17 13:27:44"}
+{"level":"error","message":"Error adding reaction: Message ID, emoji, and user ID are required","timestamp":"2025-03-17 13:29:15"}
+{"level":"error","message":"Message ID, emoji, and user ID are required","timestamp":"2025-03-17 13:29:15"}
+{"level":"error","message":"Error adding reaction: Message ID, emoji, and user ID are required","timestamp":"2025-03-17 13:30:06"}
+{"level":"error","message":"Message ID, emoji, and user ID are required","timestamp":"2025-03-17 13:30:06"}
+{"level":"error","message":"Error adding reaction: column Reaction.emoji does not exist","timestamp":"2025-03-17 13:31:01"}
+{"level":"error","message":"column Reaction.emoji does not exist","timestamp":"2025-03-17 13:31:01"}
+{"level":"error","message":"Error removing reaction: Reaction not found","timestamp":"2025-03-17 13:51:47"}
+{"level":"error","message":"Reaction not found","timestamp":"2025-03-17 13:51:47"}
+{"level":"error","message":"Error adding reaction: User already reacted with this emoji","timestamp":"2025-03-17 16:58:50"}
+{"level":"error","message":"User already reacted with this emoji","timestamp":"2025-03-17 16:58:50"}
+{"level":"error","message":"Error adding reaction: User already reacted with this emoji","timestamp":"2025-03-17 17:04:54"}
+{"level":"error","message":"User already reacted with this emoji","timestamp":"2025-03-17 17:04:54"}

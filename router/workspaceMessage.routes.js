@@ -17,12 +17,12 @@ const router = express.Router();
 // Message routes
 router.post("/workspace/:workspaceId/messages", Auth, createMessage);
 router.get("/workspace/:workspaceId/messages", getMessages);
-router.put("/messages/:messageId", Auth, updateMessage);
-router.delete("/messages/:messageId", Auth, deleteMessage);
+router.put("/messages/:workspaceMessageId", Auth, updateMessage);
+router.delete("/messages/:workspaceMessageId", Auth, deleteMessage);
 
 // Reaction routes
-router.post("/messages/:messageId/reactions", Auth, addReaction);
-router.delete("/messages/:messageId/reactions/:reactionId", Auth, removeReaction);
-router.get("/messages/:messageId/reactions", Auth, getReactions);
+router.post("/messages/:workspaceMessageId/reactions", Auth, addReaction);
+router.delete("/messages/:workspaceMessageId/reactions/:reactionId", Auth, removeReaction);
+router.get("/messages/:workspaceMessageId/reactions", Auth, getReactions);
 
 export default router; 
