@@ -1,59 +1,51 @@
 import cron from 'node-cron';
 import { Op } from 'sequelize';
-import Notifications from '../model/Notifications.js';
+import Task from '../model/Task.js'; // Import model Task
+import Notification from '../model/Notifications.js';
+import logger from '../utils/logger.js';
 
-// Cleanup expired notifications - runs every hour
-cron.schedule('0 * * * *', async () => {
-   console.log('Running notification cleanup job...');
+// Job to clean up expired notifications
+cron.schedule('0 0 * * *', async () => {
    try {
-      const deleted = await Notifications.destroy({
+      logger.info('Running notification cleanup job...');
+      const result = await Notification.destroy({
          where: {
             expiresAt: {
                [Op.lt]: new Date()
             }
          }
       });
-      console.log(`Cleaned up ${deleted} expired notifications`);
+      logger.info(`Cleaned up ${result} expired notifications`);
    } catch (error) {
-      console.error('Error cleaning up notifications:', error);
+      logger.error(`Error cleaning up notifications: ${error.message}`);
    }
 });
 
-// Check for upcoming task deadlines - runs every 12 hours
-cron.schedule('0 */12 * * *', async () => {
-   console.log('Checking for upcoming task deadlines...');
+// Job to check for upcoming task deadlines
+cron.schedule('*/5 * * * *', async () => {
    try {
-      const upcomingTasks = await Task.findAll({
+      logger.info('Checking for upcoming task deadlines...');
+      const tasks = await Task.findAll({
          where: {
             endDate: {
-               [Op.between]: [
-                  new Date(),
-                  new Date(Date.now() + 24 * 60 * 60 * 1000) // Next 24 hours
-               ]
+               [Op.lte]: new Date(new Date().getTime() + 24 * 60 * 60 * 1000) // Tasks ending in the next 24 hours
             },
             status: {
-               [Op.ne]: 'COMPLETED'
+               [Op.ne]: 3 // Tasks that are not completed
             }
-         },
-         include: [{
-            model: User,
-            attributes: ['userId']
-         }]
+         }
       });
 
-      for (const task of upcomingTasks) {
-         await Notifications.create({
-            userId: task.User.userId,
-            taskId: task.id,
-            content: `Task "${task.name}" sẽ đến hạn vào ngày ${task.endDate}`,
-            type: 'DEADLINE_REMINDER',
-            isRead: false,
-            expiresAt: task.endDate
+      for (const task of tasks) {
+         // Logic to send notification about upcoming task deadline
+         await Notification.create({
+            userId: task.assigneeId,
+            message: `Task "${task.title}" is due soon.`,
+            expiresAt: new Date(task.endDate.getTime() + 24 * 60 * 60 * 1000) // Notification expires 24 hours after task end date
          });
       }
-      console.log(`Created reminders for ${upcomingTasks.length} upcoming tasks`);
    } catch (error) {
-      console.error('Error checking task deadlines:', error);
+      logger.error(`Error checking task deadlines: ${error.message}`);
    }
 });
 

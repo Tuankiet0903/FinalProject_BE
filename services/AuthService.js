@@ -32,6 +32,7 @@ class AuthService {
       if (user.isBlocked) throw new Error("Tài khoản của bạn đã bị khóa.");
       return user;
    }
+   
 }
 
 export default AuthService;

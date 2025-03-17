@@ -4,6 +4,12 @@ import ManageMemberWorkSpace from "../model/ManageMenberWorkSpace.js";
 import WorkSpace from "../model/WorkSpace.js";
 import logger from "../utils/logger.js";
 import PremiumPlans from "../model/PremiunPlans.js";
+import jwt from "jsonwebtoken";
+import nodemailer from "nodemailer";
+import dotenv from 'dotenv';
+dotenv.config();
+
+const FE_URL = process.env.FE_URL;
 
 class AdminService {
   // DASHBOARD PAGE
@@ -356,6 +362,237 @@ class AdminService {
       throw new Error("Failed to create plan");
     }
   }
+  static async getMembersByWorkspace(workspaceId) {
+    try {
+        console.log("🔍 Fetching members for workspaceId:", workspaceId);
+
+        if (!workspaceId) {
+            throw new Error("workspaceId is required");
+        }
+
+        // ✅ JOIN `ManageMemberWorkSpace` với `User`
+        const members = await ManageMemberWorkSpace.findAll({
+            where: { workspaceId },
+            include: [{
+                model: User,
+                as: "User",
+                attributes: ["userId", "fullName", "email", "avatar"] // ❌ Không lấy active từ User nữa
+            }],
+        });
+
+        if (!members.length) {
+            console.warn("⚠️ No members found for workspaceId:", workspaceId);
+            return [];
+        }
+
+        return members.map(member => ({
+            id: member.User?.userId || null,
+            name: member.User?.fullName || "Unknown",
+            email: member.User?.email || "No email",
+            avatar: member.User?.avatar || "/default-avatar.png",
+            role: member.roleWorkSpace || "Member",
+            status: member.status ? "Active" : "Pending" // ✅ Lấy status từ ManageMemberWorkSpace
+        }));
+    } catch (error) {
+        console.error("❌ Database Query Error:", error);
+        throw new Error("Failed to fetch members from database");
+    }
+}
+
+static async inviteUserToWorkspace(workspaceId, email, roleWorkSpace) {
+  try {
+      if (!workspaceId || !email || !roleWorkSpace) {
+          throw new Error("Missing required parameters: workspaceId, email, or roleWorkSpace.");
+      }
+
+      // Kiểm tra định dạng email
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+          throw new Error("Invalid email format.");
+      }
+
+      // Kiểm tra xem người dùng đã có trong hệ thống chưa
+      let user = await User.findOne({ where: { email } });
+
+      // Nếu người dùng chưa có, tạo người dùng mới
+      if (!user) {
+          user = await User.create({
+              email,
+              fullName: "Loading...",
+              avatar: null,
+              active: false,
+          });
+      }
+
+      // Lưu vào bảng ManageMemberWorkSpace
+      const member = await ManageMemberWorkSpace.create({
+          workspaceId,
+          userId: user.userId,
+          roleWorkSpace
+      });
+
+      console.log("User invited and added to ManageMemberWorkSpace:", { email, workspaceId });
+      const token = jwt.sign({ email, workspaceId }, process.env.JWT_SECRET, { expiresIn: "24h" });
+
+      // Lưu token vào user
+      user.inviteToken = token;
+      user.inviteTokenExpires = new Date(Date.now() + 24 * 60 * 60 * 1000);
+      await user.save();
+
+      // Gửi email
+      await AdminService.sendInviteEmail(email, token);
+
+      return {
+          userId: user.userId,
+          email: user.email,
+          name: user.fullName,
+          avatar: user.avatar,
+          role: roleWorkSpace,
+          active: "Pending",
+      };
+  } catch (error) {
+      console.error("Error while inviting user to workspace:", error.message);
+      throw new Error("Failed to invite user");
+  }
+}
+
+static async checkUserExistsInWorkspace(workspaceId, email) {
+  try {
+    // Check if a user with the given email already exists in the given workspace
+    const existingMember = await ManageMemberWorkSpace.findOne({
+      where: { workspaceId },
+      include: [{
+        model: User,
+        as: "User",
+        where: { email }, // Check the email
+        attributes: ['email']
+      }]
+    });
+
+    if (existingMember) {
+      throw new Error('This email is already a member of this workspace.');
+    }
+
+    return null; // No existing member found
+  } catch (error) {
+    console.error('Error while checking user existence:', error.message);
+    throw error;
+  }
+}
+
+static async sendInviteEmail(email, token) {
+  try {
+    const inviteLink = `${FE_URL}/login?inviteToken=${token}`;
+
+    const transporter = nodemailer.createTransport({
+      service: "gmail",
+      auth: {
+        user: process.env.EMAIL,
+        pass: process.env.EMAIL_PASSWORD,
+      },
+    });
+
+    const mailOptions = {
+      from: process.env.EMAIL,
+      to: email,
+      subject: "You've been invited to join a workspace!",
+      html: `
+        <p>You have been invited to join a workspace.</p>
+        <p>Click the link below to accept the invitation and log in using Google:</p>
+        <a href="${inviteLink}" style="padding: 10px 15px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 5px;">
+          Accept Invitation
+        </a>
+        <p>This link will expire in 24 hours.</p>
+      `,
+    };
+
+    await transporter.sendMail(mailOptions);
+    console.log("✅ Invitation email sent to:", email);
+  } catch (error) {
+    console.error("❌ Failed to send invitation email:", error.message);
+  }
+}
+
+
+static async activateUser(token) {
+  try {
+    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+    const { email, workspaceId } = decoded;
+
+    // 🔍 Tìm user theo email
+    const user = await User.findOne({ where: { email } });
+
+    if (!user) {
+      throw new Error("User not found.");
+    }
+
+    // 🔍 Tìm thành viên trong workspace
+    const workspaceMember = await ManageMemberWorkSpace.findOne({
+      where: { workspaceId, userId: user.userId }
+    });
+
+    if (!workspaceMember) {
+      throw new Error("User is not a member of this workspace.");
+    }
+
+    // ✅ Cập nhật trạng thái trong `ManageMemberWorkSpace`
+    workspaceMember.status = true;
+    await workspaceMember.save();
+
+    console.log(`✅ User ${email} activated successfully in workspace ${workspaceId}`);
+
+    // ✅ Trả về phản hồi
+    return { userId: user.userId, workspaceId, status: workspaceMember.status };
+  } catch (error) {
+    console.error("❌ Activation error:", error.message);
+    throw new Error("Failed to activate user.");
+  }
+}
+static async getUserRoleInWorkspace(userId, workspaceId) {
+  try {
+    const member = await ManageMemberWorkSpace.findOne({
+      where: { userId, workspaceId },
+      attributes: ["role"],
+    });
+
+    return member ? member.role : null;
+  } catch (error) {
+    console.error("❌ Lỗi khi lấy role của user trong workspace:", error);
+    throw error;
+  }
+}
+static async resendInviteToWorkspace(workspaceId, email) {
+  try {
+      if (!workspaceId || !email) {
+          throw new Error("Missing required parameters: workspaceId or email.");
+      }
+
+      // Kiểm tra xem user có tồn tại không
+      let user = await User.findOne({ where: { email } });
+
+      if (!user) {
+          throw new Error("User not found.");
+      }
+
+      // Tạo token mới
+      const token = jwt.sign({ email, workspaceId }, process.env.JWT_SECRET, { expiresIn: "24h" });
+
+      // Cập nhật token vào database
+      user.inviteToken = token;
+      user.inviteTokenExpires = new Date(Date.now() + 24 * 60 * 60 * 1000);
+      await user.save();
+
+      // Gửi lại email
+      await AdminService.sendInviteEmail(email, token);
+
+      console.log(`📧 Resent invitation to ${email}`);
+      return { message: `Invitation resent to ${email}` };
+  } catch (error) {
+      console.error("❌ Error while resending invite:", error.message);
+      throw new Error("Failed to resend invite");
+  }
+}
+
 }
 
 export default AdminService;
