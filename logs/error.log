@@ -77,3 +77,116 @@
 {"level":"error","message":"Error fetching spaces for workspace null: invalid input syntax for type integer: \"null\"","timestamp":"2025-03-13 06:20:53"}
 {"level":"error","message":"Error fetching workspace: invalid input syntax for type integer: \"workspaceinteam\"","timestamp":"2025-03-13 07:00:32"}
 {"level":"error","message":"Failed to fetch workspace","timestamp":"2025-03-13 07:00:32"}
+{"level":"error","message":"Error fetching spaces for workspace null: invalid input syntax for type integer: \"null\"","timestamp":"2025-03-17 22:44:40"}
+{"level":"error","message":"Error fetching spaces for workspace null: invalid input syntax for type integer: \"null\"","timestamp":"2025-03-17 22:44:40"}
+{"level":"error","message":"Error fetching spaces for workspace null: invalid input syntax for type integer: \"null\"","timestamp":"2025-03-17 22:44:41"}
+{"level":"error","message":"Error fetching spaces for workspace null: invalid input syntax for type integer: \"null\"","timestamp":"2025-03-17 22:44:41"}
+{"level":"error","message":"Failed to fetch space folders","timestamp":"2025-03-17 23:06:32"}
+{"level":"error","message":"Error fetching space: invalid input syntax for type integer: \"undefined\"","timestamp":"2025-03-17 23:06:32"}
+{"level":"error","message":"Failed to fetch space","timestamp":"2025-03-17 23:06:32"}
+{"level":"error","message":"Error fetching space: invalid input syntax for type integer: \"undefined\"","timestamp":"2025-03-17 23:06:43"}
+{"level":"error","message":"Failed to fetch space","timestamp":"2025-03-17 23:06:43"}
+{"level":"error","message":"Failed to fetch space folders","timestamp":"2025-03-17 23:06:43"}
+{"level":"error","message":"Failed to fetch space folders","timestamp":"2025-03-17 23:06:43"}
+{"level":"error","message":"Error fetching space: invalid input syntax for type integer: \"undefined\"","timestamp":"2025-03-17 23:06:43"}
+{"level":"error","message":"Failed to fetch space","timestamp":"2025-03-17 23:06:43"}
+{"level":"error","message":"Failed to fetch space folders","timestamp":"2025-03-17 23:07:18"}
+{"level":"error","message":"Failed to fetch space folders","timestamp":"2025-03-17 23:07:18"}
+{"level":"error","message":"Error fetching space: invalid input syntax for type integer: \"undefined\"","timestamp":"2025-03-17 23:07:18"}
+{"level":"error","message":"Failed to fetch space","timestamp":"2025-03-17 23:07:18"}
+{"level":"error","message":"Error fetching space: invalid input syntax for type integer: \"undefined\"","timestamp":"2025-03-17 23:07:19"}
+{"level":"error","message":"Failed to fetch space","timestamp":"2025-03-17 23:07:19"}
+{"level":"error","message":"Error fetching space: invalid input syntax for type integer: \"undefined\"","timestamp":"2025-03-17 23:07:23"}
+{"level":"error","message":"Failed to fetch space","timestamp":"2025-03-17 23:07:23"}
+{"level":"error","message":"Failed to fetch space folders","timestamp":"2025-03-17 23:07:23"}
+{"level":"error","message":"Failed to fetch space folders","timestamp":"2025-03-17 23:07:23"}
+{"level":"error","message":"Error fetching space: invalid input syntax for type integer: \"undefined\"","timestamp":"2025-03-17 23:07:23"}
+{"level":"error","message":"Failed to fetch space","timestamp":"2025-03-17 23:07:24"}
+{"level":"error","message":"Failed to fetch space folders","timestamp":"2025-03-17 23:07:47"}
+{"level":"error","message":"Failed to fetch space folders","timestamp":"2025-03-17 23:07:47"}
+{"level":"error","message":"Error fetching space: invalid input syntax for type integer: \"undefined\"","timestamp":"2025-03-17 23:07:47"}
+{"level":"error","message":"Failed to fetch space","timestamp":"2025-03-17 23:07:47"}
+{"level":"error","message":"Error fetching space: invalid input syntax for type integer: \"undefined\"","timestamp":"2025-03-17 23:07:47"}
+{"level":"error","message":"Failed to fetch space","timestamp":"2025-03-17 23:07:47"}
+{"level":"error","message":"Failed to fetch space folders","timestamp":"2025-03-17 23:08:37"}
+{"level":"error","message":"Failed to fetch space folders","timestamp":"2025-03-17 23:08:37"}
+{"level":"error","message":"Error fetching space: invalid input syntax for type integer: \"undefined\"","timestamp":"2025-03-17 23:08:37"}
+{"level":"error","message":"Failed to fetch space","timestamp":"2025-03-17 23:08:37"}
+{"level":"error","message":"Error fetching space: invalid input syntax for type integer: \"undefined\"","timestamp":"2025-03-17 23:08:37"}
+{"level":"error","message":"Failed to fetch space","timestamp":"2025-03-17 23:08:37"}
+{"level":"error","message":"Error fetching space: invalid input syntax for type integer: \"undefined\"","timestamp":"2025-03-17 23:08:51"}
+{"level":"error","message":"Failed to fetch space","timestamp":"2025-03-17 23:08:51"}
+{"level":"error","message":"Failed to fetch space folders","timestamp":"2025-03-17 23:08:51"}
+{"level":"error","message":"Failed to fetch space folders","timestamp":"2025-03-17 23:08:51"}
+{"level":"error","message":"Error fetching space: invalid input syntax for type integer: \"undefined\"","timestamp":"2025-03-17 23:08:51"}
+{"level":"error","message":"Failed to fetch space","timestamp":"2025-03-17 23:08:51"}
+{"level":"error","message":"Error fetching space: invalid input syntax for type integer: \"undefined\"","timestamp":"2025-03-17 23:08:56"}
+{"level":"error","message":"Failed to fetch space","timestamp":"2025-03-17 23:08:56"}
+{"level":"error","message":"Failed to fetch space folders","timestamp":"2025-03-17 23:08:56"}
+{"level":"error","message":"Failed to fetch space folders","timestamp":"2025-03-17 23:08:56"}
+{"level":"error","message":"Error fetching space: invalid input syntax for type integer: \"undefined\"","timestamp":"2025-03-17 23:08:56"}
+{"level":"error","message":"Failed to fetch space","timestamp":"2025-03-17 23:08:56"}
+{"level":"error","message":"Error fetching space: invalid input syntax for type integer: \"undefined\"","timestamp":"2025-03-17 23:09:02"}
+{"level":"error","message":"Failed to fetch space","timestamp":"2025-03-17 23:09:02"}
+{"level":"error","message":"Failed to fetch space folders","timestamp":"2025-03-17 23:09:02"}
+{"level":"error","message":"Failed to fetch space folders","timestamp":"2025-03-17 23:09:02"}
+{"level":"error","message":"Error fetching space: invalid input syntax for type integer: \"undefined\"","timestamp":"2025-03-17 23:09:02"}
+{"level":"error","message":"Failed to fetch space","timestamp":"2025-03-17 23:09:02"}
+{"level":"error","message":"Failed to fetch space folders","timestamp":"2025-03-17 23:10:55"}
+{"level":"error","message":"Error fetching space: invalid input syntax for type integer: \"undefined\"","timestamp":"2025-03-17 23:10:55"}
+{"level":"error","message":"Failed to fetch space","timestamp":"2025-03-17 23:10:55"}
+{"level":"error","message":"Failed to fetch space folders","timestamp":"2025-03-17 23:12:10"}
+{"level":"error","message":"Failed to fetch space folders","timestamp":"2025-03-17 23:12:10"}
+{"level":"error","message":"Error fetching space: invalid input syntax for type integer: \"undefined\"","timestamp":"2025-03-17 23:12:11"}
+{"level":"error","message":"Failed to fetch space","timestamp":"2025-03-17 23:12:11"}
+{"level":"error","message":"Error fetching space: invalid input syntax for type integer: \"undefined\"","timestamp":"2025-03-17 23:12:11"}
+{"level":"error","message":"Failed to fetch space","timestamp":"2025-03-17 23:12:11"}
+{"level":"error","message":"Error fetching space: invalid input syntax for type integer: \"undefined\"","timestamp":"2025-03-17 23:12:17"}
+{"level":"error","message":"Failed to fetch space","timestamp":"2025-03-17 23:12:17"}
+{"level":"error","message":"Failed to fetch space folders","timestamp":"2025-03-17 23:12:17"}
+{"level":"error","message":"Failed to fetch space folders","timestamp":"2025-03-17 23:12:17"}
+{"level":"error","message":"Error fetching space: invalid input syntax for type integer: \"undefined\"","timestamp":"2025-03-17 23:12:17"}
+{"level":"error","message":"Failed to fetch space","timestamp":"2025-03-17 23:12:17"}
+{"level":"error","message":"Failed to fetch space folders","timestamp":"2025-03-18 00:01:57"}
+{"level":"error","message":"Error fetching space: invalid input syntax for type integer: \"undefined\"","timestamp":"2025-03-18 00:01:57"}
+{"level":"error","message":"Failed to fetch space","timestamp":"2025-03-18 00:01:57"}
+{"level":"error","message":"Error fetching space: invalid input syntax for type integer: \"undefined\"","timestamp":"2025-03-18 00:10:28"}
+{"level":"error","message":"Failed to fetch space","timestamp":"2025-03-18 00:10:28"}
+{"level":"error","message":"Failed to fetch space folders","timestamp":"2025-03-18 00:10:28"}
+{"level":"error","message":"Failed to fetch space folders","timestamp":"2025-03-18 00:10:28"}
+{"level":"error","message":"Error fetching space: invalid input syntax for type integer: \"undefined\"","timestamp":"2025-03-18 00:10:28"}
+{"level":"error","message":"Failed to fetch space","timestamp":"2025-03-18 00:10:28"}
+{"level":"error","message":"Failed to fetch space folders","timestamp":"2025-03-18 00:10:57"}
+{"level":"error","message":"Failed to fetch space folders","timestamp":"2025-03-18 00:10:57"}
+{"level":"error","message":"Error fetching space: invalid input syntax for type integer: \"undefined\"","timestamp":"2025-03-18 00:10:57"}
+{"level":"error","message":"Failed to fetch space","timestamp":"2025-03-18 00:10:57"}
+{"level":"error","message":"Error fetching space: invalid input syntax for type integer: \"undefined\"","timestamp":"2025-03-18 00:10:57"}
+{"level":"error","message":"Failed to fetch space","timestamp":"2025-03-18 00:10:57"}
+{"level":"error","message":"Error fetching space: invalid input syntax for type integer: \"undefined\"","timestamp":"2025-03-18 00:11:36"}
+{"level":"error","message":"Failed to fetch space","timestamp":"2025-03-18 00:11:36"}
+{"level":"error","message":"Failed to fetch space folders","timestamp":"2025-03-18 00:11:36"}
+{"level":"error","message":"Failed to fetch space folders","timestamp":"2025-03-18 00:11:36"}
+{"level":"error","message":"Error fetching space: invalid input syntax for type integer: \"undefined\"","timestamp":"2025-03-18 00:11:36"}
+{"level":"error","message":"Failed to fetch space","timestamp":"2025-03-18 00:11:36"}
+{"level":"error","message":"Error fetching space: invalid input syntax for type integer: \"undefined\"","timestamp":"2025-03-18 00:12:39"}
+{"level":"error","message":"Failed to fetch space","timestamp":"2025-03-18 00:12:39"}
+{"level":"error","message":"Failed to fetch space folders","timestamp":"2025-03-18 00:12:39"}
+{"level":"error","message":"Failed to fetch space folders","timestamp":"2025-03-18 00:12:39"}
+{"level":"error","message":"Error fetching space: invalid input syntax for type integer: \"undefined\"","timestamp":"2025-03-18 00:12:39"}
+{"level":"error","message":"Failed to fetch space","timestamp":"2025-03-18 00:12:39"}
+{"level":"error","message":"Failed to fetch space folders","timestamp":"2025-03-18 00:16:53"}
+{"level":"error","message":"Failed to fetch space folders","timestamp":"2025-03-18 00:16:53"}
+{"level":"error","message":"Error fetching space: invalid input syntax for type integer: \"undefined\"","timestamp":"2025-03-18 00:16:53"}
+{"level":"error","message":"Failed to fetch space","timestamp":"2025-03-18 00:16:53"}
+{"level":"error","message":"Error fetching space: invalid input syntax for type integer: \"undefined\"","timestamp":"2025-03-18 00:16:54"}
+{"level":"error","message":"Failed to fetch space","timestamp":"2025-03-18 00:16:54"}
+{"level":"error","message":"Failed to fetch space folders","timestamp":"2025-03-18 00:17:09"}
+{"level":"error","message":"Error fetching space: invalid input syntax for type integer: \"undefined\"","timestamp":"2025-03-18 00:17:09"}
+{"level":"error","message":"Failed to fetch space","timestamp":"2025-03-18 00:17:09"}
+{"level":"error","message":"Failed to fetch space folders","timestamp":"2025-03-18 00:17:09"}
+{"level":"error","message":"Error fetching space: invalid input syntax for type integer: \"undefined\"","timestamp":"2025-03-18 00:17:09"}
+{"level":"error","message":"Failed to fetch space","timestamp":"2025-03-18 00:17:09"}
+{"level":"error","message":"Error fetching workspace: invalid input syntax for type integer: \"null\"","timestamp":"2025-03-19 16:23:00"}
+{"level":"error","message":"Failed to fetch workspace","timestamp":"2025-03-19 16:23:00"}
+{"level":"error","message":"Error fetching workspace: invalid input syntax for type integer: \"null\"","timestamp":"2025-03-19 16:23:00"}
+{"level":"error","message":"Failed to fetch workspace","timestamp":"2025-03-19 16:23:00"}
