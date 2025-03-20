@@ -4,6 +4,8 @@ import ManageMemberSpace from "../model/ManageMemberSpace.js";
 import User from "../model/User.js";
 import jwt from "jsonwebtoken";
 import nodemailer from "nodemailer";
+import Folder from "../model/Folder.js";
+import List from "../model/List.js";
 
 class ManageMemberSpaceService {
   /**
@@ -14,27 +16,55 @@ class ManageMemberSpaceService {
    */
   static async getUserSpacesInWorkspace(userId, workspaceId) {
     try {
+      // Truy vấn các không gian của người dùng trong workspace
       const spaces = await ManageMemberSpace.findAll({
-        where: { userId, workspaceId },
-        attributes: ["spaceId"], // Chỉ lấy spaceId
+        where: { userId, workspaceId }, // Lọc theo userId và workspaceId
+        attributes: ["spaceId"], // Lấy spaceId
         include: [
           {
-            model: Space, // Giả sử bạn có bảng Space liên kết
-            attributes: ["name"], // Lấy tên của space
-          },
-        ],
+            model: Space, // Liên kết với bảng Space
+            // Không chỉ định 'attributes' để lấy tất cả các trường của Space
+            include: [
+              {
+                model: Folder, // Liên kết với bảng Folder
+                as: 'folders',
+                // Không chỉ định 'attributes' để lấy tất cả các trường của Folder
+                include: [
+                  {
+                    model: List, // Liên kết với bảng List
+                    as: 'lists',
+                    // Không chỉ định 'attributes' để lấy tất cả các trường của List
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       });
-
-      // Trả về danh sách các spaceId cùng với tên của từng space
+  
+      // Trả về danh sách các không gian với tên của từng space, thư mục và danh sách
       return spaces.map((space) => ({
         spaceId: space.spaceId,
         spaceName: space.Space.name, // Lấy tên của space từ bảng Space
+        // Lấy tất cả dữ liệu của thư mục và danh sách
+        folders: space.Space.folders.map(folder => ({
+          folderId: folder.folderId,
+          folderName: folder.name,
+          // Lấy tất cả các trường của List
+          lists: folder.lists.map(list => ({
+            listId: list.listId,
+            listName: list.name,
+            // Bạn có thể thêm bất kỳ trường nào khác từ List mà bạn muốn
+          }))
+        }))
       }));
     } catch (error) {
       console.error("❌ Lỗi khi lấy danh sách spaces của user trong workspace:", error);
       throw error;
     }
   }
+  
+  
 
 
   static async getMembersBySpace(spaceId) {

@@ -190,3 +190,5 @@
 {"level":"error","message":"Failed to fetch workspace","timestamp":"2025-03-19 16:23:00"}
 {"level":"error","message":"Error fetching workspace: invalid input syntax for type integer: \"null\"","timestamp":"2025-03-19 16:23:00"}
 {"level":"error","message":"Failed to fetch workspace","timestamp":"2025-03-19 16:23:00"}
+{"level":"error","message":"Error creating list: notNull Violation: List.folderId cannot be null","timestamp":"2025-03-20 10:16:43"}
+{"level":"error","message":"notNull Violation: List.folderId cannot be null","timestamp":"2025-03-20 10:16:43"}

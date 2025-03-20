@@ -28,7 +28,7 @@ export const fetchUserSpacesInWorkspaceController = async (req, res) => {
       return res.status(400).json({ message: "userId and workspaceId are required." });
     }
 
-    // Gọi Service để lấy danh sách spaceId và spaceName cho user trong workspace
+    // Gọi Service để lấy danh sách spaceId, spaceName, folder và list cho user trong workspace
     const userSpaces = await ManageMemberSpaceService.getUserSpacesInWorkspace(userId, workspaceId);
 
     // Nếu không tìm thấy space cho user trong workspace
@@ -36,13 +36,14 @@ export const fetchUserSpacesInWorkspaceController = async (req, res) => {
       return res.status(404).json({ message: "No spaces found for the user in this workspace." });
     }
 
-    // Trả về các space mà user có quyền truy cập cùng tên của từng space
+    // Trả về các space mà user có quyền truy cập cùng tên của từng space, folder và list
     res.status(200).json(userSpaces);
   } catch (error) {
     console.error("❌ Error fetching user spaces in workspace:", error.message);
     res.status(500).json({ message: "Internal server error.", error: error.message });
   }
 };
+
 
 export const getMembersBySpace = async (req, res) => {
   try {
