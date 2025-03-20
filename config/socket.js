@@ -5,7 +5,7 @@ import ManageMemberWorkSpaceService from "../services/ManagerMemberWorkspaceServ
 const configureSocket = (server) => {
     const io = new Server(server, {
         cors: {
-            origin: process.env.CLIENT_URL || "http://localhost:5173",
+            origin: process.env.FE_URL,
             methods: ["GET", "POST"],
             credentials: true
         }

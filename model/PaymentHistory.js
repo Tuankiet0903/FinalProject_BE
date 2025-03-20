@@ -24,7 +24,7 @@ const PaymentHistory = sequelize.define('PaymentHistory', {
         allowNull: false
     },
     status: {
-        type: DataTypes.ENUM('pending', 'success', 'failed'),
+        type: DataTypes.ENUM('pending', 'success', 'cancelled'),
         allowNull: false
     },
     order_code: {

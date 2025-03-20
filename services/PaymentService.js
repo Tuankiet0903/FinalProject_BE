@@ -82,18 +82,27 @@ export const updatePaymentStatusService = async (
       throw new Error("Payment record not found");
     }
 
-    const subscription = await Subscription.findOne({
+    let subscription = await Subscription.findOne({
       where: { userId: userId, workspaceId: workspaceId },
       transaction,
     });
 
+    // ✅ If no subscription exists, create one
     if (!subscription) {
-      throw new Error("Subscription record not found");
+      subscription = await Subscription.create(
+        {
+          userId,
+          workspaceId,
+          planId: payment.plan_id,
+        },
+        { transaction }
+      );
+    } else {
+      subscription.planId = payment.plan_id;
+      await subscription.save({ transaction });
     }
 
-    subscription.planId = payment.plan_id;
-    await subscription.save({ transaction });
-
+    // ✅ Update payment status
     payment.status = status;
     await payment.save({ transaction });
 
@@ -105,6 +114,7 @@ export const updatePaymentStatusService = async (
     throw error;
   }
 };
+
 
 export const getPaymentHistoryService = async () => {
   try {

@@ -6,8 +6,10 @@ import logger from "../utils/logger.js";
 import PremiumPlans from "../model/PremiunPlans.js";
 import jwt from "jsonwebtoken";
 import nodemailer from "nodemailer";
+import dotenv from 'dotenv';
+dotenv.config();
 
-
+const FE_URL = process.env.FE_URL;
 
 class AdminService {
   // DASHBOARD PAGE
@@ -480,7 +482,7 @@ static async checkUserExistsInWorkspace(workspaceId, email) {
 
 static async sendInviteEmail(email, token) {
   try {
-    const inviteLink = `http://localhost:5173/login?inviteToken=${token}`;
+    const inviteLink = `${FE_URL}/login?inviteToken=${token}`;
 
     const transporter = nodemailer.createTransport({
       service: "gmail",
