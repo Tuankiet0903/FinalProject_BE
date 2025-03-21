@@ -55,6 +55,7 @@ class WorkspaceMessageService {
             });
 
             logger.info(`Retrieved messages for workspace ${workspaceId}`);
+            console.log("Messages retrieved successfully:", JSON.stringify(messages, null, 2));
             return messages;
         } catch (error) {
             logger.error(`Error retrieving messages: ${error.message}`);
@@ -62,9 +63,9 @@ class WorkspaceMessageService {
         }
     }
 
-    static async deleteMessage(messageId, userId) {
+    static async deleteMessage(workspaceMessageId, userId) {
         try {
-            const message = await WorkspaceMessage.findByPk(messageId);
+            const message = await WorkspaceMessage.findByPk(workspaceMessageId);
             
             if (!message) {
                 throw new Error("Message not found");
@@ -75,16 +76,16 @@ class WorkspaceMessageService {
             }
 
             await message.destroy();
-            logger.info(`Message ${messageId} deleted successfully`);
+            logger.info(`Message ${workspaceMessageId} deleted successfully`);
         } catch (error) {
             logger.error(`Error deleting message: ${error.message}`);
             throw error;
         }
     }
 
-    static async updateMessage(messageId, userId, content) {
+    static async updateMessage(workspaceMessageId, userId, content) {
         try {
-            const message = await WorkspaceMessage.findByPk(messageId);
+            const message = await WorkspaceMessage.findByPk(workspaceMessageId);
             
             if (!message) {
                 throw new Error("Message not found");
@@ -99,13 +100,43 @@ class WorkspaceMessageService {
                 updatedAt: new Date()
             });
 
-            logger.info(`Message ${messageId} updated successfully`);
+            logger.info(`Message ${workspaceMessageId} updated successfully`);
             return message;
         } catch (error) {
             logger.error(`Error updating message: ${error.message}`);
             throw error;
         }
     }
+
+    static async getMessageById(workspaceMessageId) {
+        try {
+            const message = await WorkspaceMessage.findByPk(workspaceMessageId, {
+                include: [
+                    {
+                        model: User,
+                        attributes: ['userId', 'fullName', 'avatar']
+                    },
+                    {
+                        model: Reaction,
+                        include: [{
+                            model: User,
+                            attributes: ['userId', 'fullName', 'avatar']
+                        }]
+                    }
+                ]
+            });
+    
+            if (!message) {
+                throw new Error("Message not found");
+            }
+    
+            return message;
+        } catch (error) {
+            logger.error(`Error retrieving message: ${error.message}`);
+            throw error;
+        }
+    }
+    
 }
 
 export default WorkspaceMessageService; 

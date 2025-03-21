@@ -60,11 +60,11 @@ export const getMessages = async (req, res) => {
 
 export const updateMessage = async (req, res) => {
     try {
-        const { messageId } = req.params;
+        const { workspaceMessageId } = req.params;
         const { content } = req.body;
         const userId = req.user.userId;
 
-        const updatedMessage = await WorkspaceMessageService.updateMessage(messageId, userId, content);
+        const updatedMessage = await WorkspaceMessageService.updateMessage(workspaceMessageId, userId, content);
 
         // Emit socket event for real-time updates
         req.io.to(`workspace-${updatedMessage.workspaceId}`).emit('update-message', updatedMessage);
@@ -84,13 +84,13 @@ export const updateMessage = async (req, res) => {
 
 export const deleteMessage = async (req, res) => {
     try {
-        const { messageId } = req.params;
+        const { workspaceMessageId } = req.params;
         const userId = req.user.userId;
 
-        await WorkspaceMessageService.deleteMessage(messageId, userId);
+        await WorkspaceMessageService.deleteMessage(workspaceMessageId, userId);
 
         // Emit socket event for real-time updates
-        req.io.to(`workspace-${req.params.workspaceId}`).emit('delete-message', messageId);
+        req.io.to(`workspace-${req.params.workspaceId}`).emit('delete-message', workspaceMessageId);
 
         return res.status(200).json({ message: "Message deleted successfully" });
     } catch (error) {
