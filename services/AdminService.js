@@ -1,4 +1,4 @@
-import { Op, Sequelize } from "sequelize";
+import { Sequelize } from "sequelize";
 import User from "../model/User.js";
 import ManageMemberWorkSpace from "../model/ManageMenberWorkSpace.js";
 import WorkSpace from "../model/WorkSpace.js";
@@ -6,10 +6,14 @@ import logger from "../utils/logger.js";
 import PremiumPlans from "../model/PremiunPlans.js";
 import jwt from "jsonwebtoken";
 import nodemailer from "nodemailer";
+import XLSX from 'xlsx'
+import path from 'path'
 import dotenv from 'dotenv';
+import { fileURLToPath } from "url";
 dotenv.config();
 
-const FE_URL = process.env.FE_URL;
+
+const FE_URL =  process.env.FE_URL;
 
 class AdminService {
   // DASHBOARD PAGE
@@ -592,6 +596,23 @@ static async resendInviteToWorkspace(workspaceId, email) {
       throw new Error("Failed to resend invite");
   }
 }
+
+static async exportExcel(data, name){
+  try {
+    const __dirname = path.dirname(fileURLToPath(import.meta.url));
+    const ws = XLSX.utils.json_to_sheet(data);
+    const wb = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(wb, ws, "Sheet1");
+
+    const filePath = path.join(__dirname, `${name}.xlsx`);
+    XLSX.writeFile(wb, filePath);
+
+    return filePath;
+  } catch (error) {
+    console.error("Error exporting Excel:", error);
+    throw error;
+  }
+} 
 
 }
 

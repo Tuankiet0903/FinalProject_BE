@@ -20,6 +20,10 @@ const ManageMemberSpace = sequelize.define("ManageMemberSpace", {
     type: DataTypes.INTEGER,
     allowNull: false,
   },
+  status:{
+    type:DataTypes.BOOLEAN ,
+    defaultValue: false
+  }
 },{
   freezeTableName: true,
   timestamps: false

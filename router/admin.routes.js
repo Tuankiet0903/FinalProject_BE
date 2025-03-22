@@ -21,6 +21,7 @@ import {
   activateUser,
   getUserRoleInWorkspace,
   resendInviteToWorkspace,
+  exportExcel,
 } from "../controller/AdminController.js";
 
 import {
@@ -62,5 +63,9 @@ router.delete("/plans/delete-multiple", deleteMultiplePremiumPlans);
 router.delete("/plans/:id", deletePremiumPlanById);
 router.put("/plans/:id", editPlan);
 router.post("/plans", createPlan);
+
+
+// Export excel
+router.get("/exportPayment", exportExcel);
 
 export default router;
