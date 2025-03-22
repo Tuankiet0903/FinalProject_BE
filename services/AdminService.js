@@ -483,6 +483,7 @@ static async checkUserExistsInWorkspace(workspaceId, email) {
 static async sendInviteEmail(email, token) {
   try {
     const inviteLink = `${FE_URL}/login?inviteToken=${token}`;
+    const declineLink = `${FE_URL}/decline-invite?inviteToken=${token}`;
 
     const transporter = nodemailer.createTransport({
       service: "gmail",
@@ -495,14 +496,26 @@ static async sendInviteEmail(email, token) {
     const mailOptions = {
       from: process.env.EMAIL,
       to: email,
-      subject: "You've been invited to join a workspace!",
+      subject: "You're Invited to Join a Space!",
       html: `
-        <p>You have been invited to join a workspace.</p>
-        <p>Click the link below to accept the invitation and log in using Google:</p>
-        <a href="${inviteLink}" style="padding: 10px 15px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 5px;">
-          Accept Invitation
-        </a>
-        <p>This link will expire in 24 hours.</p>
+        <div style="font-family: Arial, sans-serif; padding: 20px; background-color: #f4f7fb; color: #333;">
+          <h2 style="color: #4CAF50;">You're Invited to Join a Space!</h2>
+          <p style="font-size: 16px; color: #555;">
+            Hello, 
+            <br><br>
+            You've been invited to join a Space. Click the button below to accept the invitation and get started.
+          </p>
+          <div style="text-align: center; margin: 20px 0;">
+            <a href="${inviteLink}" style="padding: 15px 25px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 8px; font-size: 16px; font-weight: bold; display: inline-block; transition: background-color 0.3s;">Accept Invitation</a>
+          </div>
+          <p style="font-size: 14px; color: #888;">This link will expire in 24 hours.</p>
+          <div style="text-align: center; margin-top: 15px;">
+            <a href="${declineLink}" style="padding: 10px 20px; background-color: #f44336; color: white; text-decoration: none; border-radius: 8px; font-size: 16px; font-weight: bold; display: inline-block; transition: background-color 0.3s;">Decline Invitation</a>
+          </div>
+          <p style="font-size: 12px; color: #888; text-align: center; margin-top: 20px;">
+            If you did not expect this email, please ignore it.
+          </p>
+        </div>
       `,
     };
 
@@ -512,6 +525,7 @@ static async sendInviteEmail(email, token) {
     console.error("❌ Failed to send invitation email:", error.message);
   }
 }
+
 
 
 static async activateUser(token) {
