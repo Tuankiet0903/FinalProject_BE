@@ -38,9 +38,7 @@ const connectDB = async () => {
     // await sequelize.authenticate();
     await sequelize.authenticate()
     console.log("Connected to the PostgreSQL database successfully.");
-
-    // Sync the database schema
-    await sequelize.sync({ alter: true }); // Use `alter: true` to update schema without dropping tables
+    await sequelize.sync({ alter: true }); 
     console.log('Database synced successfully.');
   } catch (error) {
     console.error("Error connecting to or syncing the database:", error.message);
