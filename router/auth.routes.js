@@ -3,9 +3,14 @@ import passport from "../config/passport.js";
 import jwt from "jsonwebtoken";
 import AuthService from "../services/AuthService.js";
 import { createWelcomeNotification } from "../controller/NotificationController.js";
+import dotenv from 'dotenv';
 import User from "../model/User.js"; // Import model User
 import ManageMemberWorkSpace from "../model/ManageMenberWorkSpace.js";
 import ManageMemberSpace from '../model/ManageMemberSpace.js';
+
+dotenv.config();
+
+const FE_URL = process.env.FE_URL;
 
 const router = express.Router();
 
@@ -56,14 +61,13 @@ router.get("/google", passport.authenticate("google", { scope: ["profile", "emai
 // Google OAuth - Xử lý callback
 router.get(
    "/google/callback",
-   passport.authenticate("google", { failureRedirect: "http://localhost:5173/login" }),
+   passport.authenticate("google", { failureRedirect: `${FE_URL}/login` }),
    async (req, res) => {
       try {
          const googleUser = req.user;
-
          if (!googleUser) {
             console.error("❌ Google authentication failed.");
-            return res.redirect("http://localhost:5173/login?error=auth_failed");
+            return res.redirect(`${FE_URL}/login?error=auth_failed`);
          }
 
          console.log("✅ Google User Info:", googleUser);
@@ -112,10 +116,16 @@ router.get(
          console.log(`✅ User ${user.email} logged in successfully!`);
 
          // ✅ Chuyển hướng đến trang chính
-         res.redirect(`http://localhost:5173/user`);
+         res.redirect(`${FE_URL}/user`);
+
+         // Tạo thông báo chào mừng
+         const notification = await createWelcomeNotification(user.userId);
+         console.log('Welcome notification created:', notification);
+
+
       } catch (error) {
          console.error("Google callback error:", error);
-         res.redirect("http://localhost:5173/login?error=server_error");
+         res.redirect(`${FE_URL}/login?error=server_error`);
       }
    }
 );
@@ -207,47 +217,47 @@ router.get("/activate/:token", async (req, res) => {
 
 router.post("/activate-from-google", async (req, res) => {
    try {
-     const { inviteToken } = req.body;
+      const { inviteToken } = req.body;
 
-     if (!inviteToken) return res.status(400).json({ error: "Missing invite token" });
+      if (!inviteToken) return res.status(400).json({ error: "Missing invite token" });
 
-     // 🔥 Giải mã token từ email mời
-     const decoded = jwt.verify(inviteToken, process.env.JWT_SECRET);
-     const { email, workspaceId } = decoded;
+      // 🔥 Giải mã token từ email mời
+      const decoded = jwt.verify(inviteToken, process.env.JWT_SECRET);
+      const { email, workspaceId } = decoded;
 
-     // 🔍 Tìm user theo email
-     const user = await User.findOne({ where: { email } });
+      // 🔍 Tìm user theo email
+      const user = await User.findOne({ where: { email } });
 
-     if (!user) return res.status(404).json({ error: "User not found" });
+      if (!user) return res.status(404).json({ error: "User not found" });
 
-     // ✅ Lấy thông tin từ Google Token (Lấy từ session hoặc database)
-     const googleUser = req.user; 
+      // ✅ Lấy thông tin từ Google Token (Lấy từ session hoặc database)
+      const googleUser = req.user;
 
-     if (!googleUser) return res.status(401).json({ error: "Google login required" });
+      if (!googleUser) return res.status(401).json({ error: "Google login required" });
 
-     console.log("🌟 Google User Data:", googleUser);
+      console.log("🌟 Google User Data:", googleUser);
 
-     // 🔥 Cập nhật thông tin user từ Google
-     user.fullName = googleUser.fullName;
-     user.avatar = googleUser.avatar;
-     user.active = true; 
-     await user.save();
+      // 🔥 Cập nhật thông tin user từ Google
+      user.fullName = googleUser.fullName;
+      user.avatar = googleUser.avatar;
+      user.active = true;
+      await user.save();
 
-     console.log(`✅ Updated User: ${user.email} | Name: ${user.fullName} | Avatar: ${user.avatar}`);
+      console.log(`✅ Updated User: ${user.email} | Name: ${user.fullName} | Avatar: ${user.avatar}`);
 
-     // 🔥 Cập nhật trạng thái trong `ManageMemberWorkSpace`
-     await ManageMemberWorkSpace.update(
-       { status: true }, // Chuyển trạng thái thành Active
-       { where: { workspaceId, userId: user.userId } }
-     );
+      // 🔥 Cập nhật trạng thái trong `ManageMemberWorkSpace`
+      await ManageMemberWorkSpace.update(
+         { status: true }, // Chuyển trạng thái thành Active
+         { where: { workspaceId, userId: user.userId } }
+      );
 
-     console.log(`✅ Workspace ${workspaceId} - User ${user.email} Activated!`);
+      console.log(`✅ Workspace ${workspaceId} - User ${user.email} Activated!`);
 
-     res.json({ success: true, message: "User activated successfully!" });
+      res.json({ success: true, message: "User activated successfully!" });
 
    } catch (error) {
-     console.error("❌ Activation error:", error);
-     res.status(500).json({ error: "Internal Server Error" });
+      console.error("❌ Activation error:", error);
+      res.status(500).json({ error: "Internal Server Error" });
    }
  });
 
@@ -300,16 +310,11 @@ router.post("/activate-from-google", async (req, res) => {
   }
 });
 
- 
- 
- 
-
- 
 // Đăng xuất
 router.get("/logout", (req, res) => {
    res.clearCookie("token", { httpOnly: true, secure: false, sameSite: "Lax" }); // Xóa token trong cookies
    res.json({ message: "Đã đăng xuất thành công!" }); // Gửi response về FE để xử lý tiếp
-   res.redirect("http://localhost:5173/login");
+   res.redirect(`${FE_URL}/login`);
 });
 
 export default router;

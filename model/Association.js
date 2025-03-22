@@ -14,6 +14,10 @@ import Subscription from "./Subcriptions.js";
 import PremiumPlans from "./PremiunPlans.js";
 import Otp from "./OTP.js";
 import TaskHistory from "./TaskHistory.js";
+import PaymentHistory from "./PaymentHistory.js";
+import WorkspaceMessage from "./WorkspaceMessage.js";
+import FileUpload from "./FileUpload.js";
+import Reaction from "./Reaction.js";
 
 // User ↔ Workspace
 User.hasMany(Workspace, { foreignKey: "createdBy", onDelete: "CASCADE" });
@@ -123,6 +127,42 @@ User.hasMany(TaskHistory, { foreignKey: "updatedBy", onDelete: "CASCADE" });
 TaskHistory.belongsTo(User, { foreignKey: "updatedBy", onDelete: "CASCADE" });
 
 
+// User ↔ PaymentHistory
+User.hasMany(PaymentHistory, { foreignKey: 'user_id', onDelete: 'CASCADE' });
+PaymentHistory.belongsTo(User, { foreignKey: 'user_id', onDelete: 'CASCADE' });
+
+// PremiumPlans ↔ PaymentHistory
+PremiumPlans.hasMany(PaymentHistory, { foreignKey: 'plan_id', onDelete: 'CASCADE' });
+PaymentHistory.belongsTo(PremiumPlans, { foreignKey: 'plan_id', onDelete: 'CASCADE' });
+
+// Workspace ↔ PaymentHistory
+Workspace.hasMany(PaymentHistory, { foreignKey: 'plan_id', onDelete: 'CASCADE' });
+PaymentHistory.belongsTo(Workspace, { foreignKey: 'plan_id', onDelete: 'CASCADE' });
+
+// Workspace ↔ WorkspaceMessage
+Workspace.hasMany(WorkspaceMessage, { foreignKey: "workspaceId", onDelete: "CASCADE" });
+WorkspaceMessage.belongsTo(Workspace, { foreignKey: "workspaceId", onDelete: "CASCADE" });
+
+// User ↔ WorkspaceMessage
+User.hasMany(WorkspaceMessage, { foreignKey: "createdBy", onDelete: "CASCADE" });
+WorkspaceMessage.belongsTo(User, { foreignKey: "createdBy", onDelete: "CASCADE" });
+
+// WorkspaceMessage ↔ FileUpload
+WorkspaceMessage.hasMany(FileUpload, { foreignKey: "workspaceMessageId", onDelete: "CASCADE" });
+FileUpload.belongsTo(WorkspaceMessage, { foreignKey: "workspaceMessageId", onDelete: "CASCADE" });
+
+// User ↔ FileUpload
+User.hasMany(FileUpload, { foreignKey: "createdBy", onDelete: "CASCADE" });
+FileUpload.belongsTo(User, { foreignKey: "createdBy", onDelete: "CASCADE" });
+
+// WorkspaceMessage ↔ Reaction
+WorkspaceMessage.hasMany(Reaction, { foreignKey: "workspaceMessageId", onDelete: "CASCADE" });
+Reaction.belongsTo(WorkspaceMessage, { foreignKey: "workspaceMessageId", onDelete: "CASCADE" });
+
+// User ↔ Reaction
+User.hasMany(Reaction, { foreignKey: "createdBy", onDelete: "CASCADE" });
+Reaction.belongsTo(User, { foreignKey: "createdBy", onDelete: "CASCADE" });
+
 // Synchronize Database
 const syncDatabase = async () => {
   try {
@@ -142,7 +182,10 @@ const syncDatabase = async () => {
       Subscription.sync(),
       Otp.sync(),
       PremiumPlans.sync(),
-      TaskHistory.sync()
+      TaskHistory.sync(),
+      WorkspaceMessage.sync(),
+      FileUpload.sync(),
+      Reaction.sync(),
     ]);
     console.log("Database synchronized successfully.");
   } catch (error) {

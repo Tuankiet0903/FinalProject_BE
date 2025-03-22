@@ -1,7 +1,8 @@
 import TaskService from "../services/TaskService.js";
-import NotificationService from "../services/NotificationService.js";
+import NotificationService from "../services/NotificationService.js"; // Import NotificationService
 import logger from "../utils/logger.js";
 
+// Tạo task mới
 export const createTask = async (req, res) => {
     try {
         const taskData = {
@@ -15,7 +16,9 @@ export const createTask = async (req, res) => {
             type: req.body.type,
             assigneeId: req.body.assigneeId,
             createdBy: req.body.createdBy,
-            taskColumnId: req.body.taskColumnId
+            taskColumnId: req.body.taskColumnId,
+            spaceId: req.body.spaceId,
+            workspaceId: req.body.workspaceId
         };
 
         // Create task
@@ -45,6 +48,7 @@ export const createTask = async (req, res) => {
     }
 };
 
+// Lấy tất cả tasks
 export const getAllTasks = async (req, res) => {
     try {
         const tasks = await TaskService.getAllTasks();
@@ -55,6 +59,7 @@ export const getAllTasks = async (req, res) => {
     }
 };
 
+// Lấy task theo ID
 export const getTaskById = async (req, res) => {
     try {
         const task = await TaskService.getTaskById(req.params.id);
@@ -68,6 +73,7 @@ export const getTaskById = async (req, res) => {
     }
 };
 
+// Cập nhật task
 export const updateTask = async (req, res) => {
     try {
         const task = await TaskService.updateTask(req.params.id, req.body);
@@ -83,6 +89,7 @@ export const updateTask = async (req, res) => {
     }
 };
 
+// Xóa task
 export const deleteTask = async (req, res) => {
     try {
         await TaskService.deleteTask(req.params.id);
@@ -94,6 +101,7 @@ export const deleteTask = async (req, res) => {
     }
 };
 
+// Lấy tasks theo column
 export const getTasksByColumn = async (req, res) => {
     try {
         const tasks = await TaskService.getTasksByColumn(req.params.taskColumnId);
@@ -101,5 +109,27 @@ export const getTasksByColumn = async (req, res) => {
     } catch (error) {
         logger.error(error.message);
         return res.status(500).json({ error: "Failed to fetch column tasks" });
+    }
+};
+
+// Lấy tasks theo space
+export const getTasksBySpace = async (req, res) => {
+    try {
+        const tasks = await TaskService.getTasksBySpace(req.params.spaceId);
+        return res.status(200).json(tasks);
+    } catch (error) {
+        logger.error(error.message);
+        return res.status(500).json({ error: "Failed to fetch space tasks" });
+    }
+};
+
+// Lấy tasks theo workspace
+export const getTasksByWorkspace = async (req, res) => {
+    try {
+        const tasks = await TaskService.getTasksByWorkspace(req.params.workspaceId);
+        return res.status(200).json(tasks);
+    } catch (error) {
+        logger.error(error.message);
+        return res.status(500).json({ error: "Failed to fetch workspace tasks" });
     }
 };
