@@ -305,6 +305,8 @@ export const getUserRoleInWorkspace = async (req, res) => {
     return res.status(500).json({ error: "Internal Server Error" });
   }
 };
+
+
 export const resendInviteToWorkspace = async (req, res) => {
   try {
     const { workspaceId, email } = req.body;
@@ -320,4 +322,6 @@ export const resendInviteToWorkspace = async (req, res) => {
     return res.status(500).json({ error: "Không thể gửi lại lời mời" });
   }
 };
+
+
 

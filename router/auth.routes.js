@@ -6,6 +6,7 @@ import { createWelcomeNotification } from "../controller/NotificationController.
 import dotenv from 'dotenv';
 import User from "../model/User.js"; // Import model User
 import ManageMemberWorkSpace from "../model/ManageMenberWorkSpace.js";
+import ManageMemberSpace from '../model/ManageMemberSpace.js';
 
 dotenv.config();
 
@@ -258,8 +259,58 @@ router.post("/activate-from-google", async (req, res) => {
       console.error("❌ Activation error:", error);
       res.status(500).json({ error: "Internal Server Error" });
    }
+ });
+
+
+ router.get('/confirm-invite', async (req, res) => {
+  const { inviteToken, userId, spaceId, workspaceId } = req.query;
+
+  try {
+    // Giải mã token
+    const decoded = jwt.verify(inviteToken, process.env.JWT_SECRET);  
+   console.log("Decoded Token:", decoded);
+    // Log để kiểm tra giá trị của decoded
+    console.log("Decoded Token:", decoded);
+
+    // Kiểm tra tính hợp lệ của token và so sánh với các tham số từ URL
+    if (Number(decoded.userId) !== Number(userId) || Number(decoded.workspaceId) !== Number(workspaceId) || Number(decoded.spaceId) !== Number(spaceId)) {
+     console.log(Number(decoded.userId));
+       console.log(Number(userId));
+         console.log(Number(decoded.workspaceId));
+
+      console.log(Number(workspaceId));
+      console.log(Number(decoded.spaceId));
+
+      console.log(Number(spaceId));
+
+      console.error("Token doesn't match the parameters.");
+      return res.status(400).send("Invalid invitation token.");
+    }
+
+    // Tìm bản ghi của lời mời trong ManageMemberSpace
+    const invite = await ManageMemberSpace.findOne({
+      where: { userId, spaceId, workspaceId },
+    });
+
+    if (!invite) {
+      return res.status(404).send("Invite not found.");
+    }
+
+    invite.status = true;
+    await invite.save();
+
+    res.status(200).send("Invitation confirmed successfully!");
+
+  } catch (error) {
+    console.error("Error confirming invitation:", error);
+    if (error.name === 'TokenExpiredError') {
+      return res.status(401).send("The invitation link has expired.");
+    }
+    res.status(500).send("Server error.");
+  }
 });
 
+ 
 
 
 // Đăng xuất
