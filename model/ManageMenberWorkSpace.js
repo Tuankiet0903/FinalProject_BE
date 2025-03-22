@@ -24,7 +24,6 @@
         type:DataTypes.BOOLEAN ,
         defaultValue: false
       }
-    
     },{
       freezeTableName: true,
       timestamps: false
