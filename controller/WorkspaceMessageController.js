@@ -19,12 +19,11 @@ export const createMessage = async (req, res) => {
             createdBy: userId,
         });
 
-        // Emit socket event for real-time updates
-        logger.info(`Message created in workspace ${workspaceId} by user ${userId}: ${content}`);
-        logger.info(`Emitting to room: workspace-${workspaceId}`);
+        const fullMessage = await WorkspaceMessageService.getMessageById(message.workspaceMessageId);
 
-        // Emit socket event
-        req.io.to(`workspace-${workspaceId}`).emit('new-message', message);
+        logger.info(`Message created in workspace ${workspaceId} by user ${userId}: ${content}`);
+
+        req.io.to(`workspace-${workspaceId}`).emit('new-message', fullMessage);
 
         return res.status(201).json(message);
     } catch (error) {
