@@ -102,18 +102,29 @@ class FolderService {
 
     static async getFoldersBySpace(spaceId) {
         try {
+            if (!spaceId) {
+                throw new Error("Missing spaceId"); // 🔥 Nếu không có spaceId, báo lỗi
+            }
+    
+            const parsedSpaceId = Number(spaceId);
+            if (isNaN(parsedSpaceId)) {
+                throw new Error("Invalid spaceId"); // 🔥 Nếu spaceId không phải số, báo lỗi
+            }
+    
+            console.log(`Fetching folders for spaceId: ${parsedSpaceId}`);
+    
             const folders = await Folder.findAll({
-                where: { spaceId },
+                where: { spaceId: parsedSpaceId }, // 🔥 Ép kiểu spaceId để đảm bảo Sequelize hiểu
                 order: [['createdAt', 'DESC']]
             });
-            
-            logger.info(`Fetched folders for space ID: ${spaceId}`);
+    
             return folders;
         } catch (error) {
-            logger.error(`Error fetching space folders: ${error.message}`);
+            console.error(`Error fetching space folders: ${error.message}`);
             throw new Error("Failed to fetch space folders");
         }
     }
+    
 
     static async getFoldersByUser(userId) {
         try {

@@ -137,6 +137,35 @@ class SpaceService {
             throw new Error("Failed to toggle favorite status");
         }
     }
+    static async getSpacesByWorkspaceId(workspaceId) {
+        try {
+            // 🔥 Kiểm tra workspaceId hợp lệ
+            if (!workspaceId) {
+                throw new Error("Workspace ID is required");
+            }
+
+            // 🔥 Kiểm tra xem Workspace có tồn tại không
+            const workspace = await Workspace.findByPk(workspaceId);
+            if (!workspace) {
+                throw new Error(`Workspace with ID ${workspaceId} does not exist.`);
+            }
+
+            // 🔥 Lấy danh sách Spaces từ database theo workspaceId
+            const spaces = await Space.findAll({
+                where: { workspaceId },
+                order: [["createdAt", "DESC"]], // 🔥 Sắp xếp theo thời gian mới nhất
+            });
+
+            logger.info(`Fetched spaces for workspace ID: ${workspaceId}`);
+            return spaces;
+        } catch (error) {
+            logger.error(`Error fetching spaces for workspace ${workspaceId}: ${error.message}`);
+            throw new Error("Failed to fetch spaces");
+        }
+    }
+
+    
+    
 }
 
 export default SpaceService;

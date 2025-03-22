@@ -1,5 +1,12 @@
-import { WHITELIST_DOMAINS } from '../utils/constants.js'
 import { env } from './environment.js';
+import dotenv from 'dotenv';
+dotenv.config();
+
+const FE_URL = process.env.FE_URL;
+
+const WHITELIST_DOMAINS = [
+  FE_URL
+]
 
 export const corsOptions = {
     origin: function (origin, callback) {

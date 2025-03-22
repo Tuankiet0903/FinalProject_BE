@@ -20,6 +20,7 @@ const sequelize = new Sequelize(
   }
 );
 
+
 // const sequelize = new Sequelize(process.env.DB_CONNECT_URL, {
 //     dialect: 'postgres',
 //     dialectOptions: {
@@ -34,7 +35,8 @@ const sequelize = new Sequelize(
 const connectDB = async () => {
   try {
     // Authenticate the connection to the database
-    await sequelize.authenticate();
+    // await sequelize.authenticate();
+    await sequelize.authenticate()
     console.log("Connected to the PostgreSQL database successfully.");
     await sequelize.sync({ alter: true }); 
     console.log('Database synced successfully.');

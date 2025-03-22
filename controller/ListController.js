@@ -90,3 +90,31 @@ export const getListsByColor = async (req, res) => {
         return res.status(status).json({ error: error.message });
     }
 };
+
+
+
+export const getListsByFolderId = async (req, res) => {
+    try {
+        const { folderId } = req.params;
+        console.log(`📢 Fetching lists for folderId: ${folderId}`);
+
+        if (!folderId) {
+            return res.status(400).json({ error: "❌ Folder ID is required" });
+        }
+
+        const lists = await ListService.getListsByFolderId(folderId);
+
+        if (!lists || lists.length === 0) {
+            return res.status(404).json({ message: "⚠️ No lists found for this folder" });
+        }
+
+        return res.status(200).json(lists);
+    } catch (error) {
+        console.error("❌ Error fetching lists:", error.message);
+        return res.status(500).json({ error: error.message || "Internal Server Error" });
+    }
+};
+
+
+
+

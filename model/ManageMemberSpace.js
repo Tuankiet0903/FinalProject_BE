@@ -14,12 +14,21 @@ const ManageMemberSpace = sequelize.define("ManageMemberSpace", {
   },
   roleSpace: {
     type: DataTypes.STRING,
-    allowNull: false
+    allowNull: false // Leader Space , Member 
   },
   spaceId: {
     type: DataTypes.INTEGER,
     allowNull: false,
   },
+  workspaceId: {
+    type: DataTypes.INTEGER,
+    allowNull: false
+  },
+  status:{
+    type:DataTypes.BOOLEAN ,
+    defaultValue: false
+  }
+  
 },{
   freezeTableName: true,
   timestamps: false
