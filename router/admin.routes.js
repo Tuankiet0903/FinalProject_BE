@@ -28,6 +28,7 @@ import {
     deleteUser,
  } from "../controller/UserController.js";
 import Auth from "../middleware/auth.js";
+import { getMembersBySpace, getUserRoleInSpace, inviteMemberToSpace, deleteUserFromSpace } from "../controller/ManageMemberSpaceController.js";
 
 const router = express.Router();
 
@@ -54,6 +55,11 @@ router.post('/manage-people/invite', inviteMemberToWorkspace);
 router.post("/manage-people/activate", activateUser);
 router.get("/getRole/:userId/:workspaceId", getUserRoleInWorkspace);
 router.post("/resend-invite", resendInviteToWorkspace);
+router.get("/manage-people-space/space/:spaceId", getMembersBySpace);
+router.get("/getRoleSpace/:userId/:spaceId", getUserRoleInSpace);
+router.post('/manage-people-space/workspace/:workspaceId/space/:spaceId/invite', inviteMemberToSpace);
+router.delete('/workspace/:workspaceId/space/:spaceId/delete/user/:userId', deleteUserFromSpace);
+
 
 
 

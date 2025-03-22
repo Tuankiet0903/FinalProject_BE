@@ -9,6 +9,7 @@ import {
    toggleFavorite,
    getSpacesByWorkspaceId
 } from "../controller/SpaceController.js";
+import { fetchUserSpacesInWorkspaceController } from "../controller/ManageMemberSpaceController.js";
 // import Auth from "../middleware/auth.js";
 
 const router = express.Router();
@@ -30,6 +31,8 @@ router.delete("/spaces/:id", deleteSpace); // Delete a space by ID
 router.get("/spaces/user/:userId", getUserSpaces); // Get spaces by user ID
 router.patch("/spaces/:id/favorite", toggleFavorite); // Toggle favorite status of a space
 router.get("/spaces/workspace/:workspaceId/allspaces", getSpacesByWorkspaceId); // Get spaces by user ID
+router.get('/spaces/workspace/:workspaceId/user/:userId', fetchUserSpacesInWorkspaceController);
+
 
 
 export default router;
